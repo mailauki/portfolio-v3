@@ -7,7 +7,7 @@ import SocialLinks from '../components/social'
 export default function AboutMe() {
   return (
     <>
-      <Stack direction='row' spacing={4}>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4}>
         <Box sx={{ textAlign: 'center' }}>
           <Avatar
             alt='Julie Evans'
@@ -21,7 +21,8 @@ export default function AboutMe() {
 
           <SocialLinks />
         </Box>
-        <Box>
+        
+        <Box sx={{ minWidth: 200 }}>
           <Typography paragraph sx={{ 'span': { fontSize: '3rem' } }}><span>H</span>ello, my name is Julie. I am a Web Developer from Texas. My hobbies are Linguistics, drawing, and collecting rocks.</Typography>
           
           <Typography paragraph>{`I've always loved design and I'm fasinated by words. I love the way words and languages work, especially how they differ and change with cultual influence. My greatest joy in life is being able to use my two greatest passions together, and expand my knowledge along the way. Programming languages are just like any other language, and learning how to utilize and understand them is fun for me. Combining that with turning UX designs into an asethetic and functional web application is a dream come true.`}</Typography>

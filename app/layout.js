@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} style={{ margin: 0 }}>
-        <Container maxWidth='lg' sx={{ bgcolor: grey[200] }} className={styles.main}>
+        <Container maxWidth='xl' sx={{ bgcolor: grey[200] }} className={styles.main}>
           <NavBar />
           {children}
         </Container>
