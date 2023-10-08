@@ -1,7 +1,10 @@
-import { Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material'
-import Link from 'next/link';
+import Link from 'next/link'
 
-const drawerWidth = '100%';
+import { Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material'
+
+import SocialLinks from './social'
+
+const drawerWidth = '100%'
 
 export default function Menu({ menuOpen, handleClose }) {
   return (
@@ -18,6 +21,7 @@ export default function Menu({ menuOpen, handleClose }) {
       }}
     >
       <Toolbar />
+
       <List>
         <ListItem>
           <ListItemButton component={Link} href="/">
@@ -48,6 +52,10 @@ export default function Menu({ menuOpen, handleClose }) {
           </ListItemButton>
         </ListItem>
       </List>
+
+      <Box sx={{ position: 'absolute', bottom: 40, right: 60 }}>
+        <SocialLinks />
+      </Box>
     </Drawer>
   )
 }

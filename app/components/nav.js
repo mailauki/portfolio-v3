@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 
-import Header from "./header";
-import Menu from "./menu";
+import Header from './header'
+import Menu from './menu'
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)

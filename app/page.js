@@ -1,9 +1,6 @@
 // import Image from 'next/image'
 
-import styles from './page.module.css'
-import { grey } from '@mui/material/colors'
-
-import { Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 
 export default function Home() {
 
