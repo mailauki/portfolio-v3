@@ -9,7 +9,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import ModeNightIcon from '@mui/icons-material/ModeNight'
 
-export default function Header({ menuOpen, setMenuOpen}) {
+export default function Header({ menuOpen, handleClose }) {
   const [darkMode, setDarkMode] = useState(false)
 
   return (
@@ -26,7 +26,7 @@ export default function Header({ menuOpen, setMenuOpen}) {
         <IconButton color='inherit' onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <ModeNightIcon/> : <LightModeIcon />}
         </IconButton>
-        <IconButton color='inherit' onClick={() => setMenuOpen(!menuOpen)}>
+        <IconButton color='inherit' onClick={handleClose}>
           {menuOpen ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
       </Toolbar>

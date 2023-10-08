@@ -1,37 +1,16 @@
-import { AppBar, Container, Dialog, DialogActions, DialogContent, DialogTitle, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar } from '@mui/material'
-import Header from './header'
-import CloseIcon from '@mui/icons-material/Close'
+import { Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material'
+import Link from 'next/link';
 
 const drawerWidth = '100%';
 
-export default function Menu({ menuOpen, setMenuOpen }) {
-  function handleClose() {
-    setMenuOpen(!menuOpen)
-    // setMenuOpen(false)
-  }
-
+export default function Menu({ menuOpen, handleClose }) {
   return (
-    // <Dialog
-    //   fullScreen
-    //   open={menuOpen}
-    //   onClose={handleClose}
-    // >
-    //   {/* <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
-    //   <AppBar>
-    //     <Toolbar sx={{ justifyContent: 'flex-end' }}>
-    //       <IconButton color='inherit' onClick={handleClose}>
-    //         <CloseIcon />
-    //       </IconButton>
-    //     </Toolbar>
-    //   </AppBar>
-    //   <DialogTitle>Title</DialogTitle>
-    //   <DialogContent>Content</DialogContent>
-    //   <DialogActions></DialogActions>
-    // </Dialog>
     <Drawer
-      variant='persistant'
+      // variant='persistant'
       anchor='right'
       open={menuOpen}
+      onClose={handleClose}
+      onClick={handleClose}
       sx={{
         width: drawerWidth,
         flexShrink: 0,
@@ -41,14 +20,34 @@ export default function Menu({ menuOpen, setMenuOpen }) {
       <Toolbar />
       <List>
         <ListItem>
-          <ListItemButton>
-            <ListItemText primary='Hello' />
+          <ListItemButton component={Link} href="/">
+            <ListItemText disableTypography>
+              <Typography variant='h3'>Home</Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component={Link} href="/about_me">
+            <ListItemText disableTypography>
+              <Typography variant='h3'>About Me</Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component={Link} href="/projects">
+            <ListItemText disableTypography>
+              <Typography variant='h3'>Projects</Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component={Link} href="/contact">
+            <ListItemText disableTypography>
+              <Typography variant='h3'>Contact</Typography>
+            </ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
     </Drawer>
-    // <Container>
-    //   <h1>Menu</h1>
-    // </Container>
   )
 }

@@ -1,6 +1,11 @@
 // import './globals.css'
 import { Inter } from 'next/font/google'
 
+import styles from './page.module.css'
+import { grey } from '@mui/material/colors'
+
+import NavBar from './components/nav'
+import { Container } from '@mui/material'
 // import Header from './components/header'
 // import Menu from './components/menu'
 
@@ -14,7 +19,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ margin: 0 }}>{children}</body>
+      <body className={inter.className} style={{ margin: 0 }}>
+        <Container maxWidth='lg' sx={{ bgcolor: grey[200] }} className={styles.main}>
+          <NavBar />
+          {children}
+        </Container>
+      </body>
     </html>
   )
 }
