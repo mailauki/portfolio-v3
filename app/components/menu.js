@@ -4,7 +4,7 @@ import { Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typ
 
 import SocialLinks from './social'
 
-const drawerWidth = '100%'
+const drawerWidth = '100%';
 
 export default function Menu({ menuOpen, handleClose }) {
   return (

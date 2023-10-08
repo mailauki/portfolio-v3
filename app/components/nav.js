@@ -6,11 +6,11 @@ import Header from './header'
 import Menu from './menu'
 
 export default function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function handleClose() {
     setMenuOpen(!menuOpen)
-  }
+  };
 
   return (
     <>

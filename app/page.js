@@ -1,13 +1,17 @@
-// import Image from 'next/image'
+import styles from './page.module.css'
 
-import { Typography } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 
 export default function Home() {
-
   return (
     <>
-      <Typography variant='h1'>Julie M. Evans</Typography>
-      <Typography>Software Engineer - Web Developer</Typography>
+      <Typography variant='h1' textAlign='center'>Julie <span className={styles.hide}>M. </span>Evans</Typography>
+
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}  justifyContent='center' alignItems='center'>
+        <Typography>Software Engineer</Typography>
+        <span className={styles.hide}>-</span>
+        <Typography>Web Developer</Typography>
+      </Stack>
     </>
   )
 }

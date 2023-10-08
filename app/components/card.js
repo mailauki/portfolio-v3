@@ -24,11 +24,11 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function ProjectCard({ project }) {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
-  }
+  };
 
   return (
     <Card sx={{ width: 345 }}>
@@ -57,6 +57,7 @@ export default function ProjectCard({ project }) {
             variant='outlined'
             component={Link}
             href={project.links.githubLink}
+            target='_blank'
           >
             GitHub
           </Button>
@@ -65,6 +66,7 @@ export default function ProjectCard({ project }) {
             variant='outlined'
             component={Link}
             href={project.links.demoLink}
+            target='_blank'
           >
             Demo
           </Button> : <></>}

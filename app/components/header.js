@@ -10,7 +10,7 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import ModeNightIcon from '@mui/icons-material/ModeNight'
 
 export default function Header({ menuOpen, handleClose }) {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <AppBar

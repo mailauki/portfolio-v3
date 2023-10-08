@@ -7,6 +7,7 @@ import { grey } from '@mui/material/colors'
 import { Container } from '@mui/material'
 
 import NavBar from './components/nav'
+import ThemeRegistry from './components/theme'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} style={{ margin: 0 }}>
-        <Container maxWidth='xl' sx={{ bgcolor: grey[200] }} className={styles.main}>
-          <NavBar />
-          {children}
-        </Container>
+        <ThemeRegistry options={{ key: 'mui' }}>
+          <Container maxWidth='lg' sx={{ bgcolor: grey[200] }} className={styles.main}>
+            <NavBar />
+            {children}
+          </Container>
+        </ThemeRegistry>
       </body>
     </html>
   )
