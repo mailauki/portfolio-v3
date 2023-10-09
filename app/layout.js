@@ -2,7 +2,6 @@
 import { Inter } from 'next/font/google'
 
 import styles from './page.module.css'
-import { grey } from '@mui/material/colors'
 
 import { Container, Paper } from '@mui/material'
 

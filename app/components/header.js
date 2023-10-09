@@ -2,13 +2,16 @@
 
 import { useContext } from 'react'
 
+import { Context } from '../utils/context';
+
+import { alpha } from '@mui/material/styles'
+
 import { AppBar, IconButton, Toolbar } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import ModeNightIcon from '@mui/icons-material/ModeNight'
-import { Context } from '../utils/context';
 
 export default function Header({ menuOpen, handleClose }) {
   let { darkMode, setDarkMode } = useContext(Context)
@@ -18,9 +21,10 @@ export default function Header({ menuOpen, handleClose }) {
       position='fixed'
       elevation={0}
       sx={{
-        bgcolor: 'transparent',
+        bgcolor: (theme) => alpha(theme.palette.background.paper, 0.5),
         color: 'text.primary',
-        zIndex: (theme) => theme.zIndex.drawer + 1
+        zIndex: (theme) => theme.zIndex.drawer + 1,
+        backdropFilter: 'blur(10px)'
       }}
     >
       <Toolbar sx={{ justifyContent: 'flex-end' }}>

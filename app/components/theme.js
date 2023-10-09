@@ -13,7 +13,7 @@ import { Context } from '../utils/context'
 export default function ThemeRegistry(props) {
   const { options, children } = props;
   
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const theme = createTheme({
     palette: {

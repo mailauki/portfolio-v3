@@ -9,7 +9,6 @@ const drawerWidth = '100%';
 export default function Menu({ menuOpen, handleClose }) {
   return (
     <Drawer
-      // variant='persistant'
       anchor='right'
       open={menuOpen}
       onClose={handleClose}
@@ -41,13 +40,6 @@ export default function Menu({ menuOpen, handleClose }) {
           <ListItemButton component={Link} href="/projects">
             <ListItemText disableTypography>
               <Typography variant='h3'>Projects</Typography>
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} href="/contact">
-            <ListItemText disableTypography>
-              <Typography variant='h3'>Contact</Typography>
             </ListItemText>
           </ListItemButton>
         </ListItem>
