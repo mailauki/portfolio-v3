@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import { grey } from '@mui/material/colors'
 
-import { Container } from '@mui/material'
+import { Container, Paper } from '@mui/material'
 
 import NavBar from './components/nav'
 import ThemeRegistry from './components/theme'
@@ -21,10 +21,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} style={{ margin: 0 }}>
         <ThemeRegistry options={{ key: 'mui' }}>
-          <Container maxWidth='lg' sx={{ bgcolor: grey[200] }} className={styles.main}>
-            <NavBar />
-            {children}
-          </Container>
+          <Paper elevation={0}>
+            <Container maxWidth='lg' className={styles.main}>
+              <NavBar />
+              {children}
+            </Container>
+          </Paper>
         </ThemeRegistry>
       </body>
     </html>

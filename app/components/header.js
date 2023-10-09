@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useContext } from 'react'
 
 import { AppBar, IconButton, Toolbar } from '@mui/material'
 
@@ -8,9 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import ModeNightIcon from '@mui/icons-material/ModeNight'
+import { Context } from '../utils/context';
 
 export default function Header({ menuOpen, handleClose }) {
-  const [darkMode, setDarkMode] = useState(false);
+  let { darkMode, setDarkMode } = useContext(Context)
 
   return (
     <AppBar
