@@ -16,8 +16,15 @@ export const metadata = {
     default: 'Julie Evans'
   },
   description: 'Portfolio for Julie Evans',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   icons: {
-    icon: '/logo-100.png',
+    // icon: '/icons/favicon.ico',
+    // icon: '/icons/icon.jpg',
+    icon: '/icons/icon.png',
   }
 }
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Avatar, Box, Button, Stack, Typography, Link as Anchor } from '@mui/material'
+import { Avatar, Box, Button, Stack, Typography, Link as Anchor, } from '@mui/material'
 
 import SocialLinks from '../components/social'
 import { GitHub } from '@mui/icons-material'
@@ -24,10 +24,19 @@ export default function AboutMe() {
         <Anchor variant='h6' component={Link} href="mailto:juliemevans17@gmail.com">juliemevans17@gmail.com</Anchor>
 
         <SocialLinks />
-        
+
         <Stack sx={{ m: 2, width: '100%' }}>
-          <Button startIcon={<GitHub />} variant='outlined' fullWidth>Github</Button>
-          <Typography variant='caption'>Code for this Portfolio</Typography>
+          <Button
+            startIcon={<GitHub />}
+            variant='outlined'
+            fullWidth
+            component={Link}
+            href='https://github.com/mailauki/portfolio-v3'
+            aria-label='Github repository link for this Portfolio'
+          >
+            Github
+          </Button>
+          <Typography variant='caption' >Code for this Portfolio</Typography>
         </Stack>
       </Stack>
       

@@ -38,6 +38,7 @@ export default function ProjectCard({ project }) {
             component='img'
             image={project.image}
             alt={`screenshot of ${project.title}`}
+            height="230"
           /> : <></>}
           <CardHeader
             title={project.title}

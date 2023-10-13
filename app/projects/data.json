@@ -1,14 +1,18 @@
 [
   {
-    "id": "ecommerce",
-    "title": "eCommerce",
-    "description": ["WIP: An e-commerce web application."],
-    "image": "",
+    "id": "pokedextracker",
+    "title": "pokedextracker.com",
+    "description": [
+      "A website to track your completion of a Living Pokedex.",
+      [
+        "Clone of pokedextracker.com using MUI."
+      ]
+    ],
+    "image": "/projects/pokedextracker.com.jpg",
     "links": {
-      "githubLink": "https://github.com/mailauki/ecommerce",
-      "demoLink": "https://ecommerce-o7ym.onrender.com"
+      "githubLink": "https://github.com/mailauki/pokedextracker.com"
     },
-    "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Render", "Material UI"]
+    "tags": ["TypeScript", "SCSS", "Material UI"]
   },
   {
     "id": "nearby-markets",
