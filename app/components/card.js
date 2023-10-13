@@ -31,20 +31,20 @@ export default function ProjectCard({ project }) {
   };
 
   return (
-    <Card sx={{ width: 345 }}>
+    <Card>
       <Stack justifyContent='space-between' sx={{ height: '100%', minHeight: project.image ? 416 : 170 }}>
         <Box>
           {project.image ? <CardMedia
             component='img'
             image={project.image}
             alt={`screenshot of ${project.title}`}
-            height="230"
           /> : <></>}
           <CardHeader
             title={project.title}
             subheader={project.description[0]}
+            sx={{ height: 112, alignItems: 'flex-start' }}
           />
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Collapse in={expanded} timeout='auto' unmountOnExit>
             <CardContent sx={{ pt: 0 }}>
               {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
 
