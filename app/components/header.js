@@ -21,10 +21,11 @@ export default function Header({ menuOpen, handleClose }) {
       position='fixed'
       elevation={0}
       sx={{
-        bgcolor: (theme) => alpha(theme.palette.background.paper, 0.5),
+        bgcolor: 'transparent',
+        // bgcolor: (theme) => alpha(theme.palette.background.default, 0.5),
+        backdropFilter: 'blur(10px)',
         color: 'text.primary',
-        zIndex: (theme) => theme.zIndex.drawer + 1,
-        backdropFilter: 'blur(10px)'
+        zIndex: (theme) => theme.zIndex.drawer + 1
       }}
     >
       <Toolbar sx={{ justifyContent: 'flex-end' }}>

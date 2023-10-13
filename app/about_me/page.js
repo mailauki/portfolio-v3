@@ -1,8 +1,13 @@
 import Link from 'next/link'
 
-import { Avatar, Box, Stack, Typography } from '@mui/material'
+import { Avatar, Box, Button, Stack, Typography, Link as Anchor } from '@mui/material'
 
 import SocialLinks from '../components/social'
+import { GitHub } from '@mui/icons-material'
+
+export const metadata = {
+  title: 'About Me',
+}
 
 export default function AboutMe() {
   return (
@@ -16,9 +21,14 @@ export default function AboutMe() {
           JE
         </Avatar>
 
-        <Typography variant='h6' color='primary' component={Link} href="mailto:juliemevans17@gmail.com">juliemevans17@gmail.com</Typography>
+        <Anchor variant='h6' component={Link} href="mailto:juliemevans17@gmail.com">juliemevans17@gmail.com</Anchor>
 
         <SocialLinks />
+        
+        <Stack sx={{ m: 2, width: '100%' }}>
+          <Button startIcon={<GitHub />} variant='outlined' fullWidth>Github</Button>
+          <Typography variant='caption'>Code for this Portfolio</Typography>
+        </Stack>
       </Stack>
       
       <Box sx={{ minWidth: 200, maxWidth: 600 }}>
