@@ -18,7 +18,7 @@ export const metadata = {
 export default function AboutMe() {
   return (
     <Grid container spacing={4} justifyContent='center' alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }}>
-      <Grid item xs={12} sm={9} md={4}>
+      <Grid item xs={12} sm={10} md={4}>
         <Stack sx={{ textAlign: 'center' }} alignItems='center'>
           <Avatar
             alt='Julie Evans'
@@ -52,7 +52,7 @@ export default function AboutMe() {
         </Stack>
       </Grid>
 
-      <Grid item xs={12} sm={9} md={8}>
+      <Grid item xs={12} sm={10} md={8}>
         <Summary />
       </Grid>
     </Grid>

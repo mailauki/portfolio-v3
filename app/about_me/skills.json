@@ -12,39 +12,51 @@
     "title": "JavaScript"
   },
   { 
-    "id": "ruby",
-    "title": "Ruby"
-  },
-  { 
     "id": "sql",
     "title": "SQL"
   },
   { 
-    "id": "typescript",
-    "title": "TypeScript"
+    "id": "ruby",
+    "title": "Ruby"
   },
   { 
     "id": "react-js",
     "title": "React JS"
   },
   { 
+    "id": "typescript",
+    "title": "TypeScript"
+  },
+  {
+    "id": "sqlite",
+    "title": "SQLite"
+  },
+  { 
     "id": "ruby-on-rails",
     "title": "Ruby on Rails"
-  },
-  { 
-    "id": "next-js",
-    "title": "Next JS"
-  },
-  { 
-    "id": "redux",
-    "title": "Redux"
   },
   { 
     "id": "postgres",
     "title": "PostgreSQL"
   },
   { 
+    "id": "redux",
+    "title": "Redux"
+  },
+  { 
+    "id": "next-js",
+    "title": "Next JS"
+  },
+  {
+    "id": "bootstrap",
+    "title": "Bootstrap"
+  },
+  { 
     "id": "jquery",
     "title": "jQuery"
+  },
+  {
+    "id": "scss",
+    "title": "SCSS"
   }
 ]
