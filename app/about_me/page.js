@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AboutMe() {
   return (
-    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} justifyContent='center'>
+    <Stack direction={{ xs: 'column', sm: 'column', md: 'row' }} spacing={4} justifyContent='center'>
       <Stack sx={{ textAlign: 'center' }} alignItems='center'>
         <Avatar
           alt='Julie Evans'

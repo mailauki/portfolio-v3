@@ -3,14 +3,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   min-height: 100vh;
-  min-height:100svh;
+  min-height: 100svh;
+  -webkit-backdrop-filter: brightness(95%);
+  backdrop-filter: brightness(95%);
   /* display: grid;
-  grid-template-rows:auto 1fr auto;
-  grid-template-columns:100%;
-  min-height:100vh;
-  min-height:100svh; */
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+  min-height: 100svh; */
 }
 
 .description {
