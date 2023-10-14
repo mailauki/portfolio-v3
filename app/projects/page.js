@@ -1,6 +1,6 @@
 import data from './data'
 
-import ProjectCard from '../components/card'
+import ProjectCard from './card'
 
 import { Grid } from '@mui/material'
 

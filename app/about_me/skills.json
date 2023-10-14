@@ -1,0 +1,50 @@
+[
+  { 
+    "id": "html",
+    "title": "HTML"
+  },
+  { 
+    "id": "css",
+    "title": "CSS"
+  },
+  { 
+    "id": "javascript",
+    "title": "JavaScript"
+  },
+  { 
+    "id": "ruby",
+    "title": "Ruby"
+  },
+  { 
+    "id": "sql",
+    "title": "SQL"
+  },
+  { 
+    "id": "typescript",
+    "title": "TypeScript"
+  },
+  { 
+    "id": "react-js",
+    "title": "React JS"
+  },
+  { 
+    "id": "ruby-on-rails",
+    "title": "Ruby on Rails"
+  },
+  { 
+    "id": "next-js",
+    "title": "Next JS"
+  },
+  { 
+    "id": "redux",
+    "title": "Redux"
+  },
+  { 
+    "id": "postgres",
+    "title": "PostgreSQL"
+  },
+  { 
+    "id": "jquery",
+    "title": "jQuery"
+  }
+]

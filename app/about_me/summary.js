@@ -2,12 +2,19 @@
 
 import styles from '../page.module.css'
 
-import { Card, CardContent, Typography } from '@mui/material'
 import { alpha } from '@mui/material/styles'
+
+import { Card, CardContent, Typography } from '@mui/material'
 
 export default function Summary() {
   return (
-    <Card variant='outlined' sx={{ minWidth: 200, maxWidth: 600, bgcolor: (theme) => alpha(theme.palette.background.default, 0.2) }}>
+    <Card
+      variant='outlined'
+      sx={{
+        height: '100%',
+        bgcolor: (theme) => alpha(theme.palette.background.default, 0.2)
+      }}
+    >
       <CardContent>
         <Typography paragraph className={styles.dropcap}>{`Hello, my name is Julie. I am a Web Developer from Texas. My hobbies are Linguistics, drawing, and collecting rocks.`}</Typography>
         

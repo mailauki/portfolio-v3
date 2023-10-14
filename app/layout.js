@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
           component='body'
           sx={{ backgroundImage: 'url("/ombre.png")' }}
           className={styles.background}
+          square
         >
           <NavBar />
           
