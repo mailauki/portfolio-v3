@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import createCache from '@emotion/cache'
 import { useServerInsertedHTML } from 'next/navigation'
 import { CacheProvider } from '@emotion/react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 import { Context } from '../utils/context'
 
@@ -14,6 +15,11 @@ export default function ThemeRegistry(props) {
   const { options, children } = props;
   
   const [darkMode, setDarkMode] = useState(false);
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  useEffect(() => {
+    prefersDarkMode ? setDarkMode(prefersDarkMode) : setDarkMode(darkMode)
+  }, [prefersDarkMode, darkMode])
 
   const theme = createTheme({
     palette: {

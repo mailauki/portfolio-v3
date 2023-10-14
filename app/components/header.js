@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 import { Context } from '../utils/context'
 
-// import { alpha } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 import { AppBar, IconButton, Toolbar } from '@mui/material'
 
@@ -14,7 +14,8 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import ModeNightIcon from '@mui/icons-material/ModeNight'
 
 export default function Header({ menuOpen, handleClose }) {
-  let { darkMode, setDarkMode } = useContext(Context)
+  let { darkMode, setDarkMode } = useContext(Context);
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   return (
     <AppBar
@@ -22,14 +23,17 @@ export default function Header({ menuOpen, handleClose }) {
       elevation={0}
       sx={{
         bgcolor: 'transparent',
-        // bgcolor: (theme) => alpha(theme.palette.background.default, 0.5),
         backdropFilter: 'blur(10px)',
         color: 'text.primary',
         zIndex: (theme) => theme.zIndex.drawer + 1
       }}
     >
       <Toolbar sx={{ justifyContent: 'flex-end' }}>
-        <IconButton color='inherit' onClick={() => setDarkMode(!darkMode)}>
+        <IconButton
+          color='inherit'
+          onClick={() => setDarkMode(!darkMode)}
+          disabled={prefersDarkMode}
+        >
           {darkMode ? <ModeNightIcon/> : <LightModeIcon />}
         </IconButton>
         <IconButton color='inherit' onClick={handleClose}>
