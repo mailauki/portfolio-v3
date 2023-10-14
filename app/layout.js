@@ -32,7 +32,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeRegistry options={{ key: 'mui' }}>
-        <Paper elevation={0} component='body' sx={{ backgroundImage: 'url("/ombre.png")', backgroundPosition: 'center bottom', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
+        <Paper
+          elevation={0}
+          component='body'
+          sx={{ backgroundImage: 'url("/ombre.png")' }}
+          className={styles.background}
+        >
           <NavBar />
           
           <main className={styles.main}>

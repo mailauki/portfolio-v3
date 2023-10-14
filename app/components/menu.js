@@ -8,6 +8,7 @@ import { Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typ
 import SocialLinks from './social'
 
 const drawerWidth = '100%';
+const drawerMaxWidth = 600;
 
 export default function Menu({ menuOpen, handleClose }) {
   const pathname = usePathname();
@@ -37,8 +38,9 @@ export default function Menu({ menuOpen, handleClose }) {
       onClick={handleClose}
       sx={{
         width: drawerWidth,
+        maxWidth: drawerMaxWidth,
         flexShrink: 0,
-        '.MuiDrawer-paper': { width: drawerWidth, boxSizing: 'border-box' },
+        '.MuiDrawer-paper': { width: drawerWidth, maxWidth: drawerMaxWidth, boxSizing: 'border-box' },
       }}
     >
       <Toolbar />

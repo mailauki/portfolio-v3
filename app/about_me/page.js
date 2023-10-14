@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Avatar, Button, Stack, Typography, Link as Anchor } from '@mui/material'
 
 import SocialLinks from '../components/social'
-import About from '../components/about'
+import Summary from '../components/summary'
 
 import { GitHub } from '@mui/icons-material'
 
@@ -42,7 +42,7 @@ export default function AboutMe() {
         </Stack>
       </Stack>
       
-      <About />
+      <Summary />
     </Stack>
   )
 }
