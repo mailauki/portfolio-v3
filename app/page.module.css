@@ -16,6 +16,11 @@
   min-height: 100svh; */
 }
 
+.dropcap::first-letter {
+  initial-letter: 2;
+  padding-right: 0.3rem;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

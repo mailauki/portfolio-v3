@@ -2,9 +2,9 @@
 
 import { useContext } from 'react'
 
-import { Context } from '../utils/context';
+import { Context } from '../utils/context'
 
-import { alpha } from '@mui/material/styles'
+// import { alpha } from '@mui/material/styles'
 
 import { AppBar, IconButton, Toolbar } from '@mui/material'
 
