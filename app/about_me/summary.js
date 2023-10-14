@@ -4,7 +4,7 @@ import styles from '../page.module.css'
 
 import { alpha } from '@mui/material/styles'
 
-import { Card, CardContent, Typography } from '@mui/material'
+import { Avatar, Card, CardContent, Typography } from '@mui/material'
 
 export default function Summary() {
   return (
@@ -25,6 +25,8 @@ export default function Summary() {
         <Typography paragraph>{`I'm experienced in React, JavaScript, and Ruby on Rails based programming. I have a Bachelors Degree in Integrative Studies with focuses in Linguistics and Anthropology. My understanding of Linguistics helps to provide a basis for ease in language learning, including programming languages.`}</Typography>
 
         <Typography paragraph fontStyle='italic'>{`I'm working towards learning Angular and Typescript, and anything else I come across.`}</Typography>
+
+        <Avatar src='/logo.png' alt='JE logo' sx={{ width: 100, height: 100, mx: 'auto' }}>JE</Avatar>
       </CardContent>
     </Card>
   )
