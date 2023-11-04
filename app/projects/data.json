@@ -1,11 +1,28 @@
 [
   {
+    "id": "tic-tic-toe-v2",
+    "title": "Tic-Tac-Toe 2",
+    "description": [
+      "A website for playing tic-tac-toe, either against the computer or a friend.",
+      [
+        "Tic-Tac-Toe revamp using Next JS and Material UI.",
+        "Added token emoji and color selection since previous version."
+      ]
+    ],
+    "image": "/projects/tic-tac-toe-v2.jpg",
+    "links": {
+      "githubLink": "https://github.com/mailauki/tic-tac-toe-v2",
+      "demoLink": "https://tic-tac-toe-v2-vert.vercel.app"
+    },
+    "tags": ["Next JS", "Vercel", "Material UI"]
+  },
+  {
     "id": "pokedextracker",
     "title": "pokedextracker.com",
     "description": [
       "A website to track your completion of a Living Pokedex.",
       [
-        "Clone of pokedextracker.com using MUI."
+        "Clone of pokedextracker.com using Material UI."
       ]
     ],
     "image": "/projects/pokedextracker.com.jpg",
@@ -35,7 +52,7 @@
     "id": "poke-tracker-next",
     "title": "PokeTracker 2",
     "description": [
-      "WIP: PokeTracker revamp using NextJS."
+      "WIP: PokeTracker revamp using Next JS."
     ],
     "image": "",
     "links": {
