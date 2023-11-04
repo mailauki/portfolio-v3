@@ -157,5 +157,54 @@
     },
     "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Heroku"],
     "date": "Jul 26, 2022"
+  },
+  {
+    "id": "tic-tic-toe-ruby",
+    "title": "OO-Tic-Tac-Toe",
+    "description": [
+      "Object Oriented Programming based CLI Tic-Tac-Toe game."
+    ],
+    "image": "",
+    "links": {
+      "githubLink": "https://github.com/mailauki/phase-3-oo-tic-tac-toe"
+    },
+    "tags": ["Ruby"],
+    "date": "Sep 1, 2021"
+  },
+  {
+    "id": "dune",
+    "title": "Dune",
+    "description": [
+      "Project for reviewing Dune books using Dune API.",
+      [
+        "View Dune books and review them, as well as add a reading status.",
+        "Filter books based on reading status, book title, authors, or the series the books belong to.",
+        "View the reviews made in a list."
+      ]
+    ],
+    "image": "/projects/dune.jpg",
+    "links": {
+      "githubLink": "https://github.com/mailauki/phase-2-project-dune"
+    },
+    "tags": ["React"],
+    "date": "Feb 22, 2022"
+  },
+  {
+    "id": "studio-ghibli",
+    "title": "Studio Ghibli",
+    "description": [
+      "Project using Studio Ghibli API.",
+      [
+        "View a list of all Studion Ghibli movies, and see more details of a movie if selected.",
+        "Mark weither they have watched a movie from the list, and filter the list's view to show the movies that have been marked as watched or not.",
+        "Use the filter to sort the list based on director, run time, or others."
+      ]
+    ],
+    "image": "/projects/studio-ghibli.jpg",
+    "links": {
+      "githubLink": "https://github.com/mailauki/phase-1-project-studio-ghibli"
+    },
+    "tags": ["HTML", "Vanilla JS"],
+    "date": "Dec 30, 2021"
   }
 ]
