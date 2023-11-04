@@ -11,6 +11,7 @@ import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chi
 import GitHubIcon from '@mui/icons-material/GitHub'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import moment from 'moment'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -42,7 +43,7 @@ export default function ProjectCard({ project }) {
           <Box sx={{ height: 112 }}>
             <CardHeader
               title={project.title}
-              action={<Typography color='text.secondary'>{project.date}</Typography>}
+              action={<Typography color='text.secondary'>{moment(project.date).format('MMM D')}</Typography>}
               sx={{ pb: 0 }}
             />
 
@@ -65,14 +66,15 @@ export default function ProjectCard({ project }) {
                   justifyContent='end'
                   alignItems='center'
                   spacing={1}
-                  sx={{ mt: 1 }}
+                  sx={{ mt: 2 }}
                 >
                 <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
-                <Typography>{project.date}</Typography>
+                <Typography>{moment(project.date).format('MMMM Do YYYY')}</Typography>
               </Stack> : <></>}
             </CardContent>
           </Collapse>
         </Box>
+
         <CardActions>
           <Button
             startIcon={<GitHubIcon />}
