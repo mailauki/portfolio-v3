@@ -159,12 +159,12 @@
     "date": "Jul 26, 2022"
   },
   {
-    "id": "tic-tic-toe-ruby",
+    "id": "oo-tic-tic-toe",
     "title": "OO-Tic-Tac-Toe",
     "description": [
       "Object Oriented Programming based CLI Tic-Tac-Toe game."
     ],
-    "image": "",
+    "image": "/projects/oo-tic-tac-toe.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/phase-3-oo-tic-tac-toe"
     },
