@@ -39,19 +39,34 @@ export default function ProjectCard({ project }) {
             image={project.image}
             alt={`screenshot of ${project.title}`}
           /> : <></>}
-          <CardHeader
-            title={project.title}
-            subheader={project.description[0]}
-            action={<Typography color='text.secondary'>{project.date}</Typography>}
-            sx={{ height: 112, alignItems: 'flex-start' }}
-          />
+          <Box sx={{ height: 112 }}>
+            <CardHeader
+              title={project.title}
+              action={<Typography color='text.secondary'>{project.date}</Typography>}
+              sx={{ pb: 0 }}
+            />
+
+            <CardContent sx={{ pt: 0 }}>
+              <Typography color='text.secondary'>
+                {project.description[0]}
+              </Typography>
+            </CardContent>
+          </Box>
+
           <Collapse in={expanded} timeout='auto' unmountOnExit>
             <CardContent sx={{ pt: 0 }}>
               {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
 
               <Stack direction='row' spacing={1} flexWrap='wrap' useFlexGap>{project.tags.map((tag) => <Chip key={tag} label={tag} />)}</Stack>
 
-              {project.date ? <Stack direction='row' justifyContent='end' alignItems='center' spacing={1}>
+              {project.date ? 
+                <Stack
+                  direction='row'
+                  justifyContent='end'
+                  alignItems='center'
+                  spacing={1}
+                  sx={{ mt: 1 }}
+                >
                 <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
                 <Typography>{project.date}</Typography>
               </Stack> : <></>}
