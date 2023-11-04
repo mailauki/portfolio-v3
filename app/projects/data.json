@@ -14,7 +14,8 @@
       "githubLink": "https://github.com/mailauki/tic-tac-toe-v2",
       "demoLink": "https://tic-tac-toe-v2-vert.vercel.app"
     },
-    "tags": ["Next JS", "Vercel", "Material UI"]
+    "tags": ["Next JS", "Vercel", "Material UI"],
+    "date": "Oct 29, 2023"
   },
   {
     "id": "pokedextracker",
@@ -29,7 +30,8 @@
     "links": {
       "githubLink": "https://github.com/mailauki/pokedextracker.com"
     },
-    "tags": ["TypeScript", "SCSS", "Material UI"]
+    "tags": ["TypeScript", "SCSS", "Material UI"],
+    "date": "Sep 24, 2023"
   },
   {
     "id": "nearby-markets",
@@ -46,7 +48,8 @@
       "githubLink": "https://github.com/chingu-voyages/v42-geckos-team-20",
       "demoLink": "https://v42-geckos-20.vercel.app"
     },
-    "tags": ["React", "Supabase", "Vercel", "Material UI"]
+    "tags": ["React", "Supabase", "Vercel", "Material UI"],
+    "date": "Feb 12, 2023"
   },
   {
     "id": "poke-tracker-next",
@@ -77,7 +80,8 @@
       "githubLink": "https://github.com/mailauki/tic-tac-toe", 
       "demoLink": "https://mailauki-tic-tac-toe.netlify.app"
     },
-    "tags": ["React", "Netlify", "Chakra UI"]
+    "tags": ["React", "Netlify", "Chakra UI"],
+    "date": "Nov 21, 2022"
   },
   { 
     "id": "poke-tracker",
@@ -95,7 +99,8 @@
       "githubLink": "https://github.com/mailauki/poke-tracker", 
       "demoLink": "https://poke-tracker.netlify.app"
     },
-    "tags": ["React", "TypeScript", "Redux", "Netlify", "Material UI"]
+    "tags": ["React", "TypeScript", "Redux", "Netlify", "Material UI"],
+    "date": "Nov 15, 2022"
   },
   { 
     "id": "le-banque-du-porcine",
@@ -113,7 +118,8 @@
       "githubLink": "https://github.com/mailauki/le-banque-du-porcine-version-2", 
       "demoLink": "https://le-banque-du-porcine.netlify.app"
     },
-    "tags": ["Next JS", "Redux", "Netlify", "Supabase", "Material UI", "Swiper JS"] 
+    "tags": ["Next JS", "Redux", "Netlify", "Supabase", "Material UI", "Swiper JS"],
+    "date": "Oct 17, 2022"
   },
   { 
     "id": "pic-worthy",
@@ -131,7 +137,8 @@
       "githubLink": "https://github.com/mailauki/pic-worthy", 
       "demoLink": "https://pic-worthy.onrender.com"
     },
-    "tags": ["React", "Redux", "Ruby", "Rails", "PostgreSQL", "Render", "Material UI", "Swiper JS"] 
+    "tags": ["React", "Redux", "Ruby", "Rails", "PostgreSQL", "Render", "Material UI", "Swiper JS"],
+    "date": "Nov 11, 2022"
   },
   { 
     "id": "cat-tube",
@@ -148,6 +155,7 @@
     "links": {
       "githubLink": "https://github.com/mailauki/phase-4-project-cattube"
     },
-    "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Heroku"] 
+    "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Heroku"],
+    "date": "Jul 26, 2022"
   }
 ]

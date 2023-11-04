@@ -42,6 +42,7 @@ export default function ProjectCard({ project }) {
           <CardHeader
             title={project.title}
             subheader={project.description[0]}
+            action={<Typography color='text.secondary'>{project.date}</Typography>}
             sx={{ height: 112, alignItems: 'flex-start' }}
           />
           <Collapse in={expanded} timeout='auto' unmountOnExit>
@@ -49,6 +50,11 @@ export default function ProjectCard({ project }) {
               {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
 
               <Stack direction='row' spacing={1} flexWrap='wrap' useFlexGap>{project.tags.map((tag) => <Chip key={tag} label={tag} />)}</Stack>
+
+              {project.date ? <Stack direction='row' justifyContent='end' alignItems='center' spacing={1}>
+                <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
+                <Typography>{project.date}</Typography>
+              </Stack> : <></>}
             </CardContent>
           </Collapse>
         </Box>
