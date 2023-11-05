@@ -1,5 +1,26 @@
 [
   {
+    "id":"studio-ghibli-v2",
+    "title":"Studio Ghibli 2",
+    "description": [
+      "WIP: Studio Ghibi Watchlist revamp using Next JS."
+    ],
+    "image": "",
+    "links": {
+      "githubLink": "",
+      "demoLink": ""
+    },
+    "tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
+    "inspiration" : [
+      "Based on ",
+      {
+        "text": "previous project",
+        "link": "https://github.com/mailauki/phase-1-project-studio-ghibli"
+      },
+      " using Vanilla JavaScript."
+    ]
+  },
+  {
     "id": "tic-tic-toe-v2",
     "title": "Tic-Tac-Toe 2",
     "description": [
@@ -15,7 +36,15 @@
       "demoLink": "https://tic-tac-toe-v2-vert.vercel.app"
     },
     "tags": ["Next JS", "Vercel", "Material UI"],
-    "date": "2023-10-29"
+    "date": "2023-10-29",
+    "inspiration": [
+      "Based on ",
+      {
+        "text": "previous project",
+        "link": "https://github.com/mailauki/tic-tac-toe"
+      },
+      " using React."
+    ]
   },
   {
     "id": "pokedextracker",
@@ -31,7 +60,15 @@
       "githubLink": "https://github.com/mailauki/pokedextracker.com"
     },
     "tags": ["TypeScript", "SCSS", "Material UI"],
-    "date": "2023-09-24"
+    "date": "2023-09-24",
+    "inspo": [
+      "Clone of ",
+      {
+        "text": "pokedextracker.com",
+        "link": "https://github.com/pokedextracker/pokedextracker.com"
+      },
+      "."
+    ]
   },
   {
     "id": "nearby-markets",
@@ -63,7 +100,15 @@
       "demoLink": "https://poketracker.netlify.app"
     }, 
     "tags": ["Next JS", "Supabase", "Netlify", "Material UI"],
-    "date": "2022-01-02"
+    "date": "2023-01-02",
+    "inspo": [
+      "Based on ",
+      {
+        "text": "previous project",
+        "link": "https://github.com/mailauki/poke-tracker"
+      },
+      " using React."
+    ]
   },
   {
     "id": "tic-tic-toe",
@@ -82,7 +127,15 @@
       "demoLink": "https://mailauki-tic-tac-toe.netlify.app"
     },
     "tags": ["React", "Netlify", "Chakra UI"],
-    "date": "2022-11-21"
+    "date": "2022-11-21",
+    "inspiration": [
+      "Based on ",
+      {
+        "text": "previous project",
+        "link": "https://github.com/mailauki/phase-3-oo-tic-tac-toe"
+      },
+      " using Ruby."
+    ]
   },
   { 
     "id": "poke-tracker",
@@ -139,7 +192,21 @@
       "demoLink": "https://pic-worthy.onrender.com"
     },
     "tags": ["React", "Redux", "Ruby", "Rails", "PostgreSQL", "Render", "Material UI", "Swiper JS"],
-    "date": "2022-11-11"
+    "date": "2022-11-11",
+    "inspiration": [
+      "Based from ", 
+      {
+        "text": "Instagram",
+        "link": "https://www.instagram.com"
+      },
+      ". ",
+      "Design inspired by ",
+      {
+        "text": "Insthetic Social Media Mobile App",
+        "link": "https://dribbble.com/shots/17122481-Insthetic-Social-Media-Mobile-App?utm_source=Clipboard_Shot&utm_campaign=DhimasRasyad&utm_content=Insthetic%20Social%20Media%20Mobile%20App&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=DhimasRasyad&utm_content=Insthetic%20Social%20Media%20Mobile%20App&utm_medium=Social_Share"
+      },
+      "."
+    ]
   },
   { 
     "id": "cat-tube",
@@ -157,7 +224,15 @@
       "githubLink": "https://github.com/mailauki/phase-4-project-cattube"
     },
     "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Heroku"],
-    "date": "2022-07-26"
+    "date": "2022-07-26",
+    "inspiration": [
+      "Based from ", 
+      {
+        "text": "YouTube",
+        "link": "https://www.youtube.com"
+      },
+      "."
+    ]
   },
   {
     "id": "oo-tic-tic-toe",

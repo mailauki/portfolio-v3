@@ -6,11 +6,12 @@ import Link from 'next/link'
 
 import { styled } from '@mui/material/styles'
 
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Stack, Typography } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Link as Anchor, Stack, Typography } from '@mui/material'
 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+
 import moment from 'moment'
 
 const ExpandMore = styled((props) => {
@@ -43,7 +44,7 @@ export default function ProjectCard({ project }) {
           <Box sx={{ height: 112 }}>
             <CardHeader
               title={project.title}
-              action={<Typography color='text.secondary'>{moment(project.date).format('MMM D')}</Typography>}
+              action={<Typography color='text.secondary'>{project.date ? moment(project.date).format('MMM D') : ''}</Typography>}
               sx={{ pb: 0 }}
             />
 
@@ -58,7 +59,25 @@ export default function ProjectCard({ project }) {
             <CardContent sx={{ pt: 0 }}>
               {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
 
-              <Stack direction='row' spacing={1} flexWrap='wrap' useFlexGap>{project.tags.map((tag) => <Chip key={tag} label={tag} />)}</Stack>
+              <Stack
+                direction='row'
+                spacing={1}
+                flexWrap='wrap'
+                useFlexGap
+                sx={{ mb: 2 }}
+              >
+                {project.tags.map((tag) => <Chip key={tag} label={tag} />)}
+              </Stack>
+
+              <Typography>
+                {project.inspiration ? project.inspiration.map((part) => {
+                  if (typeof part !== 'string') {
+                    // eslint-disable-next-line react/jsx-key
+                    return <Anchor href={part.link}>{part.text}</Anchor>
+                  }
+                  else return part
+                }) : <></>}
+              </Typography>
 
               {project.date ? 
                 <Stack
@@ -66,7 +85,7 @@ export default function ProjectCard({ project }) {
                   justifyContent='end'
                   alignItems='center'
                   spacing={1}
-                  sx={{ mt: 2 }}
+                  sx={{ mt: 1 }}
                 >
                 <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
                 <Typography>{moment(project.date).format('MMMM Do YYYY')}</Typography>
