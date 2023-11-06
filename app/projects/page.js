@@ -7,6 +7,7 @@ import { Grid } from '@mui/material'
 export const metadata = {
   title: 'Projects',
 }
+
 export default function Projects() {
   const desc = data.sort((a, b) => {
     return new Date(a.date) - new Date(b.date); // descending

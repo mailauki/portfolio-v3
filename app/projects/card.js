@@ -4,15 +4,16 @@ import { useState } from 'react'
 
 import Link from 'next/link'
 
+import moment from 'moment'
+
 import { styled } from '@mui/material/styles'
 
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Link as Anchor, Stack, Typography } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Link as Anchor, Stack, Typography, Tooltip } from '@mui/material'
 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-
-import moment from 'moment'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -44,7 +45,8 @@ export default function ProjectCard({ project }) {
           <Box sx={{ height: 112 }}>
             <CardHeader
               title={project.title}
-              action={<Typography color='text.secondary'>{project.date ? moment(project.date).format('MMM D') : ''}</Typography>}
+              // action={<Typography color='text.secondary'>{project.date ? moment(project.date).format('MMM D') : ''}</Typography>}
+              // action={<IconButton component={Link} href={`/projects/${project.id}`}><MoreVertIcon /></IconButton>}
               sx={{ pb: 0 }}
             />
 
@@ -101,26 +103,48 @@ export default function ProjectCard({ project }) {
             component={Link}
             href={project.links.githubLink}
             target='_blank'
+            aria-label='github repository link'
           >
             GitHub
           </Button>
+
           {project.links.demoLink ? <Button
             startIcon={<OpenInNewIcon/>}
             variant='outlined'
             component={Link}
             href={project.links.demoLink}
             target='_blank'
+            aria-label='demo link'
           >
             Demo
           </Button> : <></>}
-          <ExpandMore
+
+          <Stack
+            sx={{
+              flexGrow: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'flex-end'
+            }}
+          >
+            <Tooltip title='More' placement='top'>
+              <IconButton
+                component={Link}
+                href={`/projects/${project.id}`}
+                aria-label='show more'
+              >
+                <MoreVertIcon />
+              </IconButton>
+            </Tooltip>
+          </Stack>
+
+          {/* <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
             aria-expanded={expanded}
             aria-label="show more"
           >
             <ExpandMoreIcon />
-          </ExpandMore>
+          </ExpandMore> */}
         </CardActions>
       </Stack>
     </Card>
