@@ -7,8 +7,8 @@
     ],
     "image": "",
     "links": {
-      "githubLink": "",
-      "demoLink": ""
+      "githubLink": "https://github.com/mailauki/studio-ghibli-v2",
+      "demoLink": "https://studio-ghibli-v2.vercel.app"
     },
     "tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
     "inspiration" : [

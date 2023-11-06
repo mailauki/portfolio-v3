@@ -8,12 +8,11 @@ import moment from 'moment'
 
 import { styled } from '@mui/material/styles'
 
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Link as Anchor, Stack, Typography, Tooltip } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Link as Anchor, Stack, Typography, CardActionArea } from '@mui/material'
 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import MoreVertIcon from '@mui/icons-material/MoreVert'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -37,63 +36,56 @@ export default function ProjectCard({ project }) {
     <Card>
       <Stack justifyContent='space-between' sx={{ height: '100%', minHeight: project.image ? 416 : 170 }}>
         <Box>
-          {project.image ? <CardMedia
-            component='img'
-            image={project.image}
-            alt={`screenshot of ${project.title}`}
-          /> : <></>}
-          <Box sx={{ height: 112 }}>
-            <CardHeader
-              title={project.title}
-              // action={<Typography color='text.secondary'>{project.date ? moment(project.date).format('MMM D') : ''}</Typography>}
-              // action={<IconButton component={Link} href={`/projects/${project.id}`}><MoreVertIcon /></IconButton>}
-              sx={{ pb: 0 }}
-            />
+          <CardActionArea
+            component={Link}
+            href={`/projects/${project.id}`}
+          >
+            {project.image ? <CardMedia
+              component='img'
+              image={project.image}
+              alt={`screenshot of ${project.title}`}
+            /> : <></>}
+            <Box sx={{ height: 112 }}>
+              <CardHeader
+                title={project.title}
+                sx={{ pb: 0 }}
+              />
 
-            <CardContent sx={{ pt: 0 }}>
-              <Typography color='text.secondary'>
-                {project.description[0]}
-              </Typography>
-            </CardContent>
-          </Box>
+              <CardContent sx={{ pt: 0 }}>
+                <Typography color='text.secondary'>
+                  {project.description[0]}
+                </Typography>
+              </CardContent>
+            </Box>
 
-          <Collapse in={expanded} timeout='auto' unmountOnExit>
-            <CardContent sx={{ pt: 0 }}>
-              {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
+            <Collapse in={expanded} timeout='auto' unmountOnExit>
+              <CardContent sx={{ pt: 0 }}>
+                {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
 
-              <Stack
-                direction='row'
-                spacing={1}
-                flexWrap='wrap'
-                useFlexGap
-                sx={{ mb: 2 }}
-              >
-                {project.tags.map((tag) => <Chip key={tag} label={tag} />)}
-              </Stack>
-
-              <Typography>
-                {project.inspiration ? project.inspiration.map((part) => {
-                  if (typeof part !== 'string') {
-                    // eslint-disable-next-line react/jsx-key
-                    return <Anchor href={part.link}>{part.text}</Anchor>
-                  }
-                  else return part
-                }) : <></>}
-              </Typography>
-
-              {project.date ? 
                 <Stack
                   direction='row'
-                  justifyContent='end'
-                  alignItems='center'
                   spacing={1}
-                  sx={{ mt: 1 }}
+                  flexWrap='wrap'
+                  useFlexGap
+                  sx={{ mb: 2 }}
                 >
-                <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
-                <Typography>{moment(project.date).format('MMMM Do YYYY')}</Typography>
-              </Stack> : <></>}
-            </CardContent>
-          </Collapse>
+                  {project.tags.map((tag) => <Chip key={tag} label={tag} />)}
+                </Stack>
+
+                {project.date ? 
+                  <Stack
+                    direction='row'
+                    justifyContent='end'
+                    alignItems='center'
+                    spacing={1}
+                    sx={{ mt: 1 }}
+                  >
+                  <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
+                  <Typography>{moment(project.date).format('MMM D YYYY')}</Typography>
+                </Stack> : <></>}
+              </CardContent>
+            </Collapse>
+          </CardActionArea>
         </Box>
 
         <CardActions>
@@ -119,32 +111,14 @@ export default function ProjectCard({ project }) {
             Demo
           </Button> : <></>}
 
-          <Stack
-            sx={{
-              flexGrow: 1,
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end'
-            }}
-          >
-            <Tooltip title='More' placement='top'>
-              <IconButton
-                component={Link}
-                href={`/projects/${project.id}`}
-                aria-label='show more'
-              >
-                <MoreVertIcon />
-              </IconButton>
-            </Tooltip>
-          </Stack>
-
-          {/* <ExpandMore
+          <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
             aria-expanded={expanded}
             aria-label="show more"
           >
             <ExpandMoreIcon />
-          </ExpandMore> */}
+          </ExpandMore>
         </CardActions>
       </Stack>
     </Card>

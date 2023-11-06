@@ -23,14 +23,27 @@ export default function ProjectPage({ params }) {
       </Button>
 
       <Card>
+        {/* {project.image ? <CardMedia
+          id="project-page-img-top"
+          component='img'
+          image={project.image}
+          alt={`screenshot of ${project.title}`}
+        /> : <></>} */}
         <CardHeader
           title={project.title}
           subheader={project.description[0]}
         />
 
+        {project.image ? <CardMedia
+          id="project-page-img-top"
+          component='img'
+          image={project.image}
+          alt={`screenshot of ${project.title}`}
+        /> : <></>}
+
         <Stack direction='row' justifyContent='space-between'>
           <CardContent>
-            {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2' color='text.secondary'>• {bullet}</Typography>) : <></>}
+            {project.description[1] ? project.description[1].map((bullet, index) => <Typography key={index} paragraph variant='body2'>• {bullet}</Typography>) : <></>}
 
             <Typography paragraph>
               {project.inspiration ? project.inspiration.map((part) => {
@@ -54,12 +67,36 @@ export default function ProjectPage({ params }) {
           </CardContent>
 
           {project.image ? <CardMedia
+            id="project-page-img-right"
             component='img'
             image={project.image}
             alt={`screenshot of ${project.title}`}
-            sx={{ width: '45%', height: 'fit-content' }}
+            sx={{ width: '50%', height: 'fit-content' }}
           /> : <></>}
         </Stack>
+
+        <CardContent>
+          <Stack
+            sx={{
+              flexGrow: 1,
+              justifyContent: 'flex-end',
+              alignItems: 'flex-end'
+            }}
+          >
+            {project.date ? 
+              <Stack
+                direction='row'
+                justifyContent='end'
+                alignItems='center'
+                spacing={1}
+                sx={{ mt: 1 }}
+              >
+                <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
+                <Typography>{moment(project.date).format('MMM D YYYY')}</Typography>
+              </Stack> : <></>
+            }
+          </Stack>
+        </CardContent>
 
         <CardActions>
           <Button
@@ -83,27 +120,6 @@ export default function ProjectPage({ params }) {
           >
             Demo
           </Button> : <></>}
-
-          <Stack
-            sx={{
-              flexGrow: 1,
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end'
-            }}
-          >
-            {project.date ? 
-              <Stack
-                direction='row'
-                justifyContent='end'
-                alignItems='center'
-                spacing={1}
-                sx={{ mt: 1, mr: 1 }}
-              >
-                <Typography variant='caption' color='text.secondary'>Last Updated</Typography>
-                <Typography>{moment(project.date).format('MMMM Do YYYY')}</Typography>
-              </Stack> : <></>
-            }
-          </Stack>
         </CardActions>
       </Card>
     </>
