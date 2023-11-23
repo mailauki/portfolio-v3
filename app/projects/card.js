@@ -8,7 +8,7 @@ import moment from 'moment'
 
 import { styled } from '@mui/material/styles'
 
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Link as Anchor, Stack, Typography, CardActionArea } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Collapse, IconButton, Stack, Typography, CardActionArea } from '@mui/material'
 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'

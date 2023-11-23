@@ -12,11 +12,10 @@ export default function Skills() {
       variant='outlined'
       sx={{
         bgcolor: (theme) => alpha(theme.palette.background.default, 0.2)
-        // bgcolor: 'transparent'
       }}
     >
       <CardHeader
-        title={<Typography>Skills</Typography>}
+        title={<Typography variant='h6'>Skills</Typography>}
         subheader={<Typography variant='caption' sx={{ textTransform: 'uppercase' }}>still learning and mastering</Typography>}
         sx={{ pb: 0 }}
       />

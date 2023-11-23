@@ -1,14 +1,10 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
 import styles from './page.module.css'
 
-import { Container, Paper } from '@mui/material'
+import { Container, Paper, Toolbar } from '@mui/material'
 
 import NavBar from './components/nav'
 import ThemeRegistry from './components/theme'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: {
@@ -16,14 +12,7 @@ export const metadata = {
     default: 'Julie Evans'
   },
   description: 'Portfolio for Julie Evans',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   icons: {
-    // icon: '/icons/favicon.ico',
-    // icon: '/icons/icon.jpg',
     icon: '/icons/icon.png',
   }
 }
@@ -40,11 +29,10 @@ export default function RootLayout({ children }) {
           square
         >
           <NavBar />
-          
           <main className={styles.main}>
-            <Container maxWidth='lg'>
-              {children}
-            </Container>
+            <Toolbar />
+            {children}
+            <Toolbar />
           </main>
         </Paper>
       </ThemeRegistry>

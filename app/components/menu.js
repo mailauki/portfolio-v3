@@ -20,6 +20,8 @@ export default function Menu({ menuOpen, handleClose }) {
       return 1;
     case '/projects':
       return 2;
+    case '/experience':
+      return 3;
     default:
       return 0;
   }}
@@ -98,6 +100,25 @@ export default function Menu({ menuOpen, handleClose }) {
                 color={selectedIndex === 2 ? 'primary' : 'inherit'}
               >
                 Projects
+              </Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        
+        <ListItem disablePadding>
+          <ListItemButton
+            selected={selectedIndex === 3}
+            onClick={(event) => handleListItemClick(event, 3)}
+            component={Link}
+            href='/experience'
+            sx={{ textAlign: 'center' }}
+          >
+            <ListItemText disableTypography>
+              <Typography
+                variant='h3'
+                color={selectedIndex === 3 ? 'primary' : 'inherit'}
+              >
+                Experience
               </Typography>
             </ListItemText>
           </ListItemButton>

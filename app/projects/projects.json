@@ -15,7 +15,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "https://github.com/mailauki/phase-1-project-studio-ghibli"
+        "link": "/projects/studio-ghibli"
       },
       " using Vanilla JavaScript."
     ]
@@ -41,7 +41,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "https://github.com/mailauki/tic-tac-toe"
+        "link": "/projects/tic-tic-toe"
       },
       " using React."
     ]
@@ -50,10 +50,7 @@
     "id": "pokedextracker",
     "title": "pokedextracker.com",
     "description": [
-      "A website to track your completion of a Living Pokedex.",
-      [
-        "Clone of pokedextracker.com using Material UI."
-      ]
+      "A website to track your completion of a Living Pokedex."
     ],
     "image": "/projects/pokedextracker.com.jpg",
     "links": {
@@ -61,13 +58,13 @@
     },
     "tags": ["TypeScript", "SCSS", "Material UI"],
     "date": "2023-09-24",
-    "inspo": [
+    "inspiration": [
       "Clone of ",
       {
         "text": "pokedextracker.com",
         "link": "https://github.com/pokedextracker/pokedextracker.com"
       },
-      "."
+      " using Material UI."
     ]
   },
   {
@@ -132,7 +129,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "https://github.com/mailauki/phase-3-oo-tic-tac-toe"
+        "link": "/projects/oo-tic-tic-toe"
       },
       " using Ruby."
     ]
@@ -271,8 +268,8 @@
     "description": [
       "Project using Studio Ghibli API.",
       [
-        "View a list of all Studion Ghibli movies, and see more details of a movie if selected.",
-        "Mark weither they have watched a movie from the list, and filter the list's view to show the movies that have been marked as watched or not.",
+        "View a list of all Studio Ghibli movies, and see more details of a movie if selected.",
+        "Mark whether they have watched a movie from the list, and filter the list's view to show the movies that have been marked as watched or not.",
         "Use the filter to sort the list based on director, run time, or others."
       ]
     ],
