@@ -1,7 +1,33 @@
 [
   {
-    "id":"studio-ghibli-v2",
-    "title":"Studio Ghibli 2",
+    "id": "poke-tracker-v3",
+    "title": "PokeTracker 3",
+    "description": [
+      "WIP: PokeTracker revamp using Next JS."
+    ],
+    "image": "",
+    "links": {
+      "githubLink": "https://github.com/mailauki/poketracker-v3",
+      "demoLink": "https://poketracker-v3.vercel.app/"
+    },
+    "tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
+    "inspiration": [
+      "Based on ",
+      {
+        "text": "pokedextracker.com",
+        "link": "https://github.com/pokedextracker/pokedextracker.com"
+      },
+      " and ",
+      {
+        "text": "previous project",
+        "link": "/projects/poke-tracker"
+      },
+      "."
+    ]
+  },
+  {
+    "id": "studio-ghibli-v2",
+    "title": "Studio Ghibli 2",
     "description": [
       "WIP: Studio Ghibi Watchlist revamp using Next JS."
     ],
