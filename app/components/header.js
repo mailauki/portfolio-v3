@@ -1,36 +1,35 @@
 'use client'
 
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import { Context } from '../utils/context'
 
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-import { AppBar, IconButton, Toolbar, alpha, useTheme } from '@mui/material'
+import { AppBar, IconButton, Toolbar, alpha, useScrollTrigger, useTheme } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import ModeNightIcon from '@mui/icons-material/ModeNight'
-import ThemeRegistry from './theme'
 
 export default function Header({ menuOpen, handleClose }) {
   let { darkMode, setDarkMode } = useContext(Context);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [isTop, setIsTop] = useState(window.scrollY==0);
+  // const [isTop, setIsTop] = useState(window.scrollY==0);
   const theme = useTheme();
+  const scrollTrigger = useScrollTrigger();
 
-  window.addEventListener("scroll", function() {
-    setIsTop(window.scrollY==0)
-    ThemeRegistry
-  })
+  // window.addEventListener("scroll", function() {
+  //   setIsTop(window.scrollY==0)
+  // })
 
   return (
     <AppBar
       position='fixed'
       elevation={0}
       sx={{
-        bgcolor: isTop ? 'transparent' : alpha(theme.palette.common.white, 0.25),
+        bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.common.white, 0.25),
         backdropFilter: 'blur(10px)',
         color: 'text.primary',
         width: '95%',
