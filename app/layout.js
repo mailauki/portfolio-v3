@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll="0">
       <ThemeRegistry options={{ key: 'mui' }}>
         <Paper
           elevation={0}
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         >
           <NavBar />
           <main className={styles.main}>
-            <Toolbar />
+            <Toolbar sx={{ marginTop: 3 }} />
             {children}
             <Toolbar />
           </main>
