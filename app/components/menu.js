@@ -125,7 +125,14 @@ export default function Menu({ menuOpen, handleClose }) {
         </ListItem>
       </List>
 
-      <Box sx={{ position: 'absolute', bottom: 40, right: 60 }}>
+      <Box
+        sx={{
+          position: 'absolute', 
+          right: '2.5%',
+          top: 'auto',
+          bottom: '2.5%'
+        }}
+      >
         <SocialLinks />
       </Box>
     </Drawer>
