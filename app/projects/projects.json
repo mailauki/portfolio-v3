@@ -1,16 +1,17 @@
 [
   {
-    "id": "poke-tracker-v3",
-    "title": "PokeTracker 3",
+    "id": "poke-tracker-v2",
+    "title": "PokeTracker 2",
     "description": [
-      "WIP: PokeTracker revamp using Next JS."
+      "WIP: PokeTracker revamp using Next JS and PokeApi."
     ],
-    "image": "",
+    "image": "/projects/poketracker-v2.jpg",
     "links": {
-      "githubLink": "https://github.com/mailauki/poketracker-v3",
-      "demoLink": "https://poketracker-v3.vercel.app/"
+      "githubLink": "https://github.com/mailauki/poketracker",
+      "demoLink": "https://poketracker-one.vercel.app"
     },
-    "tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
+    "tags": ["Next JS", "TypeScript", "Vercel", "Tailwind CSS"],
+    "date": "2024-1-28",
     "inspiration": [
       "Based on ",
       {
@@ -31,12 +32,13 @@
     "description": [
       "WIP: Studio Ghibi Watchlist revamp using Next JS."
     ],
-    "image": "",
+    "image": "/projects/studio-ghibli-v2.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/studio-ghibli-v2",
       "demoLink": "https://studio-ghibli-v2.vercel.app"
     },
     "tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
+		"date": "2023-11-22",
     "inspiration" : [
       "Based on ",
       {
@@ -110,28 +112,6 @@
     },
     "tags": ["React", "Supabase", "Vercel", "Material UI"],
     "date": "2023-02-12"
-  },
-  {
-    "id": "poke-tracker-next",
-    "title": "PokeTracker 2",
-    "description": [
-      "WIP: PokeTracker revamp using Next JS."
-    ],
-    "image": "",
-    "links": {
-      "githubLink": "https://github.com/mailauki/poke-tracker-next",
-      "demoLink": "https://poketracker.netlify.app"
-    }, 
-    "tags": ["Next JS", "Supabase", "Netlify", "Material UI"],
-    "date": "2023-01-02",
-    "inspo": [
-      "Based on ",
-      {
-        "text": "previous project",
-        "link": "https://github.com/mailauki/poke-tracker"
-      },
-      " using React."
-    ]
   },
   {
     "id": "tic-tic-toe",

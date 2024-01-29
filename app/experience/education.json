@@ -2,16 +2,16 @@
   {
     "name": "Flatiron School",
     "dates": "October 2021 - September 2022",
-    "description": "Software Engineering program covering the fundamentals of Full-Stack Web Development.",
+    "description": ["Software Engineering program covering the fundamentals of Full-Stack Web Development."],
     "avatar-source": "https://yt3.googleusercontent.com/TOyxs2KlZwOD6CUDIz1dUQBi8FKUgDdznvP60L-H6XdxyNR3S2jZQ27TncQDiP5DcQQxWkqbqNk=s900-c-k-c0x00ffffff-no-rj",
-    "avatar": "/flatiron.jpg"
+    "avatar": "/experience/flatiron.jpg"
   },
   {
     "name": "University of North Texas",
     "location": "Denton, TX",
     "dates": "June 2016 - May 2020",
-    "description": "Bachelor of Arts degree in Integrative Studies with focus in Anthropology, Linguistics, and International Studies.",
+    "description": ["Bachelor of Arts degree in Integrative Studies with focus in Anthropology, Linguistics, and International Studies."],
     "avatar-source": "https://mobile.unt.edu/sites/all/images/mobile-app-icon-eagle.png",
-    "avatar": "/unt.png"
+    "avatar": "/experience/unt.png"
   }
 ]

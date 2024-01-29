@@ -3,24 +3,27 @@
     "company": "PingWind, Inc.",
     "jobTitle": "Web Developer",
     "dates": "May 2023 - Present",
-    "decription": [
-      "..."
-    ]
-  },
+    "description": [
+    ],
+    "avatar-source": "https://www.pingwind.com",
+    "avatar": "/experience/pingwind.jpg"
+	},
   {
     "company": "Chingu",
     "jobTitle": "Software Engineer",
     "dates": "January 2023 - February 2023",
-    "decription": [
+    "description": [
       "Worked as part of a team of 5 engineers to build an e-commerce web application, using React.",
       "Used a combination of Figma and GitHub to plan, organize, and coordinate the process with my team."
-    ]
+    ],
+    "avatar-source": "https://www.chingu.io",
+    "avatar": "/experience/chingu.jpg"
   },
   {
     "company": "Naqada Studio",
     "jobTitle": "Freelance Translator",
     "dates": "May 2021",
-    "decription": [
+    "description": [
       "Translated 10 episodes of an anime TV show from Japanese into English.",
       "Listened to audio from video to aid in translating the Japanese dialogue transcription."
     ]
@@ -29,9 +32,11 @@
     "company": "TED Conferences LLC",
     "jobTitle": "Translator",
     "dates": "October 2020 - December 2020",
-    "decription": [
+    "description": [
       "Watched videos and translated Japanese dialogue transcriptions into English.",
       "Time-coded the translated dialogue in sync with audio for subtitles."
-    ]
+    ],
+    "avatar-source": "https://conferences.ted.com",
+    "avatar": "/experience/ted.jpg"
   }
 ]
