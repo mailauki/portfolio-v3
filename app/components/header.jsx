@@ -6,7 +6,7 @@ import { Context } from '../utils/context'
 
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-import { AppBar, Button, Fade, IconButton, Tab, Tabs, Toolbar, alpha, useScrollTrigger, useTheme } from '@mui/material'
+import { AppBar, Fade, IconButton, Tab, Tabs, Toolbar, alpha, styled, useScrollTrigger, useTheme } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -15,6 +15,29 @@ import ModeNightIcon from '@mui/icons-material/ModeNight'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import SocialLinks from './social'
+
+
+const StyledTab = styled((props) => (
+  <Tab {...props} />
+))(({ theme }) => ({
+	margin: '0.5rem',
+	padding: '0 1.25rem',
+	border: '1px solid',
+	borderColor: 'transparent',
+	borderRadius: '32px',
+	'&:hover': {
+		backgroundColor: theme.palette.action.hover,
+		border: '1px solid',
+		borderColor: 'transparent',
+	},
+	'&.Mui-selected': {
+		backgroundColor: theme.palette.action.selected
+	},
+	'&.Mui-selected:hover': {
+		border: '1px solid',
+		borderColor: theme.palette.primary.main
+	}
+}));
 
 export default function Header({ menuOpen, handleClose }) {
   let { darkMode, setDarkMode } = useContext(Context);
@@ -63,105 +86,51 @@ export default function Header({ menuOpen, handleClose }) {
               indicatorColor='transparent'
               centered
             >
-              <Tab
+              <StyledTab
                 component={Link}
                 href='/'
                 label='Home'
                 value='/'
                 color='inherit'
-                sx={{
-                  m: 0.5,
-                  border: '1px solid',
-                  borderColor: 'transparent',
-                  borderRadius: theme.shape.borderRadius,
-                  '&:hover': {
-                    bgcolor: theme.palette.action.hover,
-                    border: '1px solid',
-                    borderColor: 'transparent',
-                  },
-                  '&.Mui-selected': {
-                    bgcolor: theme.palette.action.selected
-                  },
-                  '&.Mui-selected:hover': {
-                    border: '1px solid',
-                    borderColor: theme.palette.primary.main
-                  }
-                }}
+                // sx={{
+                //   m: 0.5,
+                //   border: '1px solid',
+                //   borderColor: 'transparent',
+                //   borderRadius: '32px',
+                //   '&:hover': {
+                //     bgcolor: theme.palette.action.hover,
+                //     border: '1px solid',
+                //     borderColor: 'transparent',
+                //   },
+                //   '&.Mui-selected': {
+                //     bgcolor: theme.palette.action.selected
+                //   },
+                //   '&.Mui-selected:hover': {
+                //     border: '1px solid',
+                //     borderColor: theme.palette.primary.main
+                //   }
+                // }}
               />
-              <Tab
+              <StyledTab
                 component={Link}
                 href='/about_me'
                 label='About Me'
                 value='/about_me'
                 color='inherit'
-                sx={{
-                  m: 0.5,
-                  border: '1px solid',
-                  borderColor: 'transparent',
-                  borderRadius: theme.shape.borderRadius,
-                  '&:hover': {
-                    bgcolor: theme.palette.action.hover,
-                    border: '1px solid',
-                    borderColor: 'transparent',
-                  },
-                  '&.Mui-selected': {
-                    bgcolor: theme.palette.action.selected
-                  },
-                  '&.Mui-selected:hover': {
-                    border: '1px solid',
-                    borderColor: theme.palette.primary.main
-                  }
-                }}
               />
-              <Tab
+              <StyledTab
                 component={Link}
                 href='/projects'
                 label='Projects'
                 value='/projects'
                 color='inherit'
-                sx={{
-                  m: 0.5,
-                  border: '1px solid',
-                  borderColor: 'transparent',
-                  borderRadius: theme.shape.borderRadius,
-                  '&:hover': {
-                    bgcolor: theme.palette.action.hover,
-                    border: '1px solid',
-                    borderColor: 'transparent',
-                  },
-                  '&.Mui-selected': {
-                    bgcolor: theme.palette.action.selected
-                  },
-                  '&.Mui-selected:hover': {
-                    border: '1px solid',
-                    borderColor: theme.palette.primary.main
-                  }
-                }}
               />
-              <Tab
+              <StyledTab
                 component={Link}
                 href='/experience'
                 label='Experience'
                 value='/experience'
                 color='inherit'
-                sx={{
-                  m: 0.5,
-                  border: '1px solid',
-                  borderColor: 'transparent',
-                  borderRadius: theme.shape.borderRadius,
-                  '&:hover': {
-                    bgcolor: theme.palette.action.hover,
-                    border: '1px solid',
-                    borderColor: 'transparent',
-                  },
-                  '&.Mui-selected': {
-                    bgcolor: theme.palette.action.selected
-                  },
-                  '&.Mui-selected:hover': {
-                    border: '1px solid',
-                    borderColor: theme.palette.primary.main
-                  }
-                }}
               />
             </Tabs>
           ) : (

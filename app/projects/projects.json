@@ -1,4 +1,29 @@
 [
+	{
+		"id": "pokedextracker",
+		"title": "PokedexTracker",
+		"description": ["WIP: PokeTracker revamp using Next JS and MUI."],
+		"image": "",
+		"links": {
+			"githubLink": "https://github.com/mailauki/pokedextracker",
+			"demoLink": "https://pokedextracker.vercel.app"
+		},
+		"tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
+		"date": "",
+		"inspiration": [
+			"Based on ",
+			{
+				"text": "pokedextracker.com",
+				"link": "https://github.com/pokedextracker/pokedextracker.com"
+			},
+			" and ",
+			{
+        "text": "previous project",
+        "link": "/projects/poke-tracker"
+      },
+      "."
+		]
+	},
   {
     "id": "poke-tracker-v2",
     "title": "PokeTracker 2",
