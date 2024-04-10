@@ -17,7 +17,7 @@ export default function AboutMe() {
     <Container maxWidth='lg'>
       <Grid container spacing={4} justifyContent='center' alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }}>
         <Grid item xs={12} sm={10} md={4}>
-          <Stack sx={{ textAlign: 'center' }} alignItems='center'>
+          <Stack sx={{ textAlign: 'center', height: '100%' }} alignItems='center'>
             <Avatar
               alt='Julie Evans'
               src='/profile.jpg'

@@ -1,7 +1,7 @@
 import './globals.css'
 import styles from './page.module.css'
 
-import { Container, Paper, Toolbar } from '@mui/material'
+import { Paper, Toolbar } from '@mui/material'
 
 import NavBar from './components/nav'
 import ThemeRegistry from './components/theme'
@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
         >
           <NavBar />
           <main className={styles.main}>
-            <Toolbar sx={{ marginTop: 3 }} />
+            <Toolbar sx={{ mt: 3 }} />
             {children}
-            <Toolbar />
+            <Toolbar sx={{ mb: 3 }} />
           </main>
         </Paper>
       </ThemeRegistry>

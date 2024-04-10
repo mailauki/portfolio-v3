@@ -1,19 +1,14 @@
 'use client'
 
-import { alpha } from '@mui/material/styles'
-
 import skills from './skills.json'
 
-import { Card, CardContent, CardHeader, Chip, Stack, Typography } from '@mui/material'
+import { CardContent, CardHeader, Chip, Stack, Typography } from '@mui/material'
+
+import Card from '@/app/components/card'
 
 export default function Skills() {
   return (
-    <Card
-      variant='outlined'
-      sx={{
-        bgcolor: (theme) => alpha(theme.palette.background.default, 0.2)
-      }}
-    >
+    <Card>
       <CardHeader
         title={<Typography variant='h6'>Skills</Typography>}
         subheader={<Typography variant='caption' sx={{ textTransform: 'uppercase' }}>still learning and mastering</Typography>}

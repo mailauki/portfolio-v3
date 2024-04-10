@@ -3,20 +3,13 @@
 import experience from './experience'
 import education from './education'
 
-import { alpha } from '@mui/material/styles'
-
-import { Avatar, Card, CardContent, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
+import { CardContent, List, Typography } from '@mui/material'
 import Item from './item'
+import Card from '@/app/components/card'
 
 export default function ExperienceCard() {
   return (
-    <Card
-      variant='outlined'
-      sx={{
-        mt: 2,
-        bgcolor: (theme) => alpha(theme.palette.background.default, 0.2)
-      }}
-    >
+    <Card>
       <CardContent>
         <List subheader={<Typography variant='h6'>Experience</Typography>}>
           {experience.map((work) => (

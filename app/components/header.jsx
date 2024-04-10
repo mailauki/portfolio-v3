@@ -69,7 +69,6 @@ export default function Header({ menuOpen, handleClose }) {
           top: '1.5%',
           borderRadius: 8,
           transition: 'all 0.4s ease-in-out 0.25s',
-          // mixBlendMode: 'exclusion',
           zIndex: theme.zIndex.drawer + 1
         }}
       >
@@ -79,7 +78,7 @@ export default function Header({ menuOpen, handleClose }) {
             alignItems: 'center',
           }}
         >
-          {matches ? (
+          {matches && (
             <Tabs
               value={tab}
               sx={{ mr: 2, width: '100%' }}
@@ -92,24 +91,6 @@ export default function Header({ menuOpen, handleClose }) {
                 label='Home'
                 value='/'
                 color='inherit'
-                // sx={{
-                //   m: 0.5,
-                //   border: '1px solid',
-                //   borderColor: 'transparent',
-                //   borderRadius: '32px',
-                //   '&:hover': {
-                //     bgcolor: theme.palette.action.hover,
-                //     border: '1px solid',
-                //     borderColor: 'transparent',
-                //   },
-                //   '&.Mui-selected': {
-                //     bgcolor: theme.palette.action.selected
-                //   },
-                //   '&.Mui-selected:hover': {
-                //     border: '1px solid',
-                //     borderColor: theme.palette.primary.main
-                //   }
-                // }}
               />
               <StyledTab
                 component={Link}
@@ -133,8 +114,6 @@ export default function Header({ menuOpen, handleClose }) {
                 color='inherit'
               />
             </Tabs>
-          ) : (
-            <></>
           )}
           <IconButton
             color='inherit'
@@ -143,16 +122,14 @@ export default function Header({ menuOpen, handleClose }) {
           >
             {darkMode ? <ModeNightIcon/> : <LightModeIcon />}
           </IconButton>
-          {!matches ? (
+          {!matches && (
             <IconButton color='inherit' onClick={handleClose}>
               {menuOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
-          ) : (
-            <></>
           )}
         </Toolbar>
       </AppBar>
-      {matches ? (
+      {matches && (
         <Fade in={scrollTrigger}>
           <AppBar
             component='div'
@@ -176,8 +153,6 @@ export default function Header({ menuOpen, handleClose }) {
             <SocialLinks />
           </AppBar>
         </Fade>
-      ) : (
-        <></>
       )}
     </>
   )
