@@ -5,7 +5,7 @@
     "dates": "May 2023 - Present",
     "description": [
     ],
-    "avatar-source": "https://www.pingwind.com",
+    "source": "https://www.pingwind.com",
     "avatar": "/experience/pingwind.jpg"
 	},
   {
@@ -16,7 +16,7 @@
       "Worked as part of a team of 5 engineers to build an e-commerce web application, using React.",
       "Used a combination of Figma and GitHub to plan, organize, and coordinate the process with my team."
     ],
-    "avatar-source": "https://www.chingu.io",
+    "source": "https://www.chingu.io",
     "avatar": "/experience/chingu.jpg"
   },
   {
@@ -36,7 +36,7 @@
       "Watched videos and translated Japanese dialogue transcriptions into English.",
       "Time-coded the translated dialogue in sync with audio for subtitles."
     ],
-    "avatar-source": "https://conferences.ted.com",
+    "source": "https://conferences.ted.com",
     "avatar": "/experience/ted.jpg"
   }
 ]

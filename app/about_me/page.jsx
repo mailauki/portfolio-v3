@@ -15,13 +15,13 @@ export const metadata = {
 export default function AboutMe() {
   return (
     <Container maxWidth='lg'>
-      <Grid container spacing={4} justifyContent='center' alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }}>
+      <Grid container spacing={{ sm: 2, md: 4}} justifyContent='center' alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }}>
         <Grid item xs={12} sm={10} md={4}>
           <Stack sx={{ textAlign: 'center', height: '100%' }} alignItems='center'>
             <Avatar
               alt='Julie Evans'
               src='/profile.jpg'
-              sx={{ width: 250, height: 250, mb: 2 }}
+              sx={{ width: 200, height: 200, my: 2 }}
             >
               JE
             </Avatar>
@@ -30,7 +30,7 @@ export default function AboutMe() {
 
             <SocialLinks />
 
-            <Stack sx={{ m: 2, width: '100%' }}>
+            <Stack sx={{ mx: 2, mt: 1, width: '100%' }}>
               <Button
                 startIcon={<GitHub />}
                 variant='outlined'

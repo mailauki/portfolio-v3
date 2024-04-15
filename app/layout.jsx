@@ -5,6 +5,7 @@ import { Paper, Toolbar } from '@mui/material'
 
 import NavBar from './components/nav'
 import ThemeRegistry from './components/theme'
+import { usePathname } from 'next/navigation'
 
 export const metadata = {
   title: {
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
         <Paper
           elevation={0}
           component='body'
-          sx={{ backgroundImage: 'url("/ombre.png")' }}
+          sx={{
+						backgroundImage: 'url("/ombre.png")',
+						position: 'relative',
+					}}
           className={styles.background}
           square
         >

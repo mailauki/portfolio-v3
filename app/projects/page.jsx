@@ -20,7 +20,7 @@ export default function Projects() {
     <Container maxWidth='lg'>
       <Grid container spacing={2} justifyContent='space-between' alignItems='stretch'>
         {asc.map((project) => (
-          <Grid key={project.id} item xs={12} sm={12} md={6}>
+          <Grid key={`project-${project.id}`} item xs={12} sm={12} md={6}>
             <ProjectCard project={project} />
           </Grid>
         ))}
