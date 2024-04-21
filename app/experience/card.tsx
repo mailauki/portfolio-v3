@@ -1,27 +1,25 @@
-'use client'
+'use client';
 
-import experience from './experience'
-import education from './education'
+import experience from './experience.json';
+import education from './education.json';
 
-import { CardContent, CardHeader, Divider, List, Typography } from '@mui/material'
-import Item from './item'
-import Card from '@/app/components/card'
+import { CardContent, CardHeader, List } from '@mui/material';
+
+import Item from './item';
+import Card from '@/app/components/card';
 
 export default function ExperienceCard() {
   return (
 		<>
 			<Card>
 				<CardHeader
-					title='Experience'
 					sx={{ pb: 0 }}
+					title='Experience'
 				/>
 				<CardContent sx={{ pt: 0 }}>
 					<List>
 						{experience.map((work) => (
-							<>
-								<Item key={work.company} exp={work} />
-								{/* <Divider variant="inset" component="li" /> */}
-							</>
+							<Item exp={work} key={work.company} />
 						))}
 					</List>
 				</CardContent>
@@ -29,17 +27,17 @@ export default function ExperienceCard() {
 
 			<Card>
 				<CardHeader
-					title='Education'
 					sx={{ pb: 0 }}
+					title='Education'
 				/>
 				<CardContent sx={{ pt: 0 }}>
 					<List>
 						{education.map((school) => (
-							<Item key={school.name} exp={school} />
+							<Item exp={school} key={school.name} />
 						))}
 					</List>
 				</CardContent>
 			</Card>
 		</>
-  )
+  );
 }

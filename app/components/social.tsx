@@ -1,13 +1,13 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { IconButton, Stack, Tooltip } from '@mui/material'
+import { IconButton, Stack, Tooltip } from '@mui/material';
 
-import { GitHub, LinkedIn, LogoDev } from '@mui/icons-material'
+import { GitHub, LinkedIn, LogoDev } from '@mui/icons-material';
 
 export default function SocialLinks() {
   return (
     <Stack direction='row' justifyContent='center' spacing={4}>
-      <Tooltip title='GitHub' placement='top' arrow>
+      <Tooltip arrow placement='top' title='GitHub'>
         <IconButton
           component={Link}
           href='https://github.com/mailauki'
@@ -17,7 +17,7 @@ export default function SocialLinks() {
         </IconButton>
       </Tooltip>
 
-      <Tooltip title='LinkedIn' placement='top' arrow>
+      <Tooltip arrow placement='top' title='LinkedIn'>
         <IconButton
           component={Link}
           href='https://www.linkedin.com/in/julie-evans-381486180'
@@ -27,7 +27,7 @@ export default function SocialLinks() {
         </IconButton>
       </Tooltip>
 
-      <Tooltip title='Dev Blog' placement='top' arrow>
+      <Tooltip arrow placement='top' title='Dev Blog'>
         <IconButton
           component={Link}
           href='https://dev.to/mailauki'
@@ -37,5 +37,5 @@ export default function SocialLinks() {
         </IconButton>
       </Tooltip>
     </Stack>
-  )
+  );
 }

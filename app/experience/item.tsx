@@ -1,14 +1,12 @@
-import { Avatar, IconButton, Link, ListItem, ListItemAvatar, ListItemButton, ListItemText, Typography } from "@mui/material"
-// import Link from "next/link"
+import { Avatar, IconButton, Link, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 
-export default function Item({ exp }) {
-	const { company, avatar, jobTitle, dates, description, name, location } = exp
+import type { Experience } from '../types/experience';
+
+export default function Item({ exp }: { exp: Experience }) {
+	const { company, avatar, jobTitle, dates, description, name, location } = exp;
+
 	return (
-		<ListItem key={company} alignItems='flex-start'>
-			{/* <ListItemButton
-				alignItems='flex-start'
-				sx={{ borderRadius: (theme) => theme.shape.borderRadius }}
-			> */}
+		<ListItem alignItems='flex-start' key={company}>
 				{avatar && (
 					<ListItemAvatar>
 						<IconButton
@@ -16,34 +14,34 @@ export default function Item({ exp }) {
 							href={exp.source}
 							sx={{ p: 0.5, m: 0 }}
 						>
-							<Avatar src={avatar} alt={company || name} />
+							<Avatar alt={company || name} src={avatar} />
 						</IconButton>
 					</ListItemAvatar>
 				)}
 				<ListItemText
-					inset={!avatar}
 					disableTypography
+					inset={!avatar}
 					primary={
 						<Typography>
 							<Typography
+								color='text.primary'
 								component={exp.source ? Link : 'span'}
 								href={exp.source}
 								underline='hover'
-								color='text.primary'
 							>
 								{company || name}
 							</Typography>
 							{(jobTitle || location) && (
 								<>
 									{' — '}
-									<Typography component='span' fontStyle='italic' color='text.secondary'>{jobTitle || location}</Typography>
+									<Typography color='text.secondary' component='span' fontStyle='italic'>{jobTitle || location}</Typography>
 								</>
 							)}
 						</Typography>
 					}
 					secondary={
 						<>
-							<Typography variant='body2' color='text.secondary'>
+							<Typography color='text.secondary' variant='body2'>
 								{dates}
 							</Typography>
 							{description && description[0] && (
@@ -51,8 +49,8 @@ export default function Item({ exp }) {
 									sx={{
 										'&:before': {
 											content: '"•"',
-											mr: 1
-										}
+											mr: 1,
+										},
 									}}
 								>
 									{description[0]}
@@ -63,8 +61,8 @@ export default function Item({ exp }) {
 									sx={{
 										'&:before': {
 											content: '"•"',
-											mr: 1
-										}
+											mr: 1,
+										},
 									}}
 								>
 									{description[1]}
@@ -73,7 +71,6 @@ export default function Item({ exp }) {
 						</>
 					}
 				/>
-			{/* </ListItemButton> */}
 		</ListItem>
-	)
+	);
 }

@@ -1,19 +1,23 @@
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { useState } from 'react'
+import { useState } from 'react';
 
-import { Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material'
+import { Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material';
 
-import SocialLinks from './social'
+import SocialLinks from './social';
+
+import type { MenuProps } from '../types/menu';
+import type { MouseEvent } from 'react';
 
 const drawerWidth = '100%';
 const drawerMaxWidth = 600;
 
-export default function Menu({ menuOpen, handleClose }) {
+export default function Menu({ menuOpen, handleClose }: MenuProps) {
   const pathname = usePathname();
 
-  const pathindex = () => {switch (pathname) {
+  const pathindex = () => {
+switch (pathname) {
     case '/':
       return 0;
     case '/about_me':
@@ -24,20 +28,21 @@ export default function Menu({ menuOpen, handleClose }) {
       return 3;
     default:
       return 0;
-  }}
+  }
+};
 
   const [selectedIndex, setSelectedIndex] = useState(pathindex);
 
-  const handleListItemClick = (event, index) => {
+  const handleListItemClick = (event: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>, index: number) => {
     setSelectedIndex(index);
   };
 
   return (
     <Drawer
       anchor='right'
-      open={menuOpen}
-      onClose={handleClose}
       onClick={handleClose}
+      onClose={handleClose}
+      open={menuOpen}
       sx={{
         width: drawerWidth,
         maxWidth: drawerMaxWidth,
@@ -50,16 +55,16 @@ export default function Menu({ menuOpen, handleClose }) {
       <List component='nav'>
         <ListItem disablePadding>
           <ListItemButton
-            selected={selectedIndex === 0}
-            onClick={(event) => handleListItemClick(event, 0)}
             component={Link}
             href='/'
+            onClick={(event) => handleListItemClick(event, 0)}
+            selected={selectedIndex === 0}
             sx={{ textAlign: 'center' }}
           >
             <ListItemText disableTypography>
               <Typography
-                variant='h3'
                 color={selectedIndex === 0 ? 'primary' : 'inherit'}
+                variant='h3'
               >
                 Home
               </Typography>
@@ -69,54 +74,54 @@ export default function Menu({ menuOpen, handleClose }) {
 
         <ListItem disablePadding>
           <ListItemButton
-            selected={selectedIndex === 1}
-            onClick={(event) => handleListItemClick(event, 1)}
             component={Link}
             href='/about_me'
+            onClick={(event) => handleListItemClick(event, 1)}
+            selected={selectedIndex === 1}
             sx={{ textAlign: 'center' }}
           >
             <ListItemText disableTypography>
               <Typography
-                variant='h3'
                 color={selectedIndex === 1 ? 'primary' : 'inherit'}
+                variant='h3'
               >
                 About Me
               </Typography>
             </ListItemText>
           </ListItemButton>
         </ListItem>
-        
+
         <ListItem disablePadding>
           <ListItemButton
-            selected={selectedIndex === 2}
-            onClick={(event) => handleListItemClick(event, 2)}
             component={Link}
             href='/projects'
+            onClick={(event) => handleListItemClick(event, 2)}
+            selected={selectedIndex === 2}
             sx={{ textAlign: 'center' }}
           >
             <ListItemText disableTypography>
               <Typography
-                variant='h3'
                 color={selectedIndex === 2 ? 'primary' : 'inherit'}
+                variant='h3'
               >
                 Projects
               </Typography>
             </ListItemText>
           </ListItemButton>
         </ListItem>
-        
+
         <ListItem disablePadding>
           <ListItemButton
-            selected={selectedIndex === 3}
-            onClick={(event) => handleListItemClick(event, 3)}
             component={Link}
             href='/experience'
+            onClick={(event) => handleListItemClick(event, 3)}
+            selected={selectedIndex === 3}
             sx={{ textAlign: 'center' }}
           >
             <ListItemText disableTypography>
               <Typography
-                variant='h3'
                 color={selectedIndex === 3 ? 'primary' : 'inherit'}
+                variant='h3'
               >
                 Experience
               </Typography>
@@ -127,14 +132,14 @@ export default function Menu({ menuOpen, handleClose }) {
 
       <Box
         sx={{
-          position: 'absolute', 
+          position: 'absolute',
           right: '2.5%',
           top: 'auto',
-          bottom: '2.5%'
+          bottom: '2.5%',
         }}
       >
         <SocialLinks />
       </Box>
     </Drawer>
-  )
+  );
 }

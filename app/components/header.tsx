@@ -1,20 +1,21 @@
-'use client'
+'use client';
 
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react';
 
-import { Context } from '../utils/context'
+import { Context } from '../utils/context';
 
-import useMediaQuery from '@mui/material/useMediaQuery'
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { AppBar, Fade, IconButton, Tab, Tabs, Toolbar, alpha, styled, useScrollTrigger, useTheme } from '@mui/material'
+import { AppBar, Fade, IconButton, Tab, Tabs, Toolbar, alpha, styled, useScrollTrigger, useTheme } from '@mui/material';
 
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
-import LightModeIcon from '@mui/icons-material/LightMode'
-import ModeNightIcon from '@mui/icons-material/ModeNight'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import SocialLinks from './social'
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import SocialLinks from './social';
+import { MenuProps } from '../types/menu';
 
 
 const StyledTab = styled((props) => (
@@ -31,35 +32,35 @@ const StyledTab = styled((props) => (
 		borderColor: 'transparent',
 	},
 	'&.Mui-selected': {
-		backgroundColor: theme.palette.action.selected
+		backgroundColor: theme.palette.action.selected,
 	},
 	'&.Mui-selected:hover': {
 		border: '1px solid',
-		borderColor: theme.palette.primary.main
-	}
+		borderColor: theme.palette.primary.main,
+	},
 }));
 
-export default function Header({ menuOpen, handleClose }) {
-  let { darkMode, setDarkMode } = useContext(Context);
+export default function Header({ menuOpen, handleClose }: MenuProps) {
+  const { darkMode, setDarkMode } = useContext(Context);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const theme = useTheme();
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 0
+    threshold: 0,
   });
   const pathname = usePathname();
   const [tab, setTab] = useState(pathname);
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
   useEffect(() => {
-    setTab(pathname)
-  }, [pathname])
+    setTab(pathname);
+  }, [pathname]);
 
   return (
     <>
       <AppBar
-        position='fixed'
         elevation={0}
+        position='fixed'
         sx={{
           bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.background.default, 0.25),
           backdropFilter: !scrollTrigger ? 'blur(0)' : 'blur(10px)',
@@ -69,7 +70,7 @@ export default function Header({ menuOpen, handleClose }) {
           top: '1.5%',
           borderRadius: 8,
           transition: 'all 0.4s ease-in-out 0.25s',
-          zIndex: theme.zIndex.drawer + 1
+          zIndex: theme.zIndex.drawer + 1,
         }}
       >
         <Toolbar
@@ -80,45 +81,45 @@ export default function Header({ menuOpen, handleClose }) {
         >
           {matches && (
             <Tabs
-              value={tab}
-              sx={{ mr: 2, width: '100%' }}
-              indicatorColor='transparent'
               centered
+              indicatorColor='transparent'
+              sx={{ mr: 2, width: '100%' }}
+              value={tab}
             >
               <StyledTab
+                color='inherit'
                 component={Link}
                 href='/'
                 label='Home'
                 value='/'
-                color='inherit'
               />
               <StyledTab
+                color='inherit'
                 component={Link}
                 href='/about_me'
                 label='About Me'
                 value='/about_me'
-                color='inherit'
               />
               <StyledTab
+                color='inherit'
                 component={Link}
                 href='/projects'
                 label='Projects'
                 value='/projects'
-                color='inherit'
               />
               <StyledTab
+                color='inherit'
                 component={Link}
                 href='/experience'
                 label='Experience'
                 value='/experience'
-                color='inherit'
               />
             </Tabs>
           )}
           <IconButton
             color='inherit'
-            onClick={() => setDarkMode(!darkMode)}
             disabled={prefersDarkMode}
+            onClick={() => setDarkMode(!darkMode)}
           >
             {darkMode ? <ModeNightIcon/> : <LightModeIcon />}
           </IconButton>
@@ -133,8 +134,8 @@ export default function Header({ menuOpen, handleClose }) {
         <Fade in={scrollTrigger}>
           <AppBar
             component='div'
-            position='fixed'
             elevation={0}
+            position='fixed'
             sx={{
               bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.background.default, 0.25),
               backdropFilter: !scrollTrigger ? 'blur(0)' : 'blur(10px)',
@@ -147,7 +148,7 @@ export default function Header({ menuOpen, handleClose }) {
               pr: 1,
               borderRadius: 8,
               transition: 'all 0.4s ease-in-out 0.25s',
-              zIndex: theme.zIndex.drawer + 1
+              zIndex: theme.zIndex.drawer + 1,
             }}
           >
             <SocialLinks />
@@ -155,5 +156,5 @@ export default function Header({ menuOpen, handleClose }) {
         </Fade>
       )}
     </>
-  )
+  );
 }

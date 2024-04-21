@@ -1,25 +1,30 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-import createCache from '@emotion/cache'
-import { useServerInsertedHTML } from 'next/navigation'
-import { CacheProvider } from '@emotion/react'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import useMediaQuery from '@mui/material/useMediaQuery'
+import createCache from '@emotion/cache';
+import { useServerInsertedHTML } from 'next/navigation';
+import { CacheProvider } from '@emotion/react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Context } from '../utils/context'
+import { Context } from '../utils/context';
 
-export default function ThemeRegistry(props) {
+export default function ThemeRegistry(
+	props: {
+		options: { key: string };
+		children: React.ReactNode;
+	}
+) {
   const { options, children } = props;
-  
-  const [darkMode, setDarkMode] = useState(false);
+
+  const [darkMode, setDarkMode] = useState<boolean>(false);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   useEffect(() => {
-    prefersDarkMode ? setDarkMode(prefersDarkMode) : setDarkMode(darkMode)
-  }, [prefersDarkMode, darkMode])
+    prefersDarkMode ? setDarkMode(prefersDarkMode) : setDarkMode(darkMode);
+  }, [prefersDarkMode, darkMode]);
 
   const theme = createTheme({
     palette: {
@@ -31,7 +36,7 @@ export default function ThemeRegistry(props) {
     const cache = createCache(options);
     cache.compat = true;
     const prevInsert = cache.insert;
-    let inserted = [];
+    let inserted = [] as string[];
     cache.insert = (...args) => {
       const serialized = args[1];
       if (cache.inserted[serialized.name] === undefined) {
@@ -58,11 +63,11 @@ export default function ThemeRegistry(props) {
     }
     return (
       <style
-        key={cache.key}
-        data-emotion={`${cache.key} ${names.join(' ')}`}
         dangerouslySetInnerHTML={{
           __html: styles,
         }}
+        data-emotion={`${cache.key} ${names.join(' ')}`}
+        key={cache.key}
       />
     );
   });
