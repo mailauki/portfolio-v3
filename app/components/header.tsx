@@ -20,7 +20,14 @@ import SocialLinks from './social';
 
 import type { MenuProps } from '../types/menu';
 
-const StyledTab = styled((props) => (
+interface StyledTabProps {
+  label: string;
+	component: React.ElementType | React.ReactNode;
+	href: string;
+	value: string;
+}
+
+const StyledTab = styled((props: StyledTabProps) => (
   <Tab {...props} />
 ))(({ theme }) => ({
 	margin: '0.5rem',
@@ -84,35 +91,41 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
         >
           {matches && (
             <Tabs
-              centered
-              indicatorColor='transparent'
+							centered
+              // indicatorColor='transparent'
 							orientation='vertical'
-              // sx={{ mr: 2, width: '100%' }}
+              sx={{
+								'& .MuiTabs-indicator': {
+									display: 'flex',
+									justifyContent: 'center',
+									backgroundColor: 'transparent',
+								},
+							}}
               value={tab}
             >
               <StyledTab
-                color='inherit'
+                // color='inherit'
                 component={Link}
                 href='/'
                 label='Home'
                 value='/'
               />
               <StyledTab
-                color='inherit'
+                // color='inherit'
                 component={Link}
                 href='/about_me'
                 label='About Me'
                 value='/about_me'
               />
               <StyledTab
-                color='inherit'
+                // color='inherit'
                 component={Link}
                 href='/projects'
                 label='Projects'
                 value='/projects'
               />
               <StyledTab
-                color='inherit'
+                // color='inherit'
                 component={Link}
                 href='/experience'
                 label='Experience'

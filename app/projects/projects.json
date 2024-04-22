@@ -21,7 +21,7 @@
 			" and ",
 			{
         "text": "previous project",
-        "link": "/projects/poke-tracker"
+        "link": "#poke-tracker"
       },
       "."
 		]
@@ -50,7 +50,7 @@
       " and ",
       {
         "text": "previous project",
-        "link": "/projects/poke-tracker"
+        "link": "#poke-tracker"
       },
       "."
     ]
@@ -74,7 +74,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "/projects/studio-ghibli"
+        "link": "#studio-ghibli"
       },
       " using Vanilla JavaScript."
     ]
@@ -102,7 +102,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "/projects/tic-tic-toe"
+        "link": "#tic-tic-toe"
       },
       " using React."
     ]
@@ -174,7 +174,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "/projects/oo-tic-tic-toe"
+        "link": "#oo-tic-tic-toe"
       },
       " using Ruby."
     ]

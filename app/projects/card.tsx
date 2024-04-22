@@ -18,6 +18,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
 		<CardBox>
 			<CardHeader
+				id={project.id}
 				subheader={project.description[0]}
 				title={project.title}
 			/>
@@ -47,12 +48,18 @@ export default function ProjectCard({ project }: { project: Project }) {
 
 							<Typography paragraph>
 								{project.inspiration && (
-									project.inspiration.map((part) => {
-										if (typeof part !== 'string') {
-											// eslint-disable-next-line react/jsx-key
-											return <Anchor href={part.link}>{part.text}</Anchor>;
-										} else return part;
-									})
+									project.inspiration.map((part) => (
+										(typeof part !== 'string') ? (
+											<Anchor
+												href={part.link}
+												key={part.text}
+											>
+												{part.text}
+											</Anchor>
+										) : (
+											part
+										)
+									))
 								)}
 							</Typography>
 						</Box>

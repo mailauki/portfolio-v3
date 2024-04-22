@@ -2,16 +2,12 @@
 
 import styles from '@/app/page.module.css';
 
-import { Button, Container, Stack, Typography, useTheme } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
+import Link from 'next/link';
 
 export default function Home() {
-	// const theme = useTheme();
-
   return (
-    <Container
-			maxWidth='lg'
-			// sx={{ position: 'fixed', height: '100%', flex: '1 1 auto' }}
-		>
+    <Container maxWidth='lg'>
       <Stack
 				alignItems='center'
 				direction='column'
@@ -32,6 +28,8 @@ export default function Home() {
           <Typography>Web Developer</Typography>
         </Stack>
 				<Button
+					component={Link}
+					href='mailto:juliemevans17@gmail.com'
 					size='large'
 					sx={{
 						mt: 2,
