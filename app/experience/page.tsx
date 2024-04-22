@@ -1,6 +1,6 @@
-import ExperienceCard from './card';
+import { ExperienceCard, EducationCard } from './card';
 
-import { Container, Stack} from '@mui/material';
+import { Container, Grid } from '@mui/material';
 
 export const metadata = {
   title: 'Experience',
@@ -8,13 +8,15 @@ export const metadata = {
 
 export default function Experience() {
   return (
-    <Container maxWidth='md'>
-      <Stack
-				alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }}
-				justifyContent='center'
-			>
-        <ExperienceCard />
-      </Stack>
+    <Container maxWidth='lg'>
+			<Grid container spacing={2}>
+				<Grid item lg={7} md={12}>
+					<ExperienceCard />
+				</Grid>
+				<Grid item lg={5} md={12}>
+					<EducationCard />
+				</Grid>
+			</Grid>
     </Container>
   );
 }

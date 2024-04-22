@@ -30,7 +30,7 @@ export default function AboutMe() {
 
             <SocialLinks />
 
-            <Stack sx={{ mx: 2, mt: 1, width: '100%' }}>
+            <Stack sx={{ mx: 2, mt: 1, mb: 2, width: '100%' }}>
               <Button
                 aria-label='Github repository link for this Portfolio'
                 component={Link}

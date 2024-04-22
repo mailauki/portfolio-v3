@@ -9,7 +9,7 @@ export default function CardBox({
 	return (
 		<MuiCard
 			sx={{
-				mt: 2,
+				// mt: 2,
 				bgcolor: (theme) => alpha(theme.palette.background.default, 0.2),
 			}}
 			variant='outlined'

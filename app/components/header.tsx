@@ -96,8 +96,6 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 							orientation='vertical'
               sx={{
 								'& .MuiTabs-indicator': {
-									display: 'flex',
-									justifyContent: 'center',
 									backgroundColor: 'transparent',
 								},
 							}}

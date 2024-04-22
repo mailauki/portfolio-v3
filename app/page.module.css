@@ -58,10 +58,6 @@
 
 /* Mobile */
 @media (max-width: 600px) {
-  .hide {
-    display: none;
-  }
-
   .background {
     background-size: cover;
   }
@@ -77,6 +73,12 @@
     margin-bottom: 120px;
     max-width: 320px;
     text-align: center;
+  }
+}
+
+@media (max-width: 860px) {
+  .hide {
+    display: none;
   }
 }
 

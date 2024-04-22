@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 					spacing={2}
 					sx={{ minHeight: 350 }}
 				>
-					<Grid item xs={4}>
+					<Grid item md={project.image[0] ? 4 : 12} sm={12} xs={12}>
 						<Box>
 							{project.description[1] && (
 								(project.description[1] as string[]).map((bullet: string, index: number) => <Typography color='text.secondary' key={index} paragraph variant='body2'>• {bullet}</Typography>)
@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 						</Box>
 					</Grid>
 
-					<Grid item xs={8}>
+					<Grid item md={project.image[0] ? 8 : 12} sm={12} xs={12}>
 						{project.image[0] && (
 							<img
 								alt={`screenshot of ${project.title}`}
