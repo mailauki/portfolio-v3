@@ -11,7 +11,7 @@ import { Button, CardContent, CardHeader, Chip, Link as Anchor, Stack, Typograph
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-import Card from '@/app/components/card';
+import CardBox from '@/app/components/card';
 import Images from './images';
 import type { Project } from '@/app/types/projects';
 
@@ -29,7 +29,7 @@ export default function ProjectPage({ params }: { params: Project }) {
           Back to Projects
         </Button>
 
-				<Card>
+				<CardBox>
 					<CardHeader
 						subheader={project.description[0]}
             title={project.title}
@@ -43,7 +43,7 @@ export default function ProjectPage({ params }: { params: Project }) {
 						>
 							<Box>
 								{project.description[1] && (
-									project.description[1].map((bullet: string, index: number) => <Typography color='text.secondary' key={index} paragraph variant='body2'>• {bullet}</Typography>)
+									(project.description[1] as string[]).map((bullet: string, index: number) => <Typography color='text.secondary' key={index} paragraph variant='body2'>• {bullet}</Typography>)
 								)}
 
 								<Typography paragraph>
@@ -115,7 +115,7 @@ export default function ProjectPage({ params }: { params: Project }) {
 							</Button>
 						)}
 					</CardActions>
-				</Card>
+				</CardBox>
       </Box>
     </Container>
   );

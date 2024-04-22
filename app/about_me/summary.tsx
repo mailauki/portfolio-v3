@@ -4,11 +4,11 @@ import styles from '../page.module.css';
 
 import { Avatar, CardContent, Typography } from '@mui/material';
 
-import Card from '@/app/components/card';
+import CardBox from '@/app/components/card';
 
 export default function Summary() {
   return (
-    <Card>
+    <CardBox>
       <CardContent>
         <Typography className={styles.dropcap} paragraph>{`Hello, my name is Julie. I am a Web Developer from Texas. My hobbies are Linguistics, drawing, and collecting rocks.`}</Typography>
 
@@ -22,6 +22,6 @@ export default function Summary() {
 
         <Avatar alt='JE logo' src='/logo.png' sx={{ width: 100, height: 100, mx: 'auto' }}>JE</Avatar>
       </CardContent>
-    </Card>
+    </CardBox>
   );
 }

@@ -6,12 +6,12 @@ import education from './education.json';
 import { CardContent, CardHeader, List } from '@mui/material';
 
 import Item from './item';
-import Card from '@/app/components/card';
+import CardBox from '@/app/components/card';
 
 export default function ExperienceCard() {
   return (
 		<>
-			<Card>
+			<CardBox>
 				<CardHeader
 					sx={{ pb: 0 }}
 					title='Experience'
@@ -23,9 +23,9 @@ export default function ExperienceCard() {
 						))}
 					</List>
 				</CardContent>
-			</Card>
+			</CardBox>
 
-			<Card>
+			<CardBox>
 				<CardHeader
 					sx={{ pb: 0 }}
 					title='Education'
@@ -37,7 +37,7 @@ export default function ExperienceCard() {
 						))}
 					</List>
 				</CardContent>
-			</Card>
+			</CardBox>
 		</>
   );
 }

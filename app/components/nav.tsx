@@ -17,7 +17,6 @@ export default function NavBar() {
       <Header
 				handleClose={handleClose}
 				menuOpen={menuOpen}
-				// setMenuOpen={setMenuOpen}
 			/>
       <Menu
 				handleClose={handleClose}

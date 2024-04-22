@@ -2,7 +2,7 @@ import projects from './projects.json';
 
 import ProjectCard from './card';
 
-import { Container, Grid } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 
 import type { Project } from '../types/projects';
 
@@ -20,13 +20,9 @@ export default function Projects() {
 
   return (
     <Container maxWidth='lg'>
-      <Grid alignItems='stretch' container justifyContent='space-between' spacing={2}>
-        {asc.map((project) => (
-          <Grid item key={`project-${project.id}`} md={6} sm={12} xs={12}>
-            <ProjectCard project={project} />
-          </Grid>
-        ))}
-      </Grid>
+			<Stack>
+				{asc.map((project) => <ProjectCard key={`project-${project.id}`} project={project} />)}
+			</Stack>
     </Container>
   );
 }

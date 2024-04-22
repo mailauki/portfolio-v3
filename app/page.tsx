@@ -1,12 +1,16 @@
-import styles from './page.module.css';
+'use client';
 
-import { Container, Stack, Typography } from '@mui/material';
+import styles from '@/app/page.module.css';
+
+import { Button, Container, Stack, Typography, useTheme } from '@mui/material';
 
 export default function Home() {
+	// const theme = useTheme();
+
   return (
     <Container
 			maxWidth='lg'
-			sx={{ position: 'fixed', height: '100%', flex: '1 1 auto' }}
+			// sx={{ position: 'fixed', height: '100%', flex: '1 1 auto' }}
 		>
       <Stack
 				alignItems='center'
@@ -27,6 +31,16 @@ export default function Home() {
           <span className={styles.hide}>-</span>
           <Typography>Web Developer</Typography>
         </Stack>
+				<Button
+					size='large'
+					sx={{
+						mt: 2,
+						borderRadius: 8,
+					}}
+					variant='outlined'
+				>
+					Email Me
+				</Button>
       </Stack>
     </Container>
   );

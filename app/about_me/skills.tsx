@@ -4,14 +4,14 @@ import skills from './skills.json';
 
 import { CardContent, CardHeader, Chip, Stack, Typography } from '@mui/material';
 
-import Card from '@/app/components/card';
+import CardBox from '@/app/components/card';
 
 export default function Skills() {
   return (
-    <Card>
+    <CardBox>
       <CardHeader
         subheader={<Typography sx={{ textTransform: 'uppercase' }} variant='caption'>still learning and mastering</Typography>}
-        sx={{ pb: 0 }}
+        sx={{ pb: 0, textAlign: 'center' }}
         title={<Typography variant='h6'>Skills</Typography>}
       />
       <CardContent>
@@ -19,6 +19,6 @@ export default function Skills() {
           {skills.map((skill) => <Chip key={skill.id} label={skill.title} />)}
         </Stack>
       </CardContent>
-    </Card>
+    </CardBox>
   );
 }

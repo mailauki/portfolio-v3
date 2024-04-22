@@ -1,11 +1,10 @@
 import './globals.css';
 import styles from './page.module.css';
 
-import { Paper, Toolbar } from '@mui/material';
+import { Grid, Paper, Toolbar } from '@mui/material';
 
 import NavBar from './components/nav';
 import ThemeRegistry from './components/theme';
-import { usePathname } from 'next/navigation';
 
 export const metadata = {
   title: {
@@ -36,12 +35,22 @@ export default function RootLayout({
 						position: 'relative',
 					}}
         >
-          <NavBar />
+          {/* <NavBar />
           <main className={styles.main}>
             <Toolbar sx={{ mt: 3 }} />
             {children}
             <Toolbar sx={{ mb: 3 }} />
-          </main>
+          </main> */}
+					<Grid container>
+						<Grid item sm={3} xs={12}>
+							<NavBar />
+						</Grid>
+						<Grid item sm={9} xs={12}>
+							<Toolbar sx={{ mt: 3, zIndex: -1 }} />
+							{children}
+							<Toolbar sx={{ mb: 3, zIndex: -1 }} />
+						</Grid>
+					</Grid>
         </Paper>
       </ThemeRegistry>
     </html>

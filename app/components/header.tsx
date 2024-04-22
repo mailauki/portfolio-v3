@@ -12,11 +12,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
+
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import SocialLinks from './social';
-import { MenuProps } from '../types/menu';
 
+import SocialLinks from './social';
+
+import type { MenuProps } from '../types/menu';
 
 const StyledTab = styled((props) => (
   <Tab {...props} />
@@ -62,28 +64,30 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
         elevation={0}
         position='fixed'
         sx={{
-          bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.background.default, 0.25),
-          backdropFilter: !scrollTrigger ? 'blur(0)' : 'blur(10px)',
+          bgcolor: !scrollTrigger && !matches || matches ? 'transparent' : alpha(theme.palette.background.default, 0.25),
+          backdropFilter: !scrollTrigger && !matches || matches ? 'blur(0)' : 'blur(10px)',
           color: 'text.primary',
           width: '95%',
           right: '2.5%',
           top: '1.5%',
           borderRadius: 8,
           transition: 'all 0.4s ease-in-out 0.25s',
-          zIndex: theme.zIndex.drawer + 1,
+					zIndex: 0,
         }}
       >
         <Toolbar
           sx={{
-            justifyContent: 'flex-end',
-            alignItems: 'center',
+						justifyContent: 'space-between',
+						alignItems: !matches ? 'center' : 'flex-start',
+						zIndex: theme.zIndex.drawer + 1,
           }}
         >
           {matches && (
             <Tabs
               centered
               indicatorColor='transparent'
-              sx={{ mr: 2, width: '100%' }}
+							orientation='vertical'
+              // sx={{ mr: 2, width: '100%' }}
               value={tab}
             >
               <StyledTab
@@ -120,16 +124,22 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
             color='inherit'
             disabled={prefersDarkMode}
             onClick={() => setDarkMode(!darkMode)}
+						sx={{ zIndex: theme.zIndex.drawer + 1 }}
           >
             {darkMode ? <ModeNightIcon/> : <LightModeIcon />}
           </IconButton>
           {!matches && (
-            <IconButton color='inherit' onClick={handleClose}>
+            <IconButton
+							color='inherit'
+							onClick={handleClose}
+							sx={{ zIndex: theme.zIndex.drawer + 1 }}
+						>
               {menuOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
           )}
         </Toolbar>
       </AppBar>
+
       {matches && (
         <Fade in={scrollTrigger}>
           <AppBar

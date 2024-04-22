@@ -1,7 +1,7 @@
 import { Card as MuiCard } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 
-export default function Card({
+export default function CardBox({
   children,
 }: Readonly<{
   children: React.ReactNode;
