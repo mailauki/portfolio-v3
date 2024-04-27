@@ -30,10 +30,7 @@ export default function RootLayout({
           component='body'
           elevation={0}
           square
-          sx={{
-						backgroundImage: 'url("/ombre.png")',
-						position: 'relative',
-					}}
+          sx={{ position: 'relative' }}
         >
 					<Grid container>
 						<Grid item sm={3} xs={12}>

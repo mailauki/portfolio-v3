@@ -30,6 +30,29 @@ export default function ThemeRegistry(
     palette: {
       mode: darkMode ? 'dark' : 'light',
     },
+		components: {
+			MuiAppBar: {
+				styleOverrides: {
+					root: {
+						borderRadius: 64,
+					},
+				},
+			},
+			MuiCard: {
+				styleOverrides: {
+					root: {
+						borderRadius: 8,
+					},
+				},
+			},
+			MuiButton: {
+				styleOverrides: {
+					root: {
+						borderRadius: 64,
+					},
+				},
+			},
+		},
   });
 
   const [{ cache, flush }] = useState(() => {

@@ -142,14 +142,12 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 							height: 'fit-content',
 							top: '1rem',
 							right: { xs: '1rem', sm: '1.5rem' },
-							borderRadius: 8,
 							borderColor: !scrollTrigger ? 'transparent' : 'default',
 							transition: 'all 0.4s ease-in-out 0.25s',
 						}}
 						variant='outlined'
 					>
 							<IconButton
-								// color='inherit'
 								disabled={prefersDarkMode}
 								onClick={() => setDarkMode(!darkMode)}
 							>
@@ -171,7 +169,6 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 								right: { xs: '1rem', sm: '1.5rem' },
 								px: 1,
 								py: 0.25,
-								borderRadius: 8,
 								transition: 'all 0.4s ease-in-out 0.25s',
 							}}
 							variant='outlined'
@@ -183,7 +180,6 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 			) : (
 				<AppBar
 					color='inherit'
-					// component='div'
 					position='fixed'
 					sx={{
 						bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.background.default, 0.25),
@@ -194,7 +190,6 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 						right: { xs: '1rem', sm: '1.5rem' },
 						px: 1,
 						py: 0.25,
-						borderRadius: 8,
 						borderColor: !scrollTrigger ? 'transparent' : 'default',
 						transition: 'all 0.4s ease-in-out 0.25s',
 					}}
@@ -202,14 +197,12 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 				>
 					<Stack direction='row' spacing={1}>
 						<IconButton
-							// color='inherit'
 							disabled={prefersDarkMode}
 							onClick={() => setDarkMode(!darkMode)}
 						>
 							{darkMode ? <ModeNightIcon/> : <LightModeIcon />}
 						</IconButton>
 						<IconButton
-							// color='inherit'
 							onClick={handleClose}
 						>
               {menuOpen ? <CloseIcon /> : <MenuIcon />}
