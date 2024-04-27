@@ -10,9 +10,8 @@
 }
 
 .background {
-  background-image: url("/ombre.png");
   background-position: center bottom;
-  background-size: contain;
+  background-size: 100vw auto !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -51,7 +50,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .background {
-    background-size: cover;
+		background-size: 200vw auto !important;
   }
 }
 
