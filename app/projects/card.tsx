@@ -93,7 +93,6 @@ export default function ProjectCard({ project }: { project: Project }) {
 						)}
 					</Grid>
 				</Grid>
-				{/* </Stack> */}
 			</CardContent>
 
 			<CardActions>

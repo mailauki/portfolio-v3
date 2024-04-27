@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Experience() {
   return (
-    <Container maxWidth='lg'>
+    <Container component='main' maxWidth='lg'>
 			<Grid container spacing={2}>
 				<Grid item lg={7} md={12}>
 					<ExperienceCard />

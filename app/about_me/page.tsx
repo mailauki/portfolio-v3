@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function AboutMe() {
   return (
-    <Container maxWidth='lg'>
+    <Container component='main' maxWidth='lg'>
       <Grid alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }} container justifyContent='center' spacing={{ sm: 2, md: 4}}>
         <Grid item md={4} sm={10} xs={12}>
           <Stack alignItems='center' sx={{ textAlign: 'center', height: '100%' }}>

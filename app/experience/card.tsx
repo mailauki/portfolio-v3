@@ -16,7 +16,7 @@ export function ExperienceCard() {
 				title='Experience'
 			/>
 			<CardContent sx={{ pt: 0 }}>
-				<List sx={{ zIndex: -1 }}>
+				<List>
 					{experience.map((work) => (
 						<Item exp={work} key={work.company} />
 					))}
@@ -33,7 +33,7 @@ export function EducationCard() {
 				title='Education'
 			/>
 			<CardContent sx={{ pt: 0 }}>
-				<List sx={{ zIndex: -1 }}>
+				<List>
 					{education.map((school) => (
 						<Item exp={school} key={school.name} />
 					))}

@@ -19,7 +19,7 @@ export default function Projects() {
   });
 
   return (
-    <Container maxWidth='lg'>
+    <Container component='main' maxWidth='lg'>
 			<Stack gap={6}>
 				{asc.map((project) => <ProjectCard key={`project-${project.id}`} project={project} />)}
 			</Stack>

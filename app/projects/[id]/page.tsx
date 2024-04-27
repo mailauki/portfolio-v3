@@ -19,7 +19,7 @@ export default function ProjectPage({ params }: { params: Project }) {
   const project = projects.find((project) => project.id === params.id) as Project;
 
   return (
-    <Container maxWidth='lg' sx={{ flex: '1 1 auto'}}>
+    <Container component='main' maxWidth='lg' sx={{ flex: '1 1 auto'}}>
       <Box>
         <Button
           component={Link}

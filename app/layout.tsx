@@ -35,20 +35,14 @@ export default function RootLayout({
 						position: 'relative',
 					}}
         >
-          {/* <NavBar />
-          <main className={styles.main}>
-            <Toolbar sx={{ mt: 3 }} />
-            {children}
-            <Toolbar sx={{ mb: 3 }} />
-          </main> */}
 					<Grid container>
 						<Grid item sm={3} xs={12}>
 							<NavBar />
 						</Grid>
 						<Grid item sm={9} xs={12}>
-							<Toolbar sx={{ mt: 3, zIndex: -1 }} />
+							<Toolbar sx={{ mt: 3 }} />
 							{children}
-							<Toolbar sx={{ mb: 3, zIndex: -1 }} />
+							<Toolbar sx={{ mb: 3 }} />
 						</Grid>
 					</Grid>
         </Paper>

@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <Container maxWidth='lg'>
+    <Container component='main' maxWidth='lg'>
       <Stack
 				alignItems='center'
 				direction='column'
