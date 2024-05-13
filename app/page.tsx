@@ -1,7 +1,5 @@
 'use client';
-
 import styles from '@/app/page.module.css';
-
 import { Button, Container, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 
@@ -13,20 +11,21 @@ export default function Home() {
 				direction='column'
 				height='100%'
 				justifyContent='center'
+				spacing={4}
 				sx={{ margin: 'auto 0', flex: '1 1 auto' }}
 			>
-        <Typography textAlign='center' variant='h1'>Julie <span className={styles.hide}>M. </span>Evans</Typography>
+				<Typography textAlign='center' variant='h1'>Julie <span className={styles.hide}>M. </span>Evans</Typography>
 
-        <Stack
+				<Stack
 					alignItems='center'
 					direction={{ xs: 'column', sm: 'row' }}
 					justifyContent='center'
 					spacing={1}
 				>
-          <Typography>Software Engineer</Typography>
-          <span className={styles.hide}>-</span>
-          <Typography>Web Developer</Typography>
-        </Stack>
+					<Typography>Software Engineer</Typography>
+					<span className={styles.hide}>-</span>
+					<Typography>Web Developer</Typography>
+				</Stack>
 				<Button
 					component={Link}
 					href='mailto:juliemevans17@gmail.com'

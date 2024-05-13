@@ -1,12 +1,9 @@
 'use client';
-
 import experience from './experience.json';
 import education from './education.json';
-
 import { CardContent, CardHeader, List } from '@mui/material';
-
 import Item from './item';
-import CardBox from '@/app/components/card';
+import CardBox from '@/app/(components)/card';
 
 export function ExperienceCard() {
   return (

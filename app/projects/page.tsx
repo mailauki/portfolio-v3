@@ -1,5 +1,4 @@
 import { Container } from '@mui/material';
-
 import Filter from './filter';
 
 export const metadata = {

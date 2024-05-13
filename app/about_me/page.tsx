@@ -1,11 +1,8 @@
 import Link from 'next/link';
-
 import { Avatar, Button, Stack, Typography, Link as Anchor, Grid, Container } from '@mui/material';
-
-import SocialLinks from '../components/social';
+import SocialLinks from '../(components)/social';
 import Summary from './summary';
 import Skills from './skills';
-
 import { GitHub } from '@mui/icons-material';
 
 export const metadata = {

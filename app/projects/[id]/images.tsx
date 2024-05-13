@@ -1,12 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-
 import { useState } from 'react';
-
 import { Box, Button, MobileStepper, ThemeProvider, createTheme, useTheme } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
-
-import type { Project } from '@/app/types/projects';
+import type { Project } from '@/app/(types)/projects';
 
 const darkTheme = createTheme({
 	palette: {

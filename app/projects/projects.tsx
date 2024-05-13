@@ -1,8 +1,6 @@
 import { Stack } from '@mui/material';
-
 import ProjectCard from './card';
-
-import type { Project } from '../types/projects';
+import type { Project } from '../(types)/projects';
 
 export default function Projects({ sort }: { sort: Project[] }) {
 	return (

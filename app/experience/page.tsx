@@ -1,5 +1,4 @@
 import { ExperienceCard, EducationCard } from './card';
-
 import { Container, Grid } from '@mui/material';
 
 export const metadata = {

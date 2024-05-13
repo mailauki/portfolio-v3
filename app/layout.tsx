@@ -1,10 +1,8 @@
 import './globals.css';
 import styles from './page.module.css';
-
 import { Grid, Paper, Toolbar } from '@mui/material';
-
-import NavBar from './components/nav';
-import ThemeRegistry from './components/theme';
+import NavBar from './(components)/nav';
+import ThemeRegistry from './(components)/theme';
 
 export const metadata = {
   title: {
@@ -13,7 +11,7 @@ export const metadata = {
   },
   description: 'Portfolio for Julie Evans',
   icons: {
-    icon: '/icons/icon.png',
+    icon: '/icon.png',
   },
 };
 

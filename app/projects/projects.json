@@ -4,14 +4,14 @@
 		"title": "ToDoLoo",
 		"description": ["WIP: ToDo app using Next JS and MUI."],
 		"image": [
-			""
+			"/projects/to-do-loo.png"
 		],
 		"links": {
 			"githubLink": "https://github.com/mailauki/todoloo",
 			"demoLink": "https://to-do-loo.vercel.app"
 		},
 		"tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
-		"date": "",
+		"date": "2024-05-12",
 		"inspiration": [
 			"Design inspired by ",
       {
@@ -33,7 +33,7 @@
 			"demoLink": "https://pokedextracker.vercel.app"
 		},
 		"tags": ["Next JS", "TypeScript", "Vercel", "Material UI"],
-		"date": "",
+		"date": "2024-03-24",
 		"inspiration": [
 			"Based on ",
 			{

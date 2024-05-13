@@ -1,17 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-
 import Link from 'next/link';
-
 import { CardHeader, Stack, Box, Grid, CardActions, Button, Link as Anchor, Typography, Chip, CardContent } from '@mui/material';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-
-import type { Project } from '../types/projects';
-
-import CardBox from '@/app/components/card';
-
+import type { Project } from '../(types)/projects';
+import CardBox from '@/app/(components)/card';
 import moment from 'moment';
 
 export default function ProjectCard({ project }: { project: Project }) {

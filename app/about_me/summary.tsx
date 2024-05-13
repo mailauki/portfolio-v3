@@ -1,10 +1,7 @@
 'use client';
-
 import styles from '../page.module.css';
-
 import { Avatar, CardContent, Typography } from '@mui/material';
-
-import CardBox from '@/app/components/card';
+import CardBox from '@/app/(components)/card';
 
 export default function Summary() {
   return (

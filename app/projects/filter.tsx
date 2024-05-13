@@ -1,13 +1,8 @@
 'use client';
-
 import { useState } from 'react';
-
 import projects from './projects.json';
-
 import { AppBar, Button, Fade, Toolbar, alpha, useScrollTrigger, useTheme } from '@mui/material';
-
 import Projects from './projects';
-
 import { SwapVert } from '@mui/icons-material';
 
 export default function Filter() {

@@ -1,19 +1,13 @@
 'use client';
-
 import projects from '../projects.json';
-
 import Link from 'next/link';
-
 import moment from 'moment';
-
 import { Button, CardContent, CardHeader, Chip, Link as Anchor, Stack, Typography, CardActions, Box, Container } from '@mui/material';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-
-import CardBox from '@/app/components/card';
+import CardBox from '@/app/(components)/card';
 import Images from './images';
-import type { Project } from '@/app/types/projects';
+import type { Project } from '@/app/(types)/projects';
 
 export default function ProjectPage({ params }: { params: Project }) {
   const project = projects.find((project) => project.id === params.id) as Project;
