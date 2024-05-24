@@ -65,7 +65,8 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 						color='inherit'
 						position='sticky'
 						sx={{
-							bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.background.default, 0.25),
+							// bgcolor: !scrollTrigger ? 'transparent' : alpha(theme.palette.background.default, 0.25),
+							bgcolor: 'transparent',
 							backdropFilter: !scrollTrigger ? 'blur(0)' : 'blur(10px)',
 							width: 'calc(100% - 32px)',
 							top: '5.5rem',
@@ -98,7 +99,7 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 								<StyledTab
 									component={Link}
 									href='/'
-									label='Home'
+									label='Hello'
 									value='/'
 								/>
 								<StyledTab

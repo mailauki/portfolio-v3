@@ -62,7 +62,7 @@ switch (pathname) {
                 color={selectedIndex === 0 ? 'primary' : 'inherit'}
                 variant='h3'
               >
-                Home
+                Hello
               </Typography>
             </ListItemText>
           </ListItemButton>

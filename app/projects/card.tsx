@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 							<img
 								alt={`screenshot of ${project.title}`}
 								src={project.image[0]}
-								style={{ objectFit: 'contain' }}
+								style={{ objectFit: 'contain', borderRadius: 8 }}
 								width='100%'
 							/>
 						)}

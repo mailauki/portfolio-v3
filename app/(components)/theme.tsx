@@ -7,7 +7,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Context } from '../_utils/context';
-import { lightBlue } from '@mui/material/colors';
+import { brown, teal } from '@mui/material/colors';
 
 export default function ThemeRegistry(
 	props: {
@@ -27,13 +27,18 @@ export default function ThemeRegistry(
   const theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
-			primary: lightBlue,
+			primary: teal,
+			background: {
+				paper: darkMode ? '#121212': brown[50],
+				default: darkMode ? '#121212': brown[50],
+			},
     },
 		components: {
 			MuiAppBar: {
 				styleOverrides: {
 					root: {
 						borderRadius: 64,
+						// backgroundColor: darkMode ? '#121212': '#f4efed',
 					},
 				},
 			},
@@ -41,6 +46,7 @@ export default function ThemeRegistry(
 				styleOverrides: {
 					root: {
 						borderRadius: 8,
+						// backgroundColor: darkMode ? '#121212': '#f4efed',
 					},
 				},
 			},

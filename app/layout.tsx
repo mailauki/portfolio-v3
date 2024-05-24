@@ -1,8 +1,9 @@
 import './globals.css';
-import styles from './page.module.css';
-import { Grid, Paper, Toolbar } from '@mui/material';
+// import styles from './page.module.css';
+import { Grid, Toolbar } from '@mui/material';
 import NavBar from './(components)/nav';
 import ThemeRegistry from './(components)/theme';
+import Background from './(components)/background';
 
 export const metadata = {
   title: {
@@ -23,16 +24,7 @@ export default function RootLayout({
   return (
     <html data-scroll='0' lang='en'>
       <ThemeRegistry options={{ key: 'mui' }}>
-        <Paper
-          className={styles.background}
-          component='body'
-          elevation={0}
-          square
-          sx={{
-						backgroundImage: 'url("./ombre.png")',
-						position: 'relative',
-					}}
-        >
+				<body>
 					<Grid container>
 						<Grid item sm={3} xs={12}>
 							<NavBar />
@@ -43,7 +35,8 @@ export default function RootLayout({
 							<Toolbar sx={{ mb: 3 }} />
 						</Grid>
 					</Grid>
-        </Paper>
+					<Background />
+				</body>
       </ThemeRegistry>
     </html>
   );

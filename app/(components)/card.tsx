@@ -1,5 +1,4 @@
 import { Card as MuiCard } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 
 export default function CardBox({
   children,
@@ -8,9 +7,10 @@ export default function CardBox({
 }>) {
 	return (
 		<MuiCard
-			sx={{
-				bgcolor: (theme) => alpha(theme.palette.background.default, 0.2),
-			}}
+			// sx={{
+			// 	bgcolor: (theme) => alpha(theme.palette.background.default, 0.2),
+			// }}
+			// sx={{ bgcolor: brown[50] }}
 			variant='outlined'
 		>
 			{children}
