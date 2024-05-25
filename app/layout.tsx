@@ -1,6 +1,6 @@
 import './globals.css';
-// import styles from './page.module.css';
-import { Grid, Toolbar } from '@mui/material';
+import styles from './page.module.css';
+import { Grid, Paper, Toolbar } from '@mui/material';
 import NavBar from './(components)/nav';
 import ThemeRegistry from './(components)/theme';
 import Background from './(components)/background';
@@ -24,7 +24,13 @@ export default function RootLayout({
   return (
     <html data-scroll='0' lang='en'>
       <ThemeRegistry options={{ key: 'mui' }}>
-				<body>
+				<Paper
+					className={styles.background}
+					component='body'
+					elevation={0}
+					square
+					sx={{ bgcolor: 'transparent' }}
+				>
 					<Grid container>
 						<Grid item sm={3} xs={12}>
 							<NavBar />
@@ -36,7 +42,7 @@ export default function RootLayout({
 						</Grid>
 					</Grid>
 					<Background />
-				</body>
+				</Paper>
       </ThemeRegistry>
     </html>
   );
