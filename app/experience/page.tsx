@@ -1,5 +1,5 @@
 import { ExperienceCard, EducationCard } from './card';
-import { Container, Grid } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 
 export const metadata = {
   title: 'Experience',
@@ -7,15 +7,13 @@ export const metadata = {
 
 export default function Experience() {
   return (
-    <Container component='main' maxWidth='lg'>
 			<Grid container spacing={2}>
-				<Grid item lg={7} md={12}>
+				<Grid size={{ md: 12, lg: 7 }}>
 					<ExperienceCard />
 				</Grid>
-				<Grid item lg={5} md={12}>
+				<Grid size={{ md: 12, lg: 5 }}>
 					<EducationCard />
 				</Grid>
 			</Grid>
-    </Container>
   );
 }

@@ -1,6 +1,7 @@
 import './globals.css';
 import styles from './page.module.css';
-import { Grid, Paper, Toolbar } from '@mui/material';
+import { Container, Paper, Toolbar } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import NavBar from './(components)/nav';
 import ThemeRegistry from './(components)/theme';
 import Background from './(components)/background';
@@ -31,16 +32,18 @@ export default function RootLayout({
 					square
 					sx={{ bgcolor: 'transparent' }}
 				>
-					<Grid container>
-						<Grid item sm={3} xs={12}>
-							<NavBar />
+					<Container component='main' maxWidth='xl'>
+						<Grid container>
+							<Grid size={{ md: 3, sm: 0 }}>
+								<NavBar />
+							</Grid>
+							<Grid size={{ md: 9, sm: 12 }}>
+								<Toolbar sx={{ mt: 3 }} />
+								{children}
+								<Toolbar sx={{ mb: 3 }} />
+							</Grid>
 						</Grid>
-						<Grid item sm={9} xs={12}>
-							<Toolbar sx={{ mt: 3 }} />
-							{children}
-							<Toolbar sx={{ mb: 3 }} />
-						</Grid>
-					</Grid>
+					</Container>
 					<Background />
 				</Paper>
       </ThemeRegistry>

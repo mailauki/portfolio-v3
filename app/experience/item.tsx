@@ -1,5 +1,5 @@
 import { Avatar, IconButton, Link, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
-import type { Experience } from '../(types)/experience';
+import type { Experience } from '../_utils/types/experience';
 
 export default function Item({ exp }: { exp: Experience }) {
 	const { company, avatar, jobTitle, dates, description, name, location } = exp;
@@ -65,6 +65,18 @@ export default function Item({ exp }: { exp: Experience }) {
 								}}
 							>
 								{description[1]}
+							</Typography>
+						)}
+						{description && description[2] && (
+							<Typography
+								sx={{
+									'&:before': {
+										content: '"•"',
+										mr: 1,
+									},
+								}}
+							>
+								{description[2]}
 							</Typography>
 						)}
 					</>

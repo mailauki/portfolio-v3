@@ -10,7 +10,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import SocialLinks from './social';
-import type { MenuProps } from '../(types)/menu';
+import type { MenuProps } from '../_utils/types/menu';
 
 interface StyledTabProps {
   label: string;

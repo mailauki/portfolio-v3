@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Avatar, Button, Stack, Typography, Link as Anchor, Grid, Container } from '@mui/material';
+import { Avatar, Button, Stack, Typography, Link as Anchor } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import SocialLinks from '../(components)/social';
 import Summary from './summary';
 import Skills from './skills';
@@ -11,9 +12,8 @@ export const metadata = {
 
 export default function AboutMe() {
   return (
-    <Container component='main' maxWidth='lg'>
       <Grid alignItems={{ xs: 'center', sm: 'center', md: 'stretch' }} container justifyContent='center' spacing={{ xs: 2, sm: 2, md: 4 }}>
-        <Grid item md={4} sm={10} xs={12}>
+        <Grid size={{ xs: 12, sm: 10, md: 4 }}>
           <Stack alignItems='center' sx={{ textAlign: 'center', height: '100%' }}>
             <Avatar
               alt='Julie Evans'
@@ -47,10 +47,9 @@ export default function AboutMe() {
           </Stack>
         </Grid>
 
-        <Grid item md={8} sm={10} xs={12}>
+        <Grid size={{ xs: 12, sm: 10, md: 8 }}>
           <Summary />
         </Grid>
       </Grid>
-    </Container>
   );
 }

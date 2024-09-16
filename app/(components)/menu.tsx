@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material';
 import SocialLinks from './social';
-import type { MenuProps } from '../(types)/menu';
+import type { MenuProps } from '../_utils/types/menu';
 import type { MouseEvent } from 'react';
 
 const drawerWidth = '100%';
