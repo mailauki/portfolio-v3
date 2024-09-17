@@ -1,10 +1,4 @@
-import {
-  Avatar,
-  Button,
-  Stack,
-  Typography,
-  Link as Anchor,
-} from "@mui/material";
+import { Avatar, Button, Link, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
 import styles from "@/app/page.module.css";
@@ -53,12 +47,11 @@ export default function About() {
           <Button
             disableElevation
             color="primary"
-            component={Anchor}
+            component={Link}
             href="mailto:juliemevans17@gmail.com"
             size="large"
             sx={{
               fontWeight: 600,
-              mt: 2,
               padding: "0.6rem 2rem",
             }}
             variant="contained"
@@ -66,6 +59,18 @@ export default function About() {
             Contact Me
           </Button>
           <SocialLinks />
+          <Button
+            download
+            color="inherit"
+            component={Link}
+            href="/JulieEvansResume.pdf"
+            sx={{
+              padding: "0.4rem 1.25rem",
+            }}
+            variant="outlined"
+          >
+            My Resume
+          </Button>
         </Stack>
       </Grid>
       <Grid size={12}>
