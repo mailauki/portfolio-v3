@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 import createCache from '@emotion/cache';
 import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider } from '@emotion/react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Context } from '../_utils/context';
-import { brown, teal } from '@mui/material/colors';
+import { amber, blue, blueGrey, brown, cyan, deepPurple, grey, indigo, lime, pink, purple, teal } from '@mui/material/colors';
 
 export default function ThemeRegistry(
 	props: {
@@ -24,10 +24,13 @@ export default function ThemeRegistry(
     prefersDarkMode ? setDarkMode(prefersDarkMode) : setDarkMode(darkMode);
   }, [prefersDarkMode, darkMode]);
 
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
-			primary: teal,
+			// primary: darkMode ? grey : indigo,
+			primary: {
+				main: darkMode ? grey[200] : indigo[800]
+			},
 			background: {
 				paper: darkMode ? '#121212': brown[50],
 				default: darkMode ? '#121212': brown[50],
@@ -46,7 +49,9 @@ export default function ThemeRegistry(
 				styleOverrides: {
 					root: {
 						borderRadius: 8,
+						borderColor: 'transparent',
 						// backgroundColor: darkMode ? '#121212': '#f4efed',
+						backgroundColor: darkMode ? 'rgba(0,0,0,0.32)' : 'rgba(255,255,255,0.16)',
 					},
 				},
 			},
@@ -54,12 +59,14 @@ export default function ThemeRegistry(
 				styleOverrides: {
 					root: {
 						borderRadius: 64,
-						backgroundColor: darkMode ? 'rgba(255,255,255,0.16)': 'rgba(0,0,0,0.08)',
+						// backgroundColor: darkMode ? 'rgba(255,255,255,0.16)': 'rgba(0,0,0,0.08)',
 					},
 				},
 			},
 		},
   });
+
+	// theme = responsiveFontSizes(theme);
 
   const [{ cache, flush }] = useState(() => {
     const cache = createCache(options);

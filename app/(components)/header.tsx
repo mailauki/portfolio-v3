@@ -104,9 +104,9 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 								/>
 								<StyledTab
 									component={Link}
-									href='/about_me'
-									label='About Me'
-									value='/about_me'
+									href='/about'
+									label='About'
+									value='/about'
 								/>
 								<StyledTab
 									component={Link}
@@ -114,12 +114,12 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 									label='Projects'
 									value='/projects'
 								/>
-								<StyledTab
+								{/* <StyledTab
 									component={Link}
 									href='/experience'
 									label='Experience'
 									value='/experience'
-								/>
+								/> */}
 							</Tabs>
 						</Toolbar>
 					</AppBar>

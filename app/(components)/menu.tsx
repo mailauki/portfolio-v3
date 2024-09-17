@@ -71,7 +71,7 @@ switch (pathname) {
         <ListItem disablePadding>
           <ListItemButton
             component={Link}
-            href='/about_me'
+            href='/about'
             onClick={(event) => handleListItemClick(event, 1)}
             selected={selectedIndex === 1}
             sx={{ textAlign: 'center' }}
@@ -81,7 +81,7 @@ switch (pathname) {
                 color={selectedIndex === 1 ? 'primary' : 'inherit'}
                 variant='h3'
               >
-                About Me
+                About
               </Typography>
             </ListItemText>
           </ListItemButton>
@@ -106,7 +106,7 @@ switch (pathname) {
           </ListItemButton>
         </ListItem>
 
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <ListItemButton
             component={Link}
             href='/experience'
@@ -123,7 +123,7 @@ switch (pathname) {
               </Typography>
             </ListItemText>
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
 
       <Box

@@ -1,6 +1,6 @@
 'use client';
 import { Paper, useTheme } from '@mui/material';
-import { teal } from '@mui/material/colors';
+import { brown, teal } from '@mui/material/colors';
 
 export default function Background() {
 	const theme = useTheme();
@@ -10,7 +10,8 @@ export default function Background() {
 			elevation={0}
 			square
 			sx={{
-				background: `linear-gradient(to bottom, ${theme.palette.background.default} 70%, ${teal[500]} 70%)`,
+				background: `linear-gradient(to bottom, ${theme.palette.background.default} 50%, ${brown[500]})`,
+				// teal[500]
 				// backgroundImage: 'url("./ombre.png")',
 				position: 'fixed',
 				top: 0,

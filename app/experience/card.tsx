@@ -9,6 +9,7 @@ export function ExperienceCard() {
   return (
 		<CardBox>
 			<CardHeader
+				titleTypographyProps={{ fontFamily: 'serif' }}
 				sx={{ pb: 0 }}
 				title='Experience'
 			/>
@@ -26,6 +27,7 @@ export function EducationCard() {
   return (
 		<CardBox>
 			<CardHeader
+				titleTypographyProps={{ fontFamily: 'serif' }}
 				sx={{ pb: 0 }}
 				title='Education'
 			/>
