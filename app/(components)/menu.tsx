@@ -105,25 +105,6 @@ switch (pathname) {
             </ListItemText>
           </ListItemButton>
         </ListItem>
-
-        {/* <ListItem disablePadding>
-          <ListItemButton
-            component={Link}
-            href='/experience'
-            onClick={(event) => handleListItemClick(event, 3)}
-            selected={selectedIndex === 3}
-            sx={{ textAlign: 'center' }}
-          >
-            <ListItemText disableTypography>
-              <Typography
-                color={selectedIndex === 3 ? 'primary' : 'inherit'}
-                variant='h3'
-              >
-                Experience
-              </Typography>
-            </ListItemText>
-          </ListItemButton>
-        </ListItem> */}
       </List>
 
       <Box

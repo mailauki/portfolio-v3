@@ -1,6 +1,7 @@
 'use client';
+
 import { Paper, useTheme } from '@mui/material';
-import { brown, teal } from '@mui/material/colors';
+import { brown } from '@mui/material/colors';
 
 export default function Background() {
 	const theme = useTheme();

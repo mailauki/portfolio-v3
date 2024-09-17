@@ -1,13 +1,14 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import createCache from '@emotion/cache';
 import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider } from '@emotion/react';
-import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Context } from '../_utils/context';
-import { amber, blue, blueGrey, brown, cyan, deepPurple, grey, indigo, lime, pink, purple, teal } from '@mui/material/colors';
+import { brown, grey, indigo } from '@mui/material/colors';
 
 export default function ThemeRegistry(
 	props: {

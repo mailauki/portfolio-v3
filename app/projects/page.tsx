@@ -6,7 +6,6 @@ export const metadata = {
 };
 
 export default function Projects() {
-
   return (
 		<>
 			<Typography fontFamily='serif' px={2} fontSize='10rem' variant='h1' mb={5}>Projects</Typography>

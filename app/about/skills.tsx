@@ -1,6 +1,7 @@
 'use client';
+
 import skills from './skills.json';
-import { CardContent, CardHeader, Chip, Divider, Stack, Typography } from '@mui/material';
+import { CardContent, CardHeader, Chip, Divider, Stack } from '@mui/material';
 import CardBox from '@/app/(components)/card';
 
 export default function Skills() {

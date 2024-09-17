@@ -1,4 +1,5 @@
 'use client';
+
 import { useContext, useEffect, useState } from 'react';
 import { Context } from '../_utils/context';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -114,12 +115,6 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
 									label='Projects'
 									value='/projects'
 								/>
-								{/* <StyledTab
-									component={Link}
-									href='/experience'
-									label='Experience'
-									value='/experience'
-								/> */}
 							</Tabs>
 						</Toolbar>
 					</AppBar>

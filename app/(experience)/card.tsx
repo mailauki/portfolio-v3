@@ -1,4 +1,5 @@
 'use client';
+
 import experience from './experience.json';
 import education from './education.json';
 import { CardContent, CardHeader, List } from '@mui/material';

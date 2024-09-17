@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
+
 import Link from 'next/link';
-import { CardHeader, Stack, Box, Grid, CardActions, Button, Link as Anchor, Typography, Chip, CardContent } from '@mui/material';
+import { CardHeader, Stack, Box, CardActions, Button, Link as Anchor, Typography, Chip, CardContent } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import type { Project } from '../_utils/types/projects';
@@ -24,10 +26,10 @@ export default function ProjectCard({ project }: { project: Project }) {
 					spacing={2}
 					sx={{ minHeight: 350 }}
 				>
-					<Grid item md={project.image[0] ? 4 : 12} sm={12} xs={12}>
+					<Grid size={{ md: project.image[0] ? 4 : 12, sm: 12 }}>
 						<Box>
 							{project.description[1] && (
-								(project.description[1] as string[]).map((bullet: string, index: number) => <Typography color='text.secondary' key={index} paragraph variant='body2'>• {bullet}</Typography>)
+								(project.description[1] as string[]).map((bullet: string, index: number) => <Typography color='text.secondary' key={index} gutterBottom variant='body2'>• {bullet}</Typography>)
 							)}
 
 							<Stack
@@ -40,7 +42,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 								{project.tags.map((tag) => <Chip key={tag} label={tag} />)}
 							</Stack>
 
-							<Typography paragraph>
+							<Typography gutterBottom>
 								{project.inspiration && (
 									project.inspiration.map((part) => (
 										(typeof part !== 'string') ? (
@@ -59,7 +61,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 						</Box>
 					</Grid>
 
-					<Grid item md={project.image[0] ? 8 : 12} sm={12} xs={12}>
+					<Grid size={{ md: project.image[0] ? 8 : 12, sm: 12 }}>
 						{project.image[0] && (
 							<img
 								alt={`screenshot of ${project.title}`}

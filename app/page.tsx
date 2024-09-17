@@ -1,46 +1,10 @@
 'use client';
-import styles from '@/app/page.module.css';
-import { Button, Container, Link, Stack, Typography } from '@mui/material';
+
+import { Link, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-// import Link from 'next/link';
 
 export default function Home() {
   return (
-    // <Container component='main' maxWidth='lg'>
-    //   <Stack
-		// 		alignItems='center'
-		// 		direction='column'
-		// 		height='100%'
-		// 		justifyContent='center'
-		// 		spacing={4}
-		// 		sx={{ margin: 'auto 0', flex: '1 1 auto' }}
-		// 	>
-		// 		<Typography textAlign='center' variant='h1'>Julie <span className={styles.hide}>M. </span>Evans</Typography>
-
-		// 		<Stack
-		// 			alignItems='center'
-		// 			direction={{ xs: 'column', sm: 'row' }}
-		// 			justifyContent='center'
-		// 			spacing={1}
-		// 		>
-		// 			<Typography>Software Engineer</Typography>
-		// 			<span className={styles.hide}>-</span>
-		// 			<Typography>Web Developer</Typography>
-		// 		</Stack>
-		// 		<Button
-		// 			component={Link}
-		// 			href='mailto:juliemevans17@gmail.com'
-		// 			size='large'
-		// 			sx={{
-		// 				mt: 2,
-		// 				borderRadius: 8,
-		// 			}}
-		// 			variant='outlined'
-		// 		>
-		// 			Email Me
-		// 		</Button>
-    //   </Stack>
-    // </Container>
 		<Grid container spacing={4}>
 			<Grid>
 				<Stack px={2} spacing={2}>
@@ -58,53 +22,6 @@ export default function Home() {
 					<Typography variant='overline'>Kilgore, Texas</Typography>
 				</Stack>
 			</Grid>
-			{/* <Grid size={4}>
-				<Stack spacing={3} justifyContent='end' height='94%'>
-					<Typography variant='h1' fontSize='1.05rem' textTransform='uppercase' fontWeight={500}>Julie M. Evans</Typography>
-					<Typography variant='subtitle1'>Web Developer | Software Engineer </Typography>
-					<Typography variant='subtitle1'>Currently working full-time as a Web Developer at <Link color='textPrimary' href='https://www.pingwind.com/' underline='hover'>PingWind</Link>.</Typography>
-				</Stack>
-			</Grid> */}
-			{/* <Grid size={7}>
-				<Stack>
-					<Link
-						href='/about'
-						px={2}
-						fontFamily='serif'
-						fontSize='10rem'
-						underline='none'
-						variant='h2'
-						color='textPrimary'
-						sx={{ cursor: 'pointer', ':hover': { fontStyle: 'italic',transform: 'translateX(0.5rem)', transition: 'transform .3s ease-in-out, color .3s ease-in-out, font-size .3s ease-in-out' } }}
-					>
-					About
-					</Link>
-					<Link
-						href='/projects'
-						px={2}
-						fontFamily='serif'
-						fontSize='10rem'
-						underline='none'
-						variant='h2'
-						color='textPrimary'
-						sx={{ cursor: 'pointer', ':hover': { fontStyle: 'italic',transform: 'translateX(0.5rem)', transition: 'transform .3s ease-in-out, color .3s ease-in-out, font-size .3s ease-in-out' } }}
-					>
-						Projects
-					</Link>
-					<Link
-						href='/contact'
-						px={2}
-						fontFamily='serif'
-						fontSize='10rem'
-						underline='none'
-						variant='h2'
-						color='textPrimary'
-						sx={{ cursor: 'pointer', ':hover': { fontStyle: 'italic',transform: 'translateX(0.5rem)', transition: 'transform .3s ease-in-out, color .3s ease-in-out, font-size .3s ease-in-out' } }}
-					>
-						Contact
-					</Link>
-				</Stack>
-			</Grid> */}
 		</Grid>
   );
 }

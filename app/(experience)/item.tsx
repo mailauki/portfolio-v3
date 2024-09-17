@@ -1,5 +1,5 @@
 import { Avatar, IconButton, Link, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
-import type { Experience } from '../_utils/types/experience';
+import type { Experience } from '@/app/_utils/types/experience';
 
 export default function Item({ exp }: { exp: Experience }) {
 	const { company, avatar, jobTitle, dates, description, name, location } = exp;
