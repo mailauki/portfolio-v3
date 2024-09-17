@@ -18,12 +18,16 @@ export default function About() {
     <Grid container spacing={2}>
       <Grid size={{ md: 8, sm: 12 }}>
         <Stack px={2} spacing={2}>
-          <Typography fontFamily="serif" fontSize="10rem" variant="h1">
+          <Typography
+            fontFamily="serif"
+            fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
+            variant="h1"
+          >
             About
           </Typography>
           <Typography
             fontFamily="serif"
-            fontSize="2.8rem"
+            fontSize={{ sm: "3rem", xs: "2rem" }}
             variant="subtitle1"
             whiteSpace="balance"
           >

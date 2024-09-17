@@ -11,7 +11,7 @@ export default function Projects() {
     <>
       <Typography
         fontFamily="serif"
-        fontSize="10rem"
+        fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
         mb={5}
         px={2}
         variant="h1"

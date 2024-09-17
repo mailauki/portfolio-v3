@@ -8,7 +8,11 @@ export default function Home() {
     <Grid container spacing={4}>
       <Grid>
         <Stack px={2} spacing={2}>
-          <Typography fontFamily="serif" fontSize="10rem" variant="h1">
+          <Typography
+            fontFamily="serif"
+            fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
+            variant="h1"
+          >
             Hello
           </Typography>
           <Stack height="94%" justifyContent="end" spacing={3}>

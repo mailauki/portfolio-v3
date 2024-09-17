@@ -1,5 +1,27 @@
 [
 	{
+		"id": "budget",
+		"title": "Paypay Budget",
+		"description": ["WIP: Budgeting app using Next UI and Tremor charts."],
+		"image": [
+			""
+		],
+		"links": {
+			"githubLink": "https://github.com/mailauki/budget",
+			"demoLink": "https://paypay-budget.vercel.app"
+		},
+		"tags": ["Next JS", "TypeScript", "Vercel", "Next UI", "Tailwind CSS", "Tremor"],
+		"date": "2024-09-14",
+		"inspiration": [
+			"Design inspired by ",
+      {
+        "text": "Paypay - Money Management Mobile & Saas App",
+        "link": "https://dribbble.com/shots/24062884-Paypay-Money-Management-Mobile-Saas-App"
+      },
+      " by Agensip UI UX Agency."
+		]
+	},
+	{
 		"id": "todoloo",
 		"title": "ToDoLoo",
 		"description": ["WIP: ToDo app using Next JS and MUI."],
