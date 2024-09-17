@@ -1,15 +1,24 @@
-import { Typography } from '@mui/material';
-import Filter from './filter';
+import { Typography } from "@mui/material";
+
+import Filter from "./filter";
 
 export const metadata = {
-  title: 'Projects',
+  title: "Projects",
 };
 
 export default function Projects() {
   return (
-		<>
-			<Typography fontFamily='serif' px={2} fontSize='10rem' variant='h1' mb={5}>Projects</Typography>
-			<Filter />
-		</>
+    <>
+      <Typography
+        fontFamily="serif"
+        fontSize="10rem"
+        mb={5}
+        px={2}
+        variant="h1"
+      >
+        Projects
+      </Typography>
+      <Filter />
+    </>
   );
 }

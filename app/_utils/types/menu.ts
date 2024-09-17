@@ -1,4 +1,4 @@
 export type MenuProps = {
-	menuOpen: boolean;
-	handleClose: () => void;
+  menuOpen: boolean;
+  handleClose: () => void;
 };

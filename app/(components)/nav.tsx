@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Header from './header';
-import Menu from './menu';
+import { useState } from "react";
+
+import Header from "./header";
+import Menu from "./menu";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -13,14 +14,8 @@ export default function NavBar() {
 
   return (
     <>
-      <Header
-				handleClose={handleClose}
-				menuOpen={menuOpen}
-			/>
-      <Menu
-				handleClose={handleClose}
-				menuOpen={menuOpen}
-			/>
+      <Header handleClose={handleClose} menuOpen={menuOpen} />
+      <Menu handleClose={handleClose} menuOpen={menuOpen} />
     </>
   );
 }
