@@ -13,10 +13,10 @@ export default function Skills() {
     <CardBox>
       <CardHeader
         subheader="Still learning and mastering"
-        subheaderTypographyProps={{ variant: "overline" }}
+        subheaderTypographyProps={{ variant: "overline", component: "h3" }}
         sx={{ pb: 0 }}
         title="Skills"
-        titleTypographyProps={{ fontFamily: "serif" }}
+        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
       <CardContent>
         <Stack

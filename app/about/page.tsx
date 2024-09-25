@@ -26,6 +26,7 @@ export default function About() {
             About
           </Typography>
           <Typography
+            component="p"
             fontFamily="serif"
             fontSize={{ sm: "3rem", xs: "2rem" }}
             variant="subtitle1"

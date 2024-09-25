@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
+  Stack,
   Typography,
 } from "@mui/material";
 
@@ -26,7 +27,7 @@ export default function Item({ exp }: { exp: Experience }) {
         disableTypography
         inset={!avatar}
         primary={
-          <Typography>
+          <Typography component="h3">
             <Typography
               color="text.primary"
               component={exp.source ? Link : "span"}
@@ -52,45 +53,53 @@ export default function Item({ exp }: { exp: Experience }) {
         }
         secondary={
           <>
-            <Typography color="text.secondary" variant="body2">
+            <Typography color="text.secondary" component="h4" variant="body2">
               {dates}
             </Typography>
-            {description && description[0] && (
-              <Typography
-                sx={{
-                  "&:before": {
-                    content: '"•"',
-                    mr: 1,
-                  },
-                }}
-              >
-                {description[0]}
-              </Typography>
-            )}
-            {description && description[1] && (
-              <Typography
-                sx={{
-                  "&:before": {
-                    content: '"•"',
-                    mr: 1,
-                  },
-                }}
-              >
-                {description[1]}
-              </Typography>
-            )}
-            {description && description[2] && (
-              <Typography
-                sx={{
-                  "&:before": {
-                    content: '"•"',
-                    mr: 1,
-                  },
-                }}
-              >
-                {description[2]}
-              </Typography>
-            )}
+            <Stack component="ul" spacing={0.5} sx={{ mt: 1 }}>
+              {description && description[0] && (
+                <Typography
+                  component="li"
+                  sx={{
+                    listStyle: "none",
+                    "&:before": {
+                      content: '"•"',
+                      mr: 1,
+                    },
+                  }}
+                >
+                  {description[0]}
+                </Typography>
+              )}
+              {description && description[1] && (
+                <Typography
+                  component="li"
+                  sx={{
+                    listStyle: "none",
+                    "&:before": {
+                      content: '"•"',
+                      mr: 1,
+                    },
+                  }}
+                >
+                  {description[1]}
+                </Typography>
+              )}
+              {description && description[2] && (
+                <Typography
+                  component="li"
+                  sx={{
+                    listStyle: "none",
+                    "&:before": {
+                      content: '"•"',
+                      mr: 1,
+                    },
+                  }}
+                >
+                  {description[2]}
+                </Typography>
+              )}
+            </Stack>
           </>
         }
       />

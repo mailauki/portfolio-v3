@@ -29,7 +29,9 @@ export default function ProjectCard({ project }: { project: Project }) {
       <CardHeader
         id={project.id}
         subheader={project.description[0]}
+        subheaderTypographyProps={{ component: "h3" }}
         title={project.title}
+        titleTypographyProps={{ component: "h2" }}
       />
 
       <CardContent>
@@ -41,7 +43,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         >
           <Grid size={{ md: project.image[0] ? 4 : 12, sm: 12 }}>
             <Stack spacing={2}>
-              <Stack spacing={1}>
+              <Stack component="ul" spacing={1}>
                 {project.description[1] &&
                   (project.description[1] as string[]).map(
                     (bullet: string, index: number) => (
@@ -49,6 +51,8 @@ export default function ProjectCard({ project }: { project: Project }) {
                         key={index}
                         gutterBottom
                         color="text.secondary"
+                        component="li"
+                        sx={{ listStyle: "none" }}
                         variant="body2"
                       >
                         • {bullet}

@@ -14,7 +14,7 @@ export function ExperienceCard() {
       <CardHeader
         sx={{ pb: 0 }}
         title="Experience"
-        titleTypographyProps={{ fontFamily: "serif" }}
+        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
       <CardContent sx={{ pt: 0 }}>
         <List>
@@ -32,7 +32,7 @@ export function EducationCard() {
       <CardHeader
         sx={{ pb: 0 }}
         title="Education"
-        titleTypographyProps={{ fontFamily: "serif" }}
+        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
       <CardContent sx={{ pt: 0 }}>
         <List>

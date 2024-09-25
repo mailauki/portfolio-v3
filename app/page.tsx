@@ -9,6 +9,7 @@ export default function Home() {
       <Grid>
         <Stack px={2} spacing={2}>
           <Typography
+            component="h1"
             fontFamily="serif"
             fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
             variant="h1"
@@ -17,6 +18,7 @@ export default function Home() {
           </Typography>
           <Stack height="94%" justifyContent="end" spacing={3}>
             <Typography
+              component="h2"
               fontSize="1.15rem"
               fontWeight={500}
               textTransform="uppercase"
@@ -24,10 +26,10 @@ export default function Home() {
             >
               Julie M. Evans
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography component="h3" variant="subtitle1">
               Web Developer | Software Engineer{" "}
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography component="p" variant="subtitle1">
               Currently working full-time as a Web Developer at{" "}
               <Link
                 color="textPrimary"
@@ -39,11 +41,11 @@ export default function Home() {
               .
             </Typography>
           </Stack>
-          <Typography fontStyle="italic" variant="subtitle1">
+          <Typography component="p" fontStyle="italic" variant="subtitle1">
             Get in touch with me however you like. No reason needed.
           </Typography>
           <Stack>
-            <Typography variant="overline">
+            <Typography component="p" variant="overline">
               Email:{" "}
               <Link
                 color="textPrimary"
@@ -54,7 +56,7 @@ export default function Home() {
                 juliemevans17@gmail.com
               </Link>
             </Typography>
-            <Typography variant="overline">
+            <Typography component="p" variant="overline">
               On the Internet:{" "}
               <Link
                 color="textPrimary"
@@ -84,7 +86,9 @@ export default function Home() {
               </Link>
             </Typography>
           </Stack>
-          <Typography variant="overline">Kilgore, Texas</Typography>
+          <Typography component="p" variant="overline">
+            Kilgore, Texas
+          </Typography>
         </Stack>
       </Grid>
     </Grid>
