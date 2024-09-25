@@ -21,6 +21,8 @@ import moment from "moment";
 
 import CardBox from "@/app/(components)/card";
 
+import { tagsLinks } from "../_utils/helpers";
+
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <CardBox>
@@ -63,7 +65,14 @@ export default function ProjectCard({ project }: { project: Project }) {
                 sx={{ mb: 2 }}
               >
                 {project.tags.map((tag) => (
-                  <Chip key={tag} label={tag} />
+                  <Chip
+                    key={tag}
+                    clickable
+                    component="a"
+                    href={tagsLinks(tag)}
+                    label={tag}
+                    target="_blank"
+                  />
                 ))}
               </Stack>
 

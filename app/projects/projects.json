@@ -15,7 +15,7 @@
 			"githubLink": "https://github.com/mailauki/budget",
 			"demoLink": "https://paypay-budget.vercel.app"
 		},
-		"tags": ["Next JS", "TypeScript", "Vercel", "Next UI", "Tailwind CSS", "Tremor"],
+		"tags": ["Next JS", "TypeScript", "Vercel", "Next UI", "Tailwind CSS", "Tremor", "React Icons"],
 		"date": "2024-09-17",
 		"inspiration": [
 			"Design inspired by ",
@@ -288,7 +288,7 @@
       "githubLink": "https://github.com/mailauki/pic-worthy", 
       "demoLink": "https://pic-worthy.onrender.com"
     },
-    "tags": ["React", "Redux", "Ruby", "Rails", "PostgreSQL", "Render", "Material UI", "Swiper JS"],
+    "tags": ["React", "Redux", "Ruby", "Rails", "PostgreSQL", "Render", "Material UI", "Swiper JS", "dbdiagram.io"],
     "date": "2022-11-11",
     "inspiration": [
       "Based from ", 
@@ -322,7 +322,7 @@
     "links": {
       "githubLink": "https://github.com/mailauki/phase-4-project-cattube"
     },
-    "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Heroku"],
+    "tags": ["React", "Ruby", "Rails", "PostgreSQL", "Heroku", "dbdiagram.io"],
     "date": "2022-07-26",
     "inspiration": [
       "Based from ", 
