@@ -2,16 +2,21 @@
 	{
 		"id": "budget",
 		"title": "Paypay Budget",
-		"description": ["WIP: Budgeting app using Next UI and Tremor charts."],
-		"image": [
-			""
+		"description": [
+			"WIP: Budgeting app using Next UI and Tremor charts.",
+			[
+				"Designed to track spending and display progress towards savings goals",
+				"Incorporated budgeting based on categories and comparison with spending.",
+				"Included charts and graphs using Tremor blocks."
+			]
 		],
+		"image": [""],
 		"links": {
 			"githubLink": "https://github.com/mailauki/budget",
 			"demoLink": "https://paypay-budget.vercel.app"
 		},
 		"tags": ["Next JS", "TypeScript", "Vercel", "Next UI", "Tailwind CSS", "Tremor"],
-		"date": "2024-09-14",
+		"date": "2024-09-17",
 		"inspiration": [
 			"Design inspired by ",
       {
