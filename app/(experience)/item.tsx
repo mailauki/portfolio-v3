@@ -31,6 +31,7 @@ export default function Item({ exp }: { exp: Experience }) {
               color="text.primary"
               component={exp.source ? Link : "span"}
               href={exp.source}
+              target="_blank"
               underline="hover"
             >
               {company || name}

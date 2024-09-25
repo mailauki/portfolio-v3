@@ -60,6 +60,10 @@
     "title": "SCSS"
   },
   {
+    "id": "sass",
+    "title": "Sass"
+  },
+  {
     "id": "tailwind",
     "title": "Tailwind CSS"
   }

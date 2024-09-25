@@ -4,6 +4,8 @@ import { CardContent, CardHeader, Chip, Divider, Stack } from "@mui/material";
 
 import CardBox from "@/app/(components)/card";
 
+import { tagsLinks } from "../_utils/helpers";
+
 import skills from "./skills.json";
 
 export default function Skills() {
@@ -25,7 +27,14 @@ export default function Skills() {
           spacing={1}
         >
           {skills.map((skill) => (
-            <Chip key={skill.id} label={skill.title} />
+            <Chip
+              key={skill.id}
+              clickable
+              component="a"
+              href={tagsLinks(skill.title)}
+              label={skill.title}
+              target="_blank"
+            />
           ))}
         </Stack>
       </CardContent>

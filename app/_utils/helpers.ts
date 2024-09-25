@@ -2,12 +2,16 @@ export function tagsLinks(tag: string) {
   switch (tag) {
     case "React":
       return "https://react.dev";
+    case "React JS":
+      return "https://react.dev";
     case "Next JS":
       return "https://nextjs.org";
     case "TypeScript":
       return "https://www.typescriptlang.org";
     case "Tailwind CSS":
       return "https://tailwindcss.com";
+    case "Bootstrap":
+      return "https://getbootstrap.com";
     case "SCSS":
       return "https://sass-lang.com";
     case "Sass":
@@ -38,16 +42,28 @@ export function tagsLinks(tag: string) {
       return "https://supabase.com";
     case "Redux":
       return "https://redux.js.org";
+    case "jQuery":
+      return "https://jquery.com";
     case "PostgreSQL":
       return "https://www.postgresql.org";
+    case "SQLite":
+      return "https://www.sqlite.org";
+    case "SQL":
+      return "https://www.sqltutorial.org";
     case "Ruby":
       return "https://www.ruby-lang.org/en/";
+    case "Ruby on Rails":
+      return "https://rubyonrails.org";
     case "Rails":
       return "https://rubyonrails.org";
     case "HTML":
-      return "https://developer.mozilla.org/en-US/docs/Learn/HTML";
+      return "https://developer.mozilla.org/en-US/docs/Web/HTML";
+    case "JavaScript":
+      return "https://developer.mozilla.org/en-US/docs/Web/JavaScript";
     case "Vanilla JS":
       return "https://developer.mozilla.org/en-US/docs/Web/JavaScript";
+    case "CSS":
+      return "https://developer.mozilla.org/en-US/docs/Web/CSS";
     default:
       return "#";
   }
