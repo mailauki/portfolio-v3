@@ -7,7 +7,6 @@ import Link from "next/link";
 import {
   CardHeader,
   Stack,
-  Box,
   CardActions,
   Button,
   Link as Anchor,
@@ -39,20 +38,22 @@ export default function ProjectCard({ project }: { project: Project }) {
           sx={{ minHeight: 350 }}
         >
           <Grid size={{ md: project.image[0] ? 4 : 12, sm: 12 }}>
-            <Box>
-              {project.description[1] &&
-                (project.description[1] as string[]).map(
-                  (bullet: string, index: number) => (
-                    <Typography
-                      key={index}
-                      gutterBottom
-                      color="text.secondary"
-                      variant="body2"
-                    >
-                      • {bullet}
-                    </Typography>
-                  ),
-                )}
+            <Stack spacing={2}>
+              <Stack spacing={1}>
+                {project.description[1] &&
+                  (project.description[1] as string[]).map(
+                    (bullet: string, index: number) => (
+                      <Typography
+                        key={index}
+                        gutterBottom
+                        color="text.secondary"
+                        variant="body2"
+                      >
+                        • {bullet}
+                      </Typography>
+                    ),
+                  )}
+              </Stack>
 
               <Stack
                 useFlexGap
@@ -78,7 +79,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     ),
                   )}
               </Typography>
-            </Box>
+            </Stack>
           </Grid>
 
           <Grid size={{ md: project.image[0] ? 8 : 12, sm: 12 }}>
