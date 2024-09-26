@@ -20,6 +20,8 @@ export function tagsLinks(tag: string) {
       return "https://react-icons.github.io/react-icons";
     case "dbdiagram.io":
       return "https://dbdiagram.io";
+    case "Figma":
+      return "https://www.figma.com";
     case "Next UI":
       return "https://nextui.org";
     case "Material UI":

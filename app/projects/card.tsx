@@ -17,13 +17,16 @@ import {
 import Grid from "@mui/material/Grid2";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import moment from "moment";
+import { getLocalTimeZone, parseDate } from "@internationalized/date";
+import { useDateFormatter } from "@react-aria/i18n";
 
 import CardBox from "@/app/(components)/card";
 
 import { tagsLinks } from "../_utils/helpers";
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const formatter = useDateFormatter({ dateStyle: "medium" });
+
   return (
     <CardBox>
       <CardHeader
@@ -117,7 +120,9 @@ export default function ProjectCard({ project }: { project: Project }) {
                   Last Updated
                 </Typography>
                 <Typography>
-                  {moment(project.date).format("MMM D YYYY")}
+                  {formatter.format(
+                    parseDate(project.date).toDate(getLocalTimeZone()),
+                  )}
                 </Typography>
               </Stack>
             )}
