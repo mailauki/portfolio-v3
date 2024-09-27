@@ -10,4 +10,5 @@ export type Project = {
   tags: string[];
   date: string;
   inspiration?: (string | { text: string; link: string })[];
+  wip: string;
 };

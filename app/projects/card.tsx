@@ -30,6 +30,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <CardBox>
       <CardHeader
+        action={project.wip && <Chip label="WIP" variant="outlined" />}
         id={project.id}
         subheader={project.description[0]}
         subheaderTypographyProps={{ component: "h3" }}
@@ -40,11 +41,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       <CardContent>
         <Grid
           container
-          justifyContent="flex-end"
+          // justifyContent="flex-end"
           spacing={2}
           sx={{ minHeight: 350 }}
         >
-          <Grid size={{ md: project.image[0] ? 4 : 12, sm: 12 }}>
+          <Grid size={{ md: project.image[0] ? 5 : 12 }}>
             <Stack spacing={2}>
               <Stack component="ul" spacing={1}>
                 {project.description[1] &&
@@ -98,12 +99,19 @@ export default function ProjectCard({ project }: { project: Project }) {
             </Stack>
           </Grid>
 
-          <Grid size={{ md: project.image[0] ? 8 : 12, sm: 12 }}>
+          <Grid
+            justifyContent="flex-end"
+            size={{ md: project.image[0] ? 7 : 12 }}
+          >
             {project.image[0] && (
               <img
                 alt={`screenshot of ${project.title}`}
                 src={project.image[0]}
-                style={{ objectFit: "contain", borderRadius: 8 }}
+                style={{
+                  // objectFit: "contain",
+                  borderRadius: 8,
+                  aspectRatio: "9/6 auto",
+                }}
                 width="100%"
               />
             )}
@@ -112,7 +120,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               <Stack
                 alignItems="center"
                 direction="row"
-                justifyContent="end"
+                justifyContent="flex-end"
                 spacing={1}
                 sx={{ mt: 1 }}
               >

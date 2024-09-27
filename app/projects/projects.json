@@ -3,14 +3,16 @@
 		"id": "budget",
 		"title": "Paypay Budget",
 		"description": [
-			"WIP: Budgeting app using Next UI and Tremor charts.",
+			"Budgeting app using Next UI and Tremor charts.",
 			[
 				"Designed to track spending and display progress towards savings goals",
 				"Incorporated budgeting based on categories and comparison with spending.",
 				"Included charts and graphs using Tremor blocks."
 			]
 		],
-		"image": [""],
+		"image": [
+			"/projects/paypay-budget.png"
+		],
 		"links": {
 			"githubLink": "https://github.com/mailauki/budget",
 			"demoLink": "https://paypay-budget.vercel.app"
@@ -24,12 +26,15 @@
         "link": "https://dribbble.com/shots/24062884-Paypay-Money-Management-Mobile-Saas-App"
       },
       " by Agensip UI UX Agency."
-		]
+		],
+		"wip": true
 	},
 	{
 		"id": "todoloo",
 		"title": "ToDoLoo",
-		"description": ["WIP: ToDo app using Next JS and MUI."],
+		"description": [
+			"ToDo app using Next JS and MUI."
+		],
 		"image": [
 			"/projects/to-do-loo.png"
 		],
@@ -46,15 +51,16 @@
         "link": "https://dribbble.com/shots/20502706-Todo-App"
       },
       " by Clément."
-		]
+		],
+		"wip": true
 	},
 	{
 		"id": "pokedextracker",
 		"title": "PokedexTracker",
-		"description": ["WIP: PokeTracker revamp using Next JS and MUI."],
-		"image": [
-			""
+		"description": [
+			"PokeTracker revamp using Next JS and MUI."
 		],
+		"image": [""],
 		"links": {
 			"githubLink": "https://github.com/mailauki/pokedextracker",
 			"demoLink": "https://pokedextracker.vercel.app"
@@ -73,13 +79,14 @@
         "link": "#poke-tracker"
       },
       "."
-		]
+		],
+		"wip": true
 	},
   {
     "id": "poke-tracker-v2",
     "title": "PokeTracker 2",
     "description": [
-      "WIP: PokeTracker revamp using Next JS and PokeApi."
+      "PokeTracker revamp using Next JS and PokeApi."
     ],
     "image": [
 			"/projects/poketracker-v2.jpg"
@@ -102,13 +109,14 @@
         "link": "#poke-tracker"
       },
       "."
-    ]
+    ],
+		"wip": true
   },
   {
     "id": "studio-ghibli-v2",
     "title": "Studio Ghibli 2",
     "description": [
-      "WIP: Studio Ghibi Watchlist revamp using Next JS."
+      "Studio Ghibi Watchlist revamp using Next JS."
     ],
     "image": [
 			"/projects/studio-ghibli-v2.jpg"
@@ -126,7 +134,8 @@
         "link": "#studio-ghibli"
       },
       " using Vanilla JavaScript."
-    ]
+    ],
+		"wip": true
   },
   {
     "id": "tic-tic-toe-v2",
@@ -154,7 +163,8 @@
         "link": "#tic-tic-toe"
       },
       " using React."
-    ]
+    ],
+		"wip": false
   },
   {
     "id": "pokedextracker",
@@ -177,7 +187,8 @@
         "link": "https://github.com/pokedextracker/pokedextracker.com"
       },
       " using Material UI."
-    ]
+    ],
+		"wip": false
   },
   {
     "id": "nearby-markets",
@@ -197,7 +208,8 @@
       "demoLink": "https://v42-geckos-20.vercel.app"
     },
     "tags": ["React", "Supabase", "Vercel", "Material UI", "Figma"],
-    "date": "2023-02-12"
+    "date": "2023-02-12",
+		"wip": false
   },
   {
     "id": "tic-tic-toe",
@@ -226,7 +238,8 @@
         "link": "#oo-tic-tic-toe"
       },
       " using Ruby."
-    ]
+    ],
+		"wip": false
   },
   { 
     "id": "poke-tracker",
@@ -247,7 +260,8 @@
       "demoLink": "https://poke-tracker.netlify.app"
     },
     "tags": ["React", "TypeScript", "Redux", "Netlify", "Material UI"],
-    "date": "2022-11-15"
+    "date": "2022-11-15",
+		"wip": false
   },
   { 
     "id": "le-banque-du-porcine",
@@ -268,7 +282,8 @@
       "demoLink": "https://le-banque-du-porcine.netlify.app"
     },
     "tags": ["Next JS", "Redux", "Netlify", "Supabase", "Material UI", "Swiper JS"],
-    "date": "2022-10-17"
+    "date": "2022-10-17",
+		"wip": false
   },
   { 
     "id": "pic-worthy",
@@ -303,7 +318,8 @@
         "link": "https://dribbble.com/shots/17122481-Insthetic-Social-Media-Mobile-App"
       },
       " by Dhimas Rasyad for Pickolab Studio."
-    ]
+    ],
+		"wip": false
   },
   { 
     "id": "cat-tube",
@@ -331,7 +347,8 @@
         "link": "https://www.youtube.com"
       },
       "."
-    ]
+    ],
+		"wip": false
   },
   {
     "id": "oo-tic-tic-toe",
@@ -346,7 +363,8 @@
       "githubLink": "https://github.com/mailauki/phase-3-oo-tic-tac-toe"
     },
     "tags": ["Ruby"],
-    "date": "2021-09-01"
+    "date": "2021-09-01",
+		"wip": false
   },
   {
     "id": "dune",
@@ -366,7 +384,8 @@
       "githubLink": "https://github.com/mailauki/phase-2-project-dune"
     },
     "tags": ["React"],
-    "date": "2022-02-22"
+    "date": "2022-02-22",
+		"wip": false
   },
   {
     "id": "studio-ghibli",
@@ -386,6 +405,7 @@
       "githubLink": "https://github.com/mailauki/phase-1-project-studio-ghibli"
     },
     "tags": ["HTML", "Vanilla JS"],
-    "date": "2021-12-30"
+    "date": "2021-12-30",
+		"wip": false
   }
 ]
