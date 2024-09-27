@@ -5,7 +5,7 @@
 		"description": [
 			"Budgeting app using Next UI and Tremor charts.",
 			[
-				"Designed to track spending and display progress towards savings goals",
+				"Designed to track spending and display progress towards savings goals.",
 				"Incorporated budgeting based on categories and comparison with spending.",
 				"Included charts and graphs using Tremor blocks."
 			]
@@ -33,7 +33,11 @@
 		"id": "todoloo",
 		"title": "ToDoLoo",
 		"description": [
-			"ToDo app using Next JS and MUI."
+			"ToDo app using Next JS and MUI.",
+			[
+				"Add tasks and mark them as completed.",
+				"Filter tasks by dates."
+			]
 		],
 		"image": [
 			"/projects/to-do-loo.png"
@@ -86,7 +90,11 @@
     "id": "poke-tracker-v2",
     "title": "PokeTracker 2",
     "description": [
-      "PokeTracker revamp using Next JS and PokeApi."
+      "PokeTracker revamp using Next JS and PokeApi.",
+			[
+				"Displays pokemon from an API.",
+				"Mark pokemon as caught to track pokedex progress."
+			]
     ],
     "image": [
 			"/projects/poketracker-v2.jpg"
