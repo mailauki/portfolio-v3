@@ -35,7 +35,7 @@ export default function RootLayout({
         >
           <Container component="main" maxWidth="xl">
             <Grid container>
-              <Grid size={{ md: 3, sm: 0 }}>
+              <Grid component="header" size={{ md: 3, sm: 0 }}>
                 <NavBar />
               </Grid>
               <Grid size={{ md: 9, sm: 12 }}>

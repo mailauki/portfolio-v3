@@ -5,17 +5,19 @@ import Grid from "@mui/material/Grid2";
 
 export default function Home() {
   return (
-    <Grid container spacing={4}>
+    <Grid container component="section" spacing={4}>
       <Grid>
         <Stack px={2} spacing={2}>
-          <Typography
-            component="h1"
-            fontFamily="serif"
-            fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
-            variant="h1"
-          >
-            Hello
-          </Typography>
+          <header>
+            <Typography
+              component="h1"
+              fontFamily="serif"
+              fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
+              variant="h1"
+            >
+              Hello
+            </Typography>
+          </header>
           <Stack height="94%" justifyContent="end" spacing={3}>
             <Typography
               component="h2"

@@ -104,6 +104,7 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
             >
               <Tabs
                 centered
+                component="nav"
                 orientation="vertical"
                 sx={{
                   "& .MuiTabs-indicator": {

@@ -11,6 +11,7 @@ export default function CardBox({
       // 	bgcolor: (theme) => alpha(theme.palette.background.default, 0.2),
       // }}
       // sx={{ bgcolor: brown[50] }}
+      component="article"
       variant="outlined"
     >
       {children}

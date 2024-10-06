@@ -15,8 +15,8 @@ export const metadata = {
 
 export default function About() {
   return (
-    <Grid container spacing={2}>
-      <Grid size={{ md: 8, sm: 12 }}>
+    <Grid container component="section" spacing={2}>
+      <Grid component="header" size={{ md: 8, sm: 12 }}>
         <Stack px={2} spacing={2}>
           <Typography
             fontFamily="serif"
@@ -36,7 +36,7 @@ export default function About() {
           </Typography>
         </Stack>
       </Grid>
-      <Grid className={styles.hide} size={{ md: 4 }}>
+      <Grid className={styles.hide} component="aside" size={{ md: 4 }}>
         <Stack
           alignItems="center"
           spacing={2}

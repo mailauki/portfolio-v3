@@ -8,17 +8,19 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <>
-      <Typography
-        fontFamily="serif"
-        fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
-        mb={5}
-        px={2}
-        variant="h1"
-      >
-        Projects
-      </Typography>
+    <section>
+      <header>
+        <Typography
+          fontFamily="serif"
+          fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
+          mb={5}
+          px={2}
+          variant="h1"
+        >
+          Projects
+        </Typography>
+      </header>
       <Filter />
-    </>
+    </section>
   );
 }
