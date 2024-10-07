@@ -77,6 +77,7 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
     <>
       {matches ? (
         <>
+          {/* lg - desktop */}
           <AppBar
             color="inherit"
             position="sticky"
@@ -130,6 +131,7 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
             </Toolbar>
           </AppBar>
 
+          {/* md - desktop */}
           <AppBar
             color="inherit"
             component="div"
@@ -156,6 +158,8 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
             </IconButton>
           </AppBar>
 
+          {/* md & lg - desktop */}
+          {/* bottom links */}
           <Fade in={scrollTrigger}>
             <AppBar
               component="div"
@@ -181,37 +185,40 @@ export default function Header({ menuOpen, handleClose }: MenuProps) {
           </Fade>
         </>
       ) : (
-        <AppBar
-          color="inherit"
-          position="fixed"
-          sx={{
-            bgcolor: !scrollTrigger
-              ? "transparent"
-              : alpha(theme.palette.background.default, 0.25),
-            backdropFilter: !scrollTrigger ? "blur(0)" : "blur(10px)",
-            width: "fit-content",
-            height: "fit-content",
-            top: "1rem",
-            right: { xs: "1rem", sm: "1.5rem" },
-            px: 1,
-            py: 0.25,
-            borderColor: !scrollTrigger ? "transparent" : "default",
-            transition: "all 0.4s ease-in-out 0.25s",
-          }}
-          variant="outlined"
-        >
-          <Stack direction="row" spacing={1}>
-            <IconButton
-              disabled={prefersDarkMode}
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? <ModeNightIcon /> : <LightModeIcon />}
-            </IconButton>
-            <IconButton onClick={handleClose}>
-              {menuOpen ? <CloseIcon /> : <MenuIcon />}
-            </IconButton>
-          </Stack>
-        </AppBar>
+        <>
+          {/* sm - mobile */}
+          <AppBar
+            color="inherit"
+            position="fixed"
+            sx={{
+              bgcolor: !scrollTrigger
+                ? "transparent"
+                : alpha(theme.palette.background.default, 0.25),
+              backdropFilter: !scrollTrigger ? "blur(0)" : "blur(10px)",
+              width: "fit-content",
+              height: "fit-content",
+              top: "1rem",
+              right: { xs: "1rem", sm: "1.5rem" },
+              px: 1,
+              py: 0.25,
+              borderColor: !scrollTrigger ? "transparent" : "default",
+              transition: "all 0.4s ease-in-out 0.25s",
+            }}
+            variant="outlined"
+          >
+            <Stack direction="row" spacing={1}>
+              <IconButton
+                disabled={prefersDarkMode}
+                onClick={() => setDarkMode(!darkMode)}
+              >
+                {darkMode ? <ModeNightIcon /> : <LightModeIcon />}
+              </IconButton>
+              <IconButton onClick={handleClose}>
+                {menuOpen ? <CloseIcon /> : <MenuIcon />}
+              </IconButton>
+            </Stack>
+          </AppBar>
+        </>
       )}
     </>
   );

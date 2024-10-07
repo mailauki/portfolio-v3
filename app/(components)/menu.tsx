@@ -78,6 +78,7 @@ export default function Menu({ menuOpen, handleClose }: MenuProps) {
             <ListItemText disableTypography>
               <Typography
                 color={selectedIndex === 0 ? "primary" : "inherit"}
+                fontFamily="serif"
                 variant="h3"
               >
                 Hello
@@ -97,6 +98,7 @@ export default function Menu({ menuOpen, handleClose }: MenuProps) {
             <ListItemText disableTypography>
               <Typography
                 color={selectedIndex === 1 ? "primary" : "inherit"}
+                fontFamily="serif"
                 variant="h3"
               >
                 About
@@ -116,6 +118,7 @@ export default function Menu({ menuOpen, handleClose }: MenuProps) {
             <ListItemText disableTypography>
               <Typography
                 color={selectedIndex === 2 ? "primary" : "inherit"}
+                fontFamily="serif"
                 variant="h3"
               >
                 Projects
