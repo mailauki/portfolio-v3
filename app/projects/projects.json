@@ -1,5 +1,26 @@
 [
 	{
+		"id": "calendar-wallpaper",
+		"title": "Calendar Wallpaper",
+		"description": [
+			"A website for creating a wallpaper with a callendar.",
+			[
+			]
+		],
+		"image": [
+			""
+		],
+		"links": {
+			"githubLink": "https://github.com/mailauki/calendar-wallpaper",
+			"demoLink": ""
+		},
+		"tags": ["Next JS", "TypeScript", "Vercel", "Tailwind CSS"],
+		"date": "2024-10-15",
+		"inspiration": [
+		],
+		"wip": true
+	},
+	{
 		"id": "budget",
 		"title": "Paypay Budget",
 		"description": [
