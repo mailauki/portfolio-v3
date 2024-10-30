@@ -12,10 +12,10 @@
 		],
 		"links": {
 			"githubLink": "https://github.com/mailauki/calendar-wallpaper",
-			"demoLink": ""
+			"demoLink": "https://calendar-wallpaper.vercel.app"
 		},
 		"tags": ["Next JS", "TypeScript", "Vercel", "Tailwind CSS"],
-		"date": "2024-10-15",
+		"date": "2024-10-30",
 		"inspiration": [
 		],
 		"wip": true
