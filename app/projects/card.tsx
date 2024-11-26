@@ -13,6 +13,7 @@ import {
   Typography,
   Chip,
   CardContent,
+  Avatar,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -22,7 +23,8 @@ import { useDateFormatter } from "@react-aria/i18n";
 
 import CardBox from "@/app/(components)/card";
 
-import { tagsLinks } from "../_utils/helpers";
+import { getTagsLink } from "../_utils/helpers/tags/links";
+import { getTagsIcon } from "../_utils/helpers/tags/icons";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const formatter = useDateFormatter({ dateStyle: "medium" });
@@ -72,12 +74,19 @@ export default function ProjectCard({ project }: { project: Project }) {
                 spacing={1}
                 sx={{ mb: 2 }}
               >
-                {project.tags.map((tag) => (
+                {project.tags.sort().map((tag) => (
                   <Chip
                     key={tag}
                     clickable
+                    avatar={
+                      getTagsIcon(tag) && (
+                        <Avatar sx={{ bgcolor: "transparent" }}>
+                          {getTagsIcon(tag)}
+                        </Avatar>
+                      )
+                    }
                     component="a"
-                    href={tagsLinks(tag)}
+                    href={getTagsLink(tag)}
                     label={tag}
                     target="_blank"
                   />

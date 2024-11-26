@@ -3,8 +3,10 @@
 		"id": "calendar-wallpaper",
 		"title": "Calendar Wallpaper",
 		"description": [
-			"A website for creating a wallpaper with a callendar.",
+			"A website for creating a wallpaper with a calendar.",
 			[
+				"Generates a jpeg wallpaper using Open Graph with Next JS.",
+				"Customize a wallpaper with a calendar."
 			]
 		],
 		"image": [
@@ -14,8 +16,8 @@
 			"githubLink": "https://github.com/mailauki/calendar-wallpaper",
 			"demoLink": "https://calendar-wallpaper.vercel.app"
 		},
-		"tags": ["Next JS", "TypeScript", "Vercel", "Tailwind CSS"],
-		"date": "2024-10-30",
+		"tags": ["Next JS", "TypeScript", "Vercel", "Next UI", "Tailwind CSS", "React Icons", "Open Graph"],
+		"date": "2024-11-26",
 		"inspiration": [
 		],
 		"wip": true

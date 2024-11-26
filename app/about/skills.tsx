@@ -1,10 +1,19 @@
 "use client";
 
-import { CardContent, CardHeader, Chip, Divider, Stack } from "@mui/material";
+import {
+  Avatar,
+  CardContent,
+  CardHeader,
+  Chip,
+  Divider,
+  Stack,
+} from "@mui/material";
 
 import CardBox from "@/app/(components)/card";
 
-import { tagsLinks } from "../_utils/helpers";
+import { getTagsLink } from "../_utils/helpers/tags/links";
+import { Tag } from "../_utils/types/projects";
+import { getTagsIcon } from "../_utils/helpers/tags/icons";
 
 import skills from "./skills.json";
 
@@ -26,13 +35,20 @@ export default function Skills() {
           flexWrap="wrap"
           spacing={1}
         >
-          {skills.map((skill) => (
+          {skills.sort().map((skill) => (
             <Chip
               key={skill.id}
               clickable
+              avatar={
+                getTagsIcon(skill.title as Tag) && (
+                  <Avatar sx={{ bgcolor: "transparent" }}>
+                    {getTagsIcon(skill.title as Tag)}
+                  </Avatar>
+                )
+              }
               component="a"
-              href={tagsLinks(skill.title)}
-              label={skill.title}
+              href={getTagsLink(skill.title as Tag)}
+              label={skill.title as Tag}
               target="_blank"
             />
           ))}
