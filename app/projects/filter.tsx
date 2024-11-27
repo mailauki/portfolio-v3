@@ -5,6 +5,8 @@ import {
   AppBar,
   Button,
   Fade,
+  Tab,
+  Tabs,
   Toolbar,
   alpha,
   useScrollTrigger,
@@ -12,12 +14,14 @@ import {
 } from "@mui/material";
 import { SwapVert } from "@mui/icons-material";
 
+import { Project } from "../_utils/types/projects";
+
 import projects from "./projects.json";
 import Projects from "./projects";
 
 export default function Filter() {
-  const desc = [...projects].reverse();
-  const asc = [...projects];
+  const desc = [...projects].reverse() as Project[];
+  const asc = [...projects] as Project[];
   const [filter, setFilter] = useState<boolean>(false);
   const sort = filter ? desc : asc;
   const scrollTrigger = useScrollTrigger();
@@ -26,6 +30,12 @@ export default function Filter() {
   function handleSort() {
     setFilter(!filter);
   }
+
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
 
   return (
     <>
@@ -43,9 +53,29 @@ export default function Filter() {
           }}
           variant="outlined"
         >
-          <Toolbar sx={{ justifyContent: "flex-end" }}>
+          <Toolbar sx={{ justifyContent: "space-between", gap: 3 }}>
+            <Tabs
+              allowScrollButtonsMobile
+              aria-label="nav tabs example"
+              role="navigation"
+              scrollButtons="auto"
+              selectionFollowsFocus={true}
+              sx={{ borderRadius: 64 }}
+              value={value}
+              variant="scrollable"
+              onChange={handleChange}
+            >
+              {projects.map((project) => (
+                <Tab
+                  key={`#${project.id}`}
+                  href={`#${project.id}`}
+                  label={project.title}
+                />
+              ))}
+            </Tabs>
             <Button
               endIcon={<SwapVert />}
+              sx={{ minWidth: "fit-content" }}
               variant="outlined"
               onClick={handleSort}
             >
