@@ -14,6 +14,7 @@ import {
   Chip,
   CardContent,
   Avatar,
+  Tooltip,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -32,7 +33,13 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <CardBox>
       <CardHeader
-        action={project.wip && <Chip label="WIP" variant="outlined" />}
+        action={
+          project.wip && (
+            <Tooltip title="Work in progress">
+              <Chip label="WIP" sx={{ cursor: "default" }} variant="outlined" />
+            </Tooltip>
+          )
+        }
         id={project.id}
         subheader={project.description[0]}
         subheaderTypographyProps={{ component: "h3" }}
@@ -41,12 +48,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       />
 
       <CardContent>
-        <Grid
-          container
-          // justifyContent="flex-end"
-          spacing={2}
-          sx={{ minHeight: 350 }}
-        >
+        <Grid container spacing={2} sx={{ minHeight: 350 }}>
           <Grid size={{ md: project.image[0] ? 5 : 12 }}>
             <Stack spacing={2}>
               <Stack component="ul" spacing={1}>
@@ -117,42 +119,23 @@ export default function ProjectCard({ project }: { project: Project }) {
                 alt={`screenshot of ${project.title}`}
                 src={project.image[0]}
                 style={{
-                  // objectFit: "contain",
                   borderRadius: 8,
                   aspectRatio: "9/6 auto",
                 }}
                 width="100%"
               />
             )}
-
-            {project.date && (
-              <Stack
-                alignItems="center"
-                direction="row"
-                justifyContent="flex-end"
-                spacing={1}
-                sx={{ mt: 1 }}
-              >
-                <Typography color="text.secondary" variant="caption">
-                  Last Updated
-                </Typography>
-                <Typography>
-                  {formatter.format(
-                    parseDate(project.date).toDate(getLocalTimeZone()),
-                  )}
-                </Typography>
-              </Stack>
-            )}
           </Grid>
         </Grid>
       </CardContent>
 
-      <CardActions>
+      <CardActions sx={{ flexWrap: "wrap" }}>
         <Button
           aria-label="github repository link"
           component={Link}
           href={project.links.githubLink}
           startIcon={<GitHubIcon />}
+          sx={{ minWidth: "fit-content" }}
           target="_blank"
           variant="outlined"
         >
@@ -165,11 +148,31 @@ export default function ProjectCard({ project }: { project: Project }) {
             component={Link}
             href={project.links.demoLink}
             startIcon={<OpenInNewIcon />}
+            sx={{ minWidth: "fit-content" }}
             target="_blank"
             variant="outlined"
           >
             Demo
           </Button>
+        )}
+
+        {project.date && (
+          <Stack
+            alignItems="center"
+            direction="row"
+            justifyContent="flex-end"
+            spacing={1}
+            sx={{ mt: 1, flexGrow: 1 }}
+          >
+            <Typography color="text.secondary" variant="caption">
+              Last Updated
+            </Typography>
+            <Typography>
+              {formatter.format(
+                parseDate(project.date).toDate(getLocalTimeZone()),
+              )}
+            </Typography>
+          </Stack>
         )}
       </CardActions>
     </CardBox>
