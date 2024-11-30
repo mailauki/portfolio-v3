@@ -1,4 +1,5 @@
-import { Typography } from "@mui/material";
+import Title from "../(components)/title";
+import Section from "../(components)/section";
 
 import Filter from "./filter";
 
@@ -6,21 +7,11 @@ export const metadata = {
   title: "Projects",
 };
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
-    <section>
-      <header>
-        <Typography
-          fontFamily="serif"
-          fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
-          mb={5}
-          px={2}
-          variant="h1"
-        >
-          Projects
-        </Typography>
-      </header>
+    <Section>
+      <Title>Projects</Title>
       <Filter />
-    </section>
+    </Section>
   );
 }
