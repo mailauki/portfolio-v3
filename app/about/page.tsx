@@ -1,6 +1,6 @@
-import Section from "../(components)/section";
+import { EducationCard, ExperienceCard } from "../(experience)/card";
 
-import About from "./about";
+import Summary from "./summary";
 
 export const metadata = {
   title: "About",
@@ -8,8 +8,10 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <Section>
-      <About />
-    </Section>
+    <>
+      <Summary />
+      <ExperienceCard />
+      <EducationCard />
+    </>
   );
 }

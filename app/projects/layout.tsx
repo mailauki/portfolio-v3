@@ -17,7 +17,7 @@ export default function ProjectsLayout({
   return (
     <Section>
       <Title>Projects</Title>
-      <Grid container spacing={2}>
+      <Grid container spacing={{ xs: 0, sm: 0, md: 2 }}>
         <Grid size={{ xs: 0, sm: 0, md: 3, lg: 3 }}>
           <ProjectsNav />
         </Grid>

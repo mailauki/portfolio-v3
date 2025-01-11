@@ -1,12 +1,23 @@
 "use client";
 
-import { Avatar, CardContent, Stack, Typography } from "@mui/material";
+import {
+  Avatar,
+  CardContent,
+  CardHeader,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 import CardBox from "@/app/(components)/card";
 
 export default function Summary() {
   return (
     <CardBox>
+      <CardHeader
+        sx={{ pb: 0 }}
+        title="About Me"
+        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
+      />
       <CardContent>
         <Stack spacing={2}>
           <Typography
