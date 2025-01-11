@@ -52,6 +52,17 @@ export default function Hello() {
               </Link>
             </Typography>
             <Typography component="p" variant="overline">
+              Phone:{" "}
+              <Link
+                color="textPrimary"
+                href="tel:+17134470724"
+                textTransform="initial"
+                variant="subtitle1"
+              >
+                (713)447-0724
+              </Link>
+            </Typography>
+            <Typography component="p" variant="overline">
               On the Internet:{" "}
               <Link
                 color="textPrimary"

@@ -1,5 +1,35 @@
 [
 	{
+		"id": "bmi-calculator",
+		"title": "BMI Calculator",
+		"description": [
+			"A website to calculate your BMI (Body Mass Index) for adults.",
+			[
+				"Uses height and weight to calculate BMI based on formula.",
+				"Calculates BMI from US Customary units or Imperial units, as well as Metric units.",
+				"Displays the BMI category that the calculated BMI number falls into."
+			]
+		],
+		"image": [
+			""
+		],
+		"links": {
+			"githubLink": "https://github.com/mailauki/bmi-calculator/",
+			"demoLink": "https://neu-bmi-calculator.vercel.app/"
+		},
+		"tags": ["Next JS", "TypeScript", "Vercel", "Tailwind CSS"],
+		"date": "2025-01-04",
+		"inspiration": [
+			"Design inspired by ",
+      {
+        "text": "BMI Calculator App - Neumorphism",
+        "link": "https://dribbble.com/shots/11368106-BMI-Calculator-App-Neumorphism"
+      },
+      " by Kevin Al-Rizal."
+		],
+		"wip": true
+	},
+	{
 		"id": "calendar-wallpaper",
 		"title": "Calendar Wallpaper",
 		"description": [
