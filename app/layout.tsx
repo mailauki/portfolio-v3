@@ -1,6 +1,5 @@
 import "./globals.css";
-import { Container, Paper, Toolbar } from "@mui/material";
-import Grid from "@mui/material/Grid2";
+import { Box, Container, Paper } from "@mui/material";
 
 import styles from "./page.module.css";
 import NavBar from "./(components)/nav";
@@ -33,8 +32,8 @@ export default function RootLayout({
           elevation={0}
           sx={{ bgcolor: "transparent" }}
         >
-          <Container component="main" maxWidth="xl">
-            <Grid container>
+          <Container component="main" maxWidth="lg">
+            {/* <Grid container>
               <Grid component="header" size={{ md: 3, sm: 0 }}>
                 <NavBar />
               </Grid>
@@ -43,7 +42,9 @@ export default function RootLayout({
                 {children}
                 <Toolbar sx={{ mb: 3 }} />
               </Grid>
-            </Grid>
+            </Grid> */}
+            <NavBar />
+            <Box sx={{ my: 10 }}>{children}</Box>
           </Container>
           <Background />
         </Paper>

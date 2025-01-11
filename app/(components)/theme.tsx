@@ -58,6 +58,13 @@ export default function ThemeRegistry(props: {
           },
         },
       },
+      MuiPaper: {
+        styleOverrides: {
+          root: {
+            borderRadius: 8,
+          },
+        },
+      },
       MuiButton: {
         styleOverrides: {
           root: {

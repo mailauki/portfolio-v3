@@ -1,6 +1,3 @@
-import Title from "../(components)/title";
-import Section from "../(components)/section";
-
 import Filter from "./filter";
 
 export const metadata = {
@@ -8,10 +5,5 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
-  return (
-    <Section>
-      <Title>Projects</Title>
-      <Filter />
-    </Section>
-  );
+  return <Filter />;
 }

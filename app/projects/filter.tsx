@@ -1,14 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import {
+  alpha,
   AppBar,
   Button,
   Fade,
-  Tab,
-  Tabs,
   Toolbar,
-  alpha,
+  useMediaQuery,
   useScrollTrigger,
   useTheme,
 } from "@mui/material";
@@ -18,6 +17,7 @@ import { Project } from "../_utils/types/projects";
 
 import projects from "./projects.json";
 import Projects from "./projects";
+import ProjectsNav from "./nav";
 
 export default function Filter() {
   const desc = [...projects].reverse() as Project[];
@@ -26,16 +26,11 @@ export default function Filter() {
   const sort = filter ? desc : asc;
   const scrollTrigger = useScrollTrigger();
   const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   function handleSort() {
     setFilter(!filter);
   }
-
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
 
   return (
     <>
@@ -53,26 +48,8 @@ export default function Filter() {
           }}
           variant="outlined"
         >
-          <Toolbar sx={{ justifyContent: "space-between", gap: 3 }}>
-            <Tabs
-              allowScrollButtonsMobile
-              aria-label="nav tabs example"
-              role="navigation"
-              scrollButtons="auto"
-              selectionFollowsFocus={true}
-              sx={{ borderRadius: 64 }}
-              value={value}
-              variant="scrollable"
-              onChange={handleChange}
-            >
-              {projects.map((project) => (
-                <Tab
-                  key={`#${project.id}`}
-                  href={`#${project.id}`}
-                  label={project.title}
-                />
-              ))}
-            </Tabs>
+          <Toolbar sx={{ justifyContent: "flex-end", gap: 3 }}>
+            {!matches && <ProjectsNav />}
             <Button
               endIcon={<SwapVert />}
               sx={{ minWidth: "fit-content" }}

@@ -13,6 +13,7 @@ export default function Title({
       fontFamily="serif"
       fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
       id={`${String(children).toLowerCase()}`}
+      sx={{ mb: 3 }}
       variant="h1"
     >
       {children}
