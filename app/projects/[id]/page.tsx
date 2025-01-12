@@ -14,18 +14,5 @@ export default async function ProjectIdPage({
 
   if (!project) return <></>;
 
-  return (
-    // <div>
-    //   <Breadcrumbs aria-label="breadcrumb">
-    //     <Link color="inherit" href="/projects/" underline="hover">
-    //       Projects
-    //     </Link>
-    //     <Typography sx={{ color: "text.primary" }}>
-    //       {project?.title || id}
-    //     </Typography>
-    //   </Breadcrumbs>
-    //   <ProjectIdCard project={project} />
-    // </div>
-    <ProjectIdCard project={project} />
-  );
+  return <ProjectIdCard project={project} />;
 }

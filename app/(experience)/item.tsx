@@ -2,6 +2,7 @@ import type { Experience } from "@/app/_utils/types/experience";
 
 import {
   Avatar,
+  Button,
   IconButton,
   Link,
   ListItem,
@@ -10,9 +11,19 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import LinkIcon from "@mui/icons-material/Link";
 
 export default function Item({ exp }: { exp: Experience }) {
-  const { company, avatar, jobTitle, dates, description, name, location } = exp;
+  const {
+    company,
+    avatar,
+    jobTitle,
+    dates,
+    description,
+    name,
+    location,
+    links,
+  } = exp;
 
   return (
     <ListItem key={company} alignItems="flex-start">
@@ -100,6 +111,18 @@ export default function Item({ exp }: { exp: Experience }) {
                 </Typography>
               )}
             </Stack>
+            {links &&
+              links.map((link) => (
+                <Button
+                  key={link.link}
+                  component={Link}
+                  href={link.link}
+                  startIcon={<LinkIcon />}
+                  sx={{ px: 2 }}
+                >
+                  {link.text}
+                </Button>
+              ))}
           </>
         }
       />

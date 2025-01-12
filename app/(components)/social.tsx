@@ -1,10 +1,19 @@
 import Link from "next/link";
 import { IconButton, Stack, Tooltip } from "@mui/material";
-import { GitHub, LinkedIn, LogoDev } from "@mui/icons-material";
+import { GitHub, LinkedIn, LogoDev, Mail } from "@mui/icons-material";
 
 export default function SocialLinks() {
   return (
     <Stack direction="row" justifyContent="center" spacing={4}>
+      <Tooltip arrow placement="top" title="Email">
+        <IconButton
+          component={Link}
+          href="mailto:juliemevans17@gmail.com"
+          target="_blank"
+        >
+          <Mail />
+        </IconButton>
+      </Tooltip>
       <Tooltip arrow placement="top" title="GitHub">
         <IconButton
           component={Link}

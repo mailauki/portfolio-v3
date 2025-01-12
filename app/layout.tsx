@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import NavBar from "./(components)/nav";
 import ThemeRegistry from "./(components)/theme";
 import Background from "./(components)/background";
+import Footer from "./(components)/footer";
 
 export const metadata = {
   title: {
@@ -33,18 +34,11 @@ export default function RootLayout({
           sx={{ bgcolor: "transparent" }}
         >
           <Container component="main" maxWidth="lg">
-            {/* <Grid container>
-              <Grid component="header" size={{ md: 3, sm: 0 }}>
-                <NavBar />
-              </Grid>
-              <Grid size={{ md: 9, sm: 12 }}>
-                <Toolbar sx={{ mt: 3 }} />
-                {children}
-                <Toolbar sx={{ mb: 3 }} />
-              </Grid>
-            </Grid> */}
             <NavBar />
-            <Box sx={{ my: 10 }}>{children}</Box>
+            <Box sx={{ my: 6 }}>
+              {children}
+              <Footer />
+            </Box>
           </Container>
           <Background />
         </Paper>

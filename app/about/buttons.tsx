@@ -20,7 +20,7 @@ export default function QuickButtons() {
         disableElevation
         color="primary"
         component={Link}
-        href="mailto:juliemevans17@gmail.com"
+        href="https://calendly.com/juliemevans17/30min"
         size="large"
         sx={{
           fontWeight: 600,
@@ -28,7 +28,7 @@ export default function QuickButtons() {
         }}
         variant="contained"
       >
-        Contact Me
+        Get in touch
       </Button>
       <SocialLinks />
       <Button

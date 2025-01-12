@@ -28,7 +28,6 @@ export default function ThemeRegistry(props: {
   const theme = createTheme({
     palette: {
       mode: darkMode ? "dark" : "light",
-      // primary: darkMode ? grey : indigo,
       primary: {
         main: darkMode ? grey[200] : indigo[800],
       },
@@ -69,14 +68,18 @@ export default function ThemeRegistry(props: {
         styleOverrides: {
           root: {
             borderRadius: 64,
-            // backgroundColor: darkMode ? 'rgba(255,255,255,0.16)': 'rgba(0,0,0,0.08)',
+          },
+        },
+      },
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            cursor: "pointer",
           },
         },
       },
     },
   });
-
-  // theme = responsiveFontSizes(theme);
 
   const [{ cache, flush }] = useState(() => {
     const cache = createCache(options);

@@ -15,7 +15,7 @@ export default function Summary() {
     <CardBox>
       <CardHeader
         sx={{ pb: 0 }}
-        title="About Me"
+        title="Profile"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
       <CardContent>

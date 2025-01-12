@@ -8,4 +8,5 @@ export type Experience = {
   source?: string;
   avatarSource?: string;
   avatar?: string;
+  links?: { text: string; link: string }[];
 };

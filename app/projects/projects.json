@@ -199,7 +199,7 @@
 		"wip": true
   },
   {
-    "id": "tic-tic-toe-v2",
+    "id": "tic-tac-toe-v2",
     "title": "Tic-Tac-Toe 2",
     "description": [
       "A website for playing tic-tac-toe, either against the computer or a friend.",
@@ -221,7 +221,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "#tic-tic-toe"
+        "link": "#tic-tac-toe"
       },
       " using React."
     ],
@@ -273,7 +273,7 @@
 		"wip": false
   },
   {
-    "id": "tic-tic-toe",
+    "id": "tic-tac-toe",
     "title": "Tic-Tac-Toe",
     "description": [
       "A website for playing tic-tac-toe, either against the computer or a friend.", 
@@ -296,7 +296,7 @@
       "Based on ",
       {
         "text": "previous project",
-        "link": "#oo-tic-tic-toe"
+        "link": "#oo-tic-tac-toe"
       },
       " using Ruby."
     ],
@@ -412,7 +412,7 @@
 		"wip": false
   },
   {
-    "id": "oo-tic-tic-toe",
+    "id": "oo-tic-tac-toe",
     "title": "OO-Tic-Tac-Toe",
     "description": [
       "Object Oriented Programming based CLI Tic-Tac-Toe game."
