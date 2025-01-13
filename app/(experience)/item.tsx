@@ -1,3 +1,5 @@
+"use client";
+
 import type { Experience } from "@/app/_utils/types/experience";
 
 import {

@@ -33,7 +33,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
       <CardHeader
         action={
           project.wip && (
-            <Tooltip title="Work in progress">
+            <Tooltip arrow placement="top" title="Work in progress">
               <Chip label="WIP" sx={{ cursor: "default" }} variant="outlined" />
             </Tooltip>
           )
@@ -45,7 +45,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
         titleTypographyProps={{ component: "h2" }}
       />
 
-      <CardContent>
+      <CardContent component="div">
         <Grid container spacing={2} sx={{ minHeight: 350 }}>
           <Grid size={{ md: project.image[0] ? 5 : 12 }}>
             <Stack spacing={2}>
@@ -114,7 +114,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
           >
             {project.image[0] && (
               <img
-                alt={`screenshot of ${project.title}`}
+                alt={`Screenshot of ${project.title}`}
                 src={project.image[0]}
                 style={{
                   borderRadius: 8,

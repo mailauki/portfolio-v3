@@ -2,9 +2,9 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import Section from "./(components)/section";
 import Hello from "./hello";
-import QuickButtons from "./about/buttons";
-import Skills from "./about/skills";
-import Summary from "./about/summary";
+import QuickButtons from "./(about)/buttons";
+import Skills from "./(about)/skills";
+import Summary from "./(about)/summary";
 import { ExperienceCard, EducationCard } from "./(experience)/card";
 import Title from "./(components)/title";
 import FeaturedProjects from "./projects/featured";

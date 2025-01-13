@@ -2,9 +2,9 @@ import "./globals.css";
 import { Box, Container, Paper } from "@mui/material";
 
 import styles from "./page.module.css";
-import NavBar from "./(components)/nav";
 import ThemeRegistry from "./(components)/theme";
 import Background from "./(components)/background";
+import NavBar from "./(components)/nav";
 import Footer from "./(components)/footer";
 
 export const metadata = {

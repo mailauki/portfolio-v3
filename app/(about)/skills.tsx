@@ -2,14 +2,13 @@
 
 import {
   Avatar,
+  Card,
   CardContent,
   CardHeader,
   Chip,
   Divider,
   Stack,
 } from "@mui/material";
-
-import CardBox from "@/app/(components)/card";
 
 import { getTagsLink } from "../_utils/helpers/tags/links";
 import { Tag } from "../_utils/types/projects";
@@ -19,7 +18,7 @@ import skills from "./skills.json";
 
 export default function Skills() {
   return (
-    <CardBox>
+    <Card variant="outlined">
       <CardHeader
         subheader="Still learning and mastering"
         subheaderTypographyProps={{ variant: "overline", component: "h3" }}
@@ -27,7 +26,7 @@ export default function Skills() {
         title="Skills"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
-      <CardContent>
+      <CardContent component="div">
         <Stack
           useFlexGap
           direction="row"
@@ -54,6 +53,6 @@ export default function Skills() {
           ))}
         </Stack>
       </CardContent>
-    </CardBox>
+    </Card>
   );
 }

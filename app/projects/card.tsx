@@ -1,101 +1,133 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import type { Project } from "../_utils/types/projects";
 
 import Link from "next/link";
 import {
-  CardHeader,
-  Stack,
-  Card,
-  CardActionArea,
-  Typography,
   IconButton,
-  Paper,
-  Chip,
-  Tooltip,
+  Link as Anchor,
+  ListItemButton,
+  Stack,
+  Avatar,
   Box,
+  Chip,
+  ListItemAvatar,
+  ListItemText,
+  Tooltip,
+  Typography,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { GitHub, Info, OpenInNew } from "@mui/icons-material";
+
+import { getTagsLink } from "../_utils/helpers/tags/links";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card
-      sx={{ background: "transparent", position: "relative" }}
-      variant="outlined"
-    >
-      {project.wip && (
-        <Box position="absolute" right={10} sx={{ zIndex: 100 }} top={10}>
-          <Tooltip title="Work in progress">
-            <Chip
-              label="WIP"
-              sx={{
-                cursor: "default",
-                "&:hover": { bgcolor: "background.paper" },
-              }}
-            />
-          </Tooltip>
-        </Box>
-      )}
-      <CardActionArea component={Link} href={`/projects/${project.id}`}>
-        <Paper
-          sx={{ height: 300, width: "100%", aspectRatio: "9/6 auto" }}
-          variant="outlined"
+    <ListItemButton disableRipple sx={{ borderRadius: 2, cursor: "default" }}>
+      <ListItemAvatar sx={{ mr: 3 }}>
+        <Avatar
+          alt={project.title}
+          component={Link}
+          href={`/projects/${project.id}`}
+          src={project.image[0]}
+          sx={{ width: 160, height: 90 }}
+          variant="rounded"
         >
-          {!project.image || project.image[0] === "" ? (
-            <Stack
-              alignItems="center"
-              direction="column"
-              justifyContent="center"
-              sx={{ height: "100%", width: "100%" }}
-            >
-              <Typography>No Image Yet</Typography>
-            </Stack>
-          ) : (
-            <img
-              alt={`screenshot of ${project.title}`}
-              height="100%"
-              src={project.image[0]}
-              style={{
-                borderRadius: 8,
-                aspectRatio: "9/6 auto",
-                objectFit: "cover",
-              }}
-              width="100%"
-            />
-          )}
-        </Paper>
-      </CardActionArea>
-      <CardHeader
+          <Stack
+            alignItems="center"
+            direction="column"
+            justifyContent="center"
+            sx={{ height: "100%", width: "100%" }}
+          >
+            <Typography>No Image Yet</Typography>
+          </Stack>
+        </Avatar>
+      </ListItemAvatar>
+      <ListItemText
         disableTypography
-        action={
-          <Stack direction="row" spacing={1}>
-            <IconButton
-              aria-label="github repository link"
-              component={Link}
-              href={project.links.githubLink}
-              target="_blank"
+        primary={
+          <Anchor
+            color="text.primary"
+            component={Link}
+            href={`/projects/${project.id}`}
+            underline="hover"
+          >
+            {project.title}
+          </Anchor>
+        }
+        secondary={
+          <>
+            <Typography color="text.secondary" variant="body2">
+              {project.description[0]}
+            </Typography>
+            <Stack
+              useFlexGap
+              direction="row"
+              flexWrap="wrap"
+              spacing={1}
+              sx={{ my: 2 }}
             >
-              <GitHubIcon />
-            </IconButton>
-
-            {project.links.demoLink && (
+              {project.tags.sort().map((tag) => (
+                <Chip
+                  key={tag}
+                  clickable
+                  component="a"
+                  href={getTagsLink(tag)}
+                  label={tag}
+                  target="_blank"
+                />
+              ))}
+            </Stack>
+            {project.wip && (
+              <Box position="absolute" right={10} top={10}>
+                <Tooltip arrow placement="top" title="Work in progress">
+                  <Chip
+                    label="WIP"
+                    sx={{
+                      cursor: "default",
+                      "&:hover": { bgcolor: "background.paper" },
+                    }}
+                    variant="outlined"
+                  />
+                </Tooltip>
+              </Box>
+            )}
+            <Stack
+              bottom={10}
+              direction="row"
+              position="absolute"
+              right={10}
+              spacing={1}
+            >
               <IconButton
-                aria-label="demo link"
+                aria-label="github repository link"
                 component={Link}
-                href={project.links.demoLink}
+                href={project.links.githubLink}
                 target="_blank"
               >
-                <OpenInNewIcon />
+                <GitHub />
               </IconButton>
-            )}
-          </Stack>
+
+              {project.links.demoLink && (
+                <IconButton
+                  aria-label="demo link"
+                  component={Link}
+                  href={project.links.demoLink}
+                  target="_blank"
+                >
+                  <OpenInNew />
+                </IconButton>
+              )}
+              <IconButton
+                aria-label="see more"
+                component={Link}
+                href={`/projects/${project.id}`}
+              >
+                <Info />
+              </IconButton>
+            </Stack>
+          </>
         }
-        sx={{ pt: 1 }}
-        title={project.title}
-        titleTypographyProps={{ variant: "caption" }}
       />
-    </Card>
+    </ListItemButton>
   );
 }

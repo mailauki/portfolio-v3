@@ -2,6 +2,7 @@
 
 import { Button, CardActions, CardContent, CardHeader } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import Link from "next/link";
 
 import { Project } from "../_utils/types/projects";
 import CardBox from "../(components)/card";
@@ -27,11 +28,16 @@ export default function FeaturedProjects() {
         title="Featured Projects"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
-      <CardContent sx={{ pt: 0 }}>
+      <CardContent component="div" sx={{ pt: 0 }}>
         <Projects sort={featured} />
       </CardContent>
       <CardActions>
-        <Button endIcon={<OpenInNewIcon />} sx={{ px: 2 }}>
+        <Button
+          component={Link}
+          endIcon={<OpenInNewIcon />}
+          href="/projects"
+          sx={{ px: 2 }}
+        >
           See All Projects
         </Button>
       </CardActions>

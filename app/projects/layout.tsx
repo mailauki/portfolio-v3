@@ -1,4 +1,6 @@
-import { Grid2 as Grid } from "@mui/material";
+import { Button, Grid2 as Grid } from "@mui/material";
+import { ChevronLeft } from "@mui/icons-material";
+import Link from "next/link";
 
 import Section from "../(components)/section";
 import Title from "../(components)/title";
@@ -19,6 +21,15 @@ export default function ProjectsLayout({
       <Title>Projects</Title>
       <Grid container spacing={{ xs: 0, sm: 0, md: 2 }}>
         <Grid size={{ xs: 0, sm: 0, md: 3, lg: 3 }}>
+          <Button
+            component={Link}
+            href="/"
+            startIcon={<ChevronLeft />}
+            sx={{ pr: 3 }}
+            variant="outlined"
+          >
+            Back
+          </Button>
           <ProjectsNav />
         </Grid>
         <Grid size="grow">{children}</Grid>

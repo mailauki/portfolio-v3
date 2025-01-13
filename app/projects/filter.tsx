@@ -52,7 +52,7 @@ export default function Filter() {
             {!matches && <ProjectsNav />}
             <Button
               endIcon={<SwapVert />}
-              sx={{ minWidth: "fit-content" }}
+              sx={{ minWidth: "fit-content", pl: 3 }}
               variant="outlined"
               onClick={handleSort}
             >

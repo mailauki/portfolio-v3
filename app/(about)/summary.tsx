@@ -2,23 +2,22 @@
 
 import {
   Avatar,
+  Card,
   CardContent,
   CardHeader,
   Stack,
   Typography,
 } from "@mui/material";
 
-import CardBox from "@/app/(components)/card";
-
 export default function Summary() {
   return (
-    <CardBox>
+    <Card variant="outlined">
       <CardHeader
         sx={{ pb: 0 }}
         title="Profile"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
       />
-      <CardContent>
+      <CardContent component="div">
         <Stack spacing={2}>
           <Typography
             gutterBottom
@@ -48,6 +47,6 @@ export default function Summary() {
           </Avatar>
         </Stack>
       </CardContent>
-    </CardBox>
+    </Card>
   );
 }
