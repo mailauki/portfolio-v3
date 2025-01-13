@@ -35,8 +35,8 @@ export default function HomePage() {
             <QuickButtons />
           </Box>
         </Stack>
-        <Skills />
         <Summary />
+        <Skills />
         <FeaturedProjects />
         <ExperienceCard />
         <EducationCard />

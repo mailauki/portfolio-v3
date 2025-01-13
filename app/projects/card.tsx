@@ -13,12 +13,13 @@ import {
   Chip,
   ListItemAvatar,
   ListItemText,
-  Tooltip,
   Typography,
 } from "@mui/material";
 import { GitHub, Info, OpenInNew } from "@mui/icons-material";
 
 import { getTagsLink } from "../_utils/helpers/tags/links";
+
+import WIP from "./wip";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -79,16 +80,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </Stack>
             {project.wip && (
               <Box position="absolute" right={10} top={10}>
-                <Tooltip arrow placement="top" title="Work in progress">
-                  <Chip
-                    label="WIP"
-                    sx={{
-                      cursor: "default",
-                      "&:hover": { bgcolor: "background.paper" },
-                    }}
-                    variant="outlined"
-                  />
-                </Tooltip>
+                <WIP />
               </Box>
             )}
             <Stack

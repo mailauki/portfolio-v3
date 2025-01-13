@@ -1,11 +1,16 @@
 "use client";
 
-import { Button, CardActions, CardContent, CardHeader } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+} from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Link from "next/link";
 
 import { Project } from "../_utils/types/projects";
-import CardBox from "../(components)/card";
 
 import projects from "./projects.json";
 import Projects from "./projects";
@@ -23,7 +28,7 @@ export default function FeaturedProjects() {
   ) as Project[];
 
   return (
-    <CardBox>
+    <Card>
       <CardHeader
         title="Featured Projects"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
@@ -41,6 +46,6 @@ export default function FeaturedProjects() {
           See All Projects
         </Button>
       </CardActions>
-    </CardBox>
+    </Card>
   );
 }

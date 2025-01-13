@@ -12,32 +12,27 @@ import {
   CardActions,
   Chip,
   Grid2 as Grid,
-  Tooltip,
   Link as Anchor,
+  Card,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useDateFormatter } from "@react-aria/i18n";
 import { parseDate, getLocalTimeZone } from "@internationalized/date";
 
-import CardBox from "@/app/(components)/card";
 import { getTagsIcon } from "@/app/_utils/helpers/tags/icons";
 import { getTagsLink } from "@/app/_utils/helpers/tags/links";
 import { Project } from "@/app/_utils/types/projects";
+
+import WIP from "../wip";
 
 export default function ProjectIdCard({ project }: { project: Project }) {
   const formatter = useDateFormatter({ dateStyle: "medium" });
 
   return (
-    <CardBox>
+    <Card>
       <CardHeader
-        action={
-          project.wip && (
-            <Tooltip arrow placement="top" title="Work in progress">
-              <Chip label="WIP" sx={{ cursor: "default" }} variant="outlined" />
-            </Tooltip>
-          )
-        }
+        action={project.wip && <WIP />}
         id={project.id}
         subheader={project.description[0]}
         subheaderTypographyProps={{ component: "h3" }}
@@ -173,6 +168,6 @@ export default function ProjectIdCard({ project }: { project: Project }) {
           </Stack>
         )}
       </CardActions>
-    </CardBox>
+    </Card>
   );
 }
