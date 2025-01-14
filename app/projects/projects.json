@@ -2,17 +2,14 @@
 	{
 		"id": "bmi-calculator",
 		"title": "BMI Calculator",
-		"description": [
-			"A website to calculate your BMI (Body Mass Index) for adults.",
-			[
-				"Uses height and weight to calculate BMI based on formula.",
-				"Calculates BMI from US Customary units or Imperial units, as well as Metric units.",
-				"Displays the BMI category that the calculated BMI number falls into."
-			]
+		"description": "A website to calculate your BMI (Body Mass Index) for adults.",
+		"bullets":
+		[
+			"Uses height and weight to calculate BMI based on formula.",
+			"Calculates BMI from US Customary units or Imperial units, as well as Metric units.",
+			"Displays the BMI category that the calculated BMI number falls into."
 		],
-		"image": [
-			"/projects/bmi-calculator.jpg"
-		],
+		"image": "/projects/bmi-calculator.jpg",
 		"links": {
 			"githubLink": "https://github.com/mailauki/bmi-calculator/",
 			"demoLink": "https://neu-bmi-calculator.vercel.app/"
@@ -32,16 +29,12 @@
 	{
 		"id": "calendar-wallpaper",
 		"title": "Calendar Wallpaper",
-		"description": [
-			"A website for creating a wallpaper with a calendar.",
-			[
-				"Generates a jpeg wallpaper using Open Graph with Next JS.",
-				"Customize a wallpaper with a calendar."
-			]
+		"description": "A website for creating a wallpaper with a calendar.",
+		"bullets": [
+			"Generates a jpeg wallpaper using Open Graph with Next JS.",
+			"Customize a wallpaper with a calendar."
 		],
-		"image": [
-			""
-		],
+		"image": "",
 		"links": {
 			"githubLink": "https://github.com/mailauki/calendar-wallpaper",
 			"demoLink": "https://calendar-wallpaper.vercel.app"
@@ -55,17 +48,13 @@
 	{
 		"id": "budget",
 		"title": "Paypay Budget",
-		"description": [
-			"Budgeting app using Next UI and Tremor charts.",
-			[
-				"Designed to track spending and display progress towards savings goals.",
-				"Incorporated budgeting based on categories and comparison with spending.",
-				"Included charts and graphs using Tremor blocks."
-			]
+		"description": "Budgeting app using Next UI and Tremor charts.",
+		"bullets": [
+			"Designed to track spending and display progress towards savings goals.",
+			"Incorporated budgeting based on categories and comparison with spending.",
+			"Included charts and graphs using Tremor blocks."
 		],
-		"image": [
-			"/projects/paypay-budget.png"
-		],
+		"image": "/projects/paypay-budget.png",
 		"links": {
 			"githubLink": "https://github.com/mailauki/budget",
 			"demoLink": "https://paypay-budget.vercel.app"
@@ -85,16 +74,12 @@
 	{
 		"id": "todoloo",
 		"title": "ToDoLoo",
-		"description": [
-			"ToDo app using Next JS and MUI.",
-			[
-				"Add tasks and mark them as completed.",
-				"Filter tasks by dates."
-			]
+		"description": "ToDo app using Next JS and MUI.",
+		"bullets": [
+			"Add tasks and mark them as completed.",
+			"Filter tasks by dates."
 		],
-		"image": [
-			"/projects/to-do-loo.png"
-		],
+		"image": "/projects/to-do-loo.png",
 		"links": {
 			"githubLink": "https://github.com/mailauki/todoloo",
 			"demoLink": "https://to-do-loo.vercel.app"
@@ -114,10 +99,9 @@
 	{
 		"id": "pokedextracker",
 		"title": "PokedexTracker",
-		"description": [
-			"PokeTracker revamp using Next JS and MUI."
-		],
-		"image": [""],
+		"description": "PokeTracker revamp using Next JS and MUI.",
+		"bullets": [],
+		"image": "",
 		"links": {
 			"githubLink": "https://github.com/mailauki/pokedextracker",
 			"demoLink": "https://pokedextracker.vercel.app"
@@ -141,17 +125,13 @@
 	},
   {
     "id": "poke-tracker-v2",
-    "title": "PokeTracker 2",
-    "description": [
-      "PokeTracker revamp using Next JS and PokeApi.",
-			[
-				"Displays pokemon from an API.",
-				"Mark pokemon as caught to track pokedex progress."
-			]
+    "title": "PokeTracker (v2)",
+    "description": "PokeTracker revamp using Next JS and PokeApi.",
+		"bullets": [
+			"Displays pokemon from an API.",
+			"Mark pokemon as caught to track pokedex progress."
     ],
-    "image": [
-			"/projects/poketracker-v2.jpg"
-		],
+    "image": "/projects/poketracker-v2.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/poketracker",
       "demoLink": "https://poketracker-one.vercel.app"
@@ -175,13 +155,10 @@
   },
   {
     "id": "studio-ghibli-v2",
-    "title": "Studio Ghibli 2",
-    "description": [
-      "Studio Ghibi Watchlist revamp using Next JS."
-    ],
-    "image": [
-			"/projects/studio-ghibli-v2.jpg"
-		],
+    "title": "Studio Ghibli (v2)",
+    "description": "Studio Ghibi Watchlist revamp using Next JS.",
+		"bullets": [],
+    "image": "/projects/studio-ghibli-v2.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/studio-ghibli-v2",
       "demoLink": "https://studio-ghibli-v2.vercel.app"
@@ -200,17 +177,13 @@
   },
   {
     "id": "tic-tac-toe-v2",
-    "title": "Tic-Tac-Toe 2",
-    "description": [
-      "A website for playing tic-tac-toe, either against the computer or a friend.",
-      [
-        "Tic-Tac-Toe revamp using Next JS and Material UI.",
-        "Added token emoji and color selection since previous version."
-      ]
+    "title": "Tic-Tac-Toe (v2)",
+    "description": "A website for playing tic-tac-toe, either against the computer or a friend.",
+		"bullets": [
+			"Tic-Tac-Toe revamp using Next JS and Material UI.",
+			"Added token emoji and color selection since previous version."
     ],
-    "image": [
-			"/projects/tic-tac-toe-v2.jpg"
-		],
+    "image": "/projects/tic-tac-toe-v2.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/tic-tac-toe-v2",
       "demoLink": "https://tic-tac-toe-v2-vert.vercel.app"
@@ -233,9 +206,7 @@
     "description": [
       "A website to track your completion of a Living Pokedex."
     ],
-    "image": [
-			"/projects/pokedextracker.com.jpg"
-		],
+    "image": "/projects/pokedextracker.com.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/pokedextracker.com"
     },
@@ -254,16 +225,12 @@
   {
     "id": "nearby-markets",
     "title": "Nearby Markets",
-    "description": [
-      "An e-commerce app which connects buyers with sellers locally.",
-      [
-        "Worked as part of a team of 5 engineers to build an ecommerce web application, using React.",
-        "Used a combination of Figma and GitHub to plan, organize, and coordinate the process with my team."
-      ]
+    "description": "An e-commerce app which connects buyers with sellers locally.",
+		"bullets": [
+			"Worked as part of a team of 5 engineers to build an ecommerce web application, using React.",
+			"Used a combination of Figma and GitHub to plan, organize, and coordinate the process with my team."
     ],
-    "image": [
-			"/projects/nearby-markets.jpg"
-		],
+    "image": "/projects/nearby-markets.jpg",
     "links": {
       "githubLink": "https://github.com/chingu-voyages/v42-geckos-team-20",
       "demoLink": "https://v42-geckos-20.vercel.app"
@@ -275,17 +242,13 @@
   {
     "id": "tic-tac-toe",
     "title": "Tic-Tac-Toe",
-    "description": [
-      "A website for playing tic-tac-toe, either against the computer or a friend.", 
-      [
-        "Created Front-End only game based off of previous project using Ruby.", 
-        "Used Javascript functions and React hooks to provide game functionality and a “computer” opponent.", 
-        "Provided color options of the tokens to the user that are unlockable based on the number of wins tally."
-      ]
+    "description": "A website for playing tic-tac-toe, either against the computer or a friend.", 
+		"bullets": [
+			"Created Front-End only game based off of previous project using Ruby.", 
+			"Used Javascript functions and React hooks to provide game functionality and a “computer” opponent.", 
+			"Provided color options of the tokens to the user that are unlockable based on the number of wins tally."
     ],
-    "image": [
-			"/projects/tic-tac-toe.jpg"
-		],
+    "image": "/projects/tic-tac-toe.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/tic-tac-toe", 
       "demoLink": "https://mailauki-tic-tac-toe.netlify.app"
@@ -305,17 +268,13 @@
   { 
     "id": "poke-tracker",
     "title": "PokeTracker", 
-    "description": [
-      "A website for viewing viewing pokemon, pokedexes, and tracking your collection.", 
-      [
-        "Made a web application to show pokemon and allow the user to track their collection.",
-        "Applied an external API to display data of pokemon and filters to sort them.",
-        "Provided a database to store the information that allows the user to track specific pokemon."
-      ]
+    "description": "A website for viewing viewing pokemon, pokedexes, and tracking your collection.", 
+		"bullets": [
+			"Made a web application to show pokemon and allow the user to track their collection.",
+			"Applied an external API to display data of pokemon and filters to sort them.",
+			"Provided a database to store the information that allows the user to track specific pokemon."
     ], 
-    "image": [
-			"/projects/poke-tracker.jpg"
-		],   
+    "image": "/projects/poke-tracker.jpg",   
     "links": {
       "githubLink": "https://github.com/mailauki/poke-tracker", 
       "demoLink": "https://poke-tracker.netlify.app"
@@ -327,17 +286,13 @@
   { 
     "id": "le-banque-du-porcine",
     "title": "Le Banque du Porcine", 
-    "description": [
-      "A website for viewing balances and wish-list items, with progress bars calculated based on both.", 
-      [
-        "Created minimalistic Next JS Application using Supabase for the database API.", 
-        "Utilized nested routes to personalize data shown limited to the logged-in user.", 
-        "Stored data with integrations interconnecting them to each other, such as having an item only exist if there is a user."
-      ]
+    "description": "A website for viewing balances and wish-list items, with progress bars calculated based on both.", 
+		"bullets": [
+			"Created minimalistic Next JS Application using Supabase for the database API.", 
+			"Utilized nested routes to personalize data shown limited to the logged-in user.", 
+			"Stored data with integrations interconnecting them to each other, such as having an item only exist if there is a user."
     ], 
-    "image": [
-			"/projects/le-banque-du-porcine.jpg"
-		],  
+    "image": "/projects/le-banque-du-porcine.jpg",  
     "links": {
       "githubLink": "https://github.com/mailauki/le-banque-du-porcine-version-2", 
       "demoLink": "https://le-banque-du-porcine.netlify.app"
@@ -349,17 +304,13 @@
   { 
     "id": "pic-worthy",
     "title": "PicWorthy", 
-    "description": [
-      "A website for posting, liking, and commenting on photos.", 
-      [
-        "Structured using mobile-first design with phone screen-size layout in mind and later upscaling.", 
-        "Added Redux usage to help maximize database functionality.", 
-        "Included external components and tools such as Material UI and Swiper JS through React plugins."
-      ]
+    "description": "A website for posting, liking, and commenting on photos.", 
+		"bullets": [
+			"Structured using mobile-first design with phone screen-size layout in mind and later upscaling.", 
+			"Added Redux usage to help maximize database functionality.", 
+			"Included external components and tools such as Material UI and Swiper JS through React plugins."
     ], 
-    "image": [
-			"/projects/pic-worthy.jpg"
-		], 
+    "image": "/projects/pic-worthy.jpg", 
     "links": {
       "githubLink": "https://github.com/mailauki/pic-worthy", 
       "demoLink": "https://pic-worthy.onrender.com"
@@ -385,17 +336,13 @@
   { 
     "id": "cat-tube",
     "title": "CatTube", 
-    "description": [
-      "A website for posting and commenting on cat-related videos.", 
-      [
-        "Limited content to only pertain to cats through ActiveRecord Validations.", 
-        "Provided stored user information in the database and interaction to content through Auth.", 
-        "Utilized a Self-Join database table to allow for user-to-user interaction."
-      ]
+    "description": "A website for posting and commenting on cat-related videos.", 
+		"bullets": [
+			"Limited content to only pertain to cats through ActiveRecord Validations.", 
+			"Provided stored user information in the database and interaction to content through Auth.", 
+			"Utilized a Self-Join database table to allow for user-to-user interaction."
     ], 
-    "image": [
-			"/projects/cat-tube.jpg"
-		], 
+    "image": "/projects/cat-tube.jpg", 
     "links": {
       "githubLink": "https://github.com/mailauki/phase-4-project-cattube"
     },
@@ -414,12 +361,9 @@
   {
     "id": "oo-tic-tac-toe",
     "title": "OO-Tic-Tac-Toe",
-    "description": [
-      "Object Oriented Programming based CLI Tic-Tac-Toe game."
-    ],
-    "image": [
-			"/projects/oo-tic-tac-toe.jpg"
-		],
+    "description": "Object Oriented Programming based CLI Tic-Tac-Toe game.",
+		"bullets": [],
+    "image": "/projects/oo-tic-tac-toe.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/phase-3-oo-tic-tac-toe"
     },
@@ -430,17 +374,13 @@
   {
     "id": "dune",
     "title": "Dune",
-    "description": [
-      "Project for reviewing Dune books using Dune API.",
-      [
-        "View Dune books and review them, as well as add a reading status.",
-        "Filter books based on reading status, book title, authors, or the series the books belong to.",
-        "View the reviews made in a list."
-      ]
+    "description": "Project for reviewing Dune books using Dune API.",
+		"bullets": [
+			"View Dune books and review them, as well as add a reading status.",
+			"Filter books based on reading status, book title, authors, or the series the books belong to.",
+			"View the reviews made in a list."
     ],
-    "image": [
-			"/projects/dune.jpg"
-		],
+    "image": "/projects/dune.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/phase-2-project-dune"
     },
@@ -451,17 +391,13 @@
   {
     "id": "studio-ghibli",
     "title": "Studio Ghibli",
-    "description": [
-      "Project using Studio Ghibli API.",
-      [
-        "View a list of all Studio Ghibli movies, and see more details of a movie if selected.",
-        "Mark whether they have watched a movie from the list, and filter the list's view to show the movies that have been marked as watched or not.",
-        "Use the filter to sort the list based on director, run time, or others."
-      ]
+    "description": "Project using Studio Ghibli API.",
+		"bullets": [
+			"View a list of all Studio Ghibli movies, and see more details of a movie if selected.",
+			"Mark whether they have watched a movie from the list, and filter the list's view to show the movies that have been marked as watched or not.",
+			"Use the filter to sort the list based on director, run time, or others."
     ],
-    "image": [
-			"/projects/studio-ghibli.jpg"
-		],
+    "image": "/projects/studio-ghibli.jpg",
     "links": {
       "githubLink": "https://github.com/mailauki/phase-1-project-studio-ghibli"
     },

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Link from "next/link";
@@ -15,8 +14,7 @@ import {
   Link as Anchor,
   Card,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { GitHub, OpenInNew } from "@mui/icons-material";
 import { useDateFormatter } from "@react-aria/i18n";
 import { parseDate, getLocalTimeZone } from "@internationalized/date";
 
@@ -34,7 +32,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
       <CardHeader
         action={project.wip && <WIP />}
         id={project.id}
-        subheader={project.description[0]}
+        subheader={project.description}
         subheaderTypographyProps={{ component: "h3" }}
         title={project.title}
         titleTypographyProps={{ component: "h2" }}
@@ -45,21 +43,19 @@ export default function ProjectIdCard({ project }: { project: Project }) {
           <Grid size={{ md: project.image[0] ? 5 : 12 }}>
             <Stack spacing={2}>
               <Stack component="ul" spacing={1}>
-                {project.description[1] &&
-                  (project.description[1] as string[]).map(
-                    (bullet: string, index: number) => (
-                      <Typography
-                        key={index}
-                        gutterBottom
-                        color="text.secondary"
-                        component="li"
-                        sx={{ listStyle: "none" }}
-                        variant="body2"
-                      >
-                        • {bullet}
-                      </Typography>
-                    ),
-                  )}
+                {project.bullets &&
+                  project.bullets.map((bullet: string, index: number) => (
+                    <Typography
+                      key={index}
+                      gutterBottom
+                      color="text.secondary"
+                      component="li"
+                      sx={{ listStyle: "none" }}
+                      variant="body2"
+                    >
+                      • {bullet}
+                    </Typography>
+                  ))}
               </Stack>
 
               <Stack
@@ -103,14 +99,11 @@ export default function ProjectIdCard({ project }: { project: Project }) {
             </Stack>
           </Grid>
 
-          <Grid
-            justifyContent="flex-end"
-            size={{ md: project.image[0] ? 7 : 12 }}
-          >
+          <Grid justifyContent="flex-end" size={{ md: project.image ? 7 : 12 }}>
             {project.image[0] && (
               <img
                 alt={`Screenshot of ${project.title}`}
-                src={project.image[0]}
+                src={project.image}
                 style={{
                   borderRadius: 8,
                   aspectRatio: "9/6 auto",
@@ -127,7 +120,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
           aria-label="github repository link"
           component={Link}
           href={project.links.githubLink}
-          startIcon={<GitHubIcon />}
+          startIcon={<GitHub />}
           sx={{ minWidth: "fit-content" }}
           target="_blank"
           variant="outlined"
@@ -140,7 +133,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
             aria-label="demo link"
             component={Link}
             href={project.links.demoLink}
-            startIcon={<OpenInNewIcon />}
+            startIcon={<OpenInNew />}
             sx={{ minWidth: "fit-content" }}
             target="_blank"
             variant="outlined"

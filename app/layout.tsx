@@ -33,7 +33,7 @@ export default function RootLayout({
           elevation={0}
           sx={{ bgcolor: "transparent" }}
         >
-          <Container component="main" maxWidth="lg">
+          <Container component="main" maxWidth="md">
             <NavBar />
             <Box sx={{ my: 6 }}>
               {children}

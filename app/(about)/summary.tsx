@@ -11,13 +11,21 @@ import {
 
 export default function Summary() {
   return (
-    <Card variant="outlined">
-      <CardHeader
+    <Card>
+      {/* <CardHeader
         sx={{ pb: 0 }}
         title="Profile"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
+      /> */}
+      <CardHeader
+        title="Profile"
+        titleTypographyProps={{
+          fontFamily: "serif",
+          component: "h2",
+          variant: "h5",
+        }}
       />
-      <CardContent component="div">
+      <CardContent>
         <Stack spacing={2}>
           <Typography
             gutterBottom

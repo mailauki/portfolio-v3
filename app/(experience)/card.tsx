@@ -1,43 +1,56 @@
 "use client";
 
-import { Card, CardContent, CardHeader, List } from "@mui/material";
+import { Card, CardContent, CardHeader, Stack, Divider } from "@mui/material";
+
+import ItemCard from "../(components)/card";
 
 import experience from "./experience.json";
 import education from "./education.json";
-import Item from "./item";
 
 export function ExperienceCard() {
   return (
-    <Card variant="outlined">
+    <Card>
       <CardHeader
-        sx={{ pb: 0 }}
-        title="Experience"
-        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
+        title="Education"
+        titleTypographyProps={{
+          fontFamily: "serif",
+          component: "h2",
+          variant: "h5",
+        }}
       />
-      <CardContent sx={{ pt: 0 }}>
-        <List>
-          {experience.map((work) => (
-            <Item key={work.company} exp={work} />
+      <CardContent>
+        {/* <Typography component="h2" fontFamily="serif" variant="h5">
+				Education
+			</Typography> */}
+        <Stack divider={<Divider />} spacing={3}>
+          {experience.map((item) => (
+            <ItemCard key={item.title} item={item} />
           ))}
-        </List>
+        </Stack>
       </CardContent>
     </Card>
   );
 }
 export function EducationCard() {
   return (
-    <Card variant="outlined">
+    <Card>
       <CardHeader
-        sx={{ pb: 0 }}
         title="Education"
-        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
+        titleTypographyProps={{
+          fontFamily: "serif",
+          component: "h2",
+          variant: "h5",
+        }}
       />
-      <CardContent component="div" sx={{ pt: 0 }}>
-        <List>
-          {education.map((school) => (
-            <Item key={school.name} exp={school} />
+      <CardContent>
+        {/* <Typography component="h2" fontFamily="serif" variant="h5">
+				Education
+			</Typography> */}
+        <Stack divider={<Divider />} spacing={3}>
+          {education.map((item) => (
+            <ItemCard key={item.title} item={item} />
           ))}
-        </List>
+        </Stack>
       </CardContent>
     </Card>
   );

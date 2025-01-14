@@ -1,12 +1,10 @@
 export type Experience = {
-  company?: string;
-  name?: string;
-  jobTitle?: string;
-  location?: string;
+  title: string;
+  description?: string;
   dates: string;
-  description: string[];
+  bullets: string[];
   source?: string;
   avatarSource?: string;
   avatar?: string;
-  links?: { text: string; link: string }[];
+  links?: { text: string; href: string }[];
 };

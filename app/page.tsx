@@ -6,7 +6,6 @@ import QuickButtons from "./(about)/buttons";
 import Skills from "./(about)/skills";
 import Summary from "./(about)/summary";
 import { ExperienceCard, EducationCard } from "./(experience)/card";
-import Title from "./(components)/title";
 import FeaturedProjects from "./projects/featured";
 
 export default function HomePage() {
@@ -14,9 +13,17 @@ export default function HomePage() {
     <Section>
       <Stack spacing={3}>
         <Stack px={2} spacing={2}>
-          <Title>Julie Evans</Title>
           <Typography
-            component="h2"
+            component="h1"
+            fontFamily="serif"
+            fontSize={{ md: "10rem", sm: "8rem", xs: "6rem" }}
+            sx={{ mb: 3 }}
+            variant="h1"
+          >
+            Julie Evans
+          </Typography>
+          <Typography
+            component="p"
             fontSize="1.15rem"
             fontWeight={500}
             textTransform="uppercase"

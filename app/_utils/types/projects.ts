@@ -1,8 +1,9 @@
 export type Project = {
   id: string;
   title: string;
-  description: (string | string[])[];
-  image: string[];
+  description: string;
+  bullets?: string[];
+  image: string;
   links: {
     githubLink: string;
     demoLink?: string;

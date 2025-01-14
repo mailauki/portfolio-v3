@@ -46,6 +46,9 @@ export default function ThemeRegistry(props: {
         },
       },
       MuiCard: {
+        defaultProps: {
+          variant: "outlined",
+        },
         styleOverrides: {
           root: {
             borderRadius: 8,
@@ -68,6 +71,13 @@ export default function ThemeRegistry(props: {
         styleOverrides: {
           root: {
             borderRadius: 64,
+          },
+        },
+      },
+      MuiListItemButton: {
+        styleOverrides: {
+          root: {
+            borderRadius: 8,
           },
         },
       },

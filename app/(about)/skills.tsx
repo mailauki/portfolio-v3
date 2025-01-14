@@ -18,15 +18,28 @@ import skills from "./skills.json";
 
 export default function Skills() {
   return (
-    <Card variant="outlined">
-      <CardHeader
+    <Card>
+      {/* <CardHeader
         subheader="Still learning and mastering"
         subheaderTypographyProps={{ variant: "overline", component: "h3" }}
         sx={{ pb: 0 }}
         title="Skills"
         titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
+      /> */}
+      <CardHeader
+        subheader="Still learning and mastering"
+        subheaderTypographyProps={{
+          textTransform: "uppercase",
+          variant: "overline",
+        }}
+        title="Skills"
+        titleTypographyProps={{
+          fontFamily: "serif",
+          component: "h2",
+          variant: "h5",
+        }}
       />
-      <CardContent component="div">
+      <CardContent>
         <Stack
           useFlexGap
           direction="row"
