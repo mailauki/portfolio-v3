@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 
 import ItemCard from "@/app/(components)/card";
@@ -9,7 +11,7 @@ import FeaturedProjects from "./projects/featured";
 import Hello from "./hello";
 import Summary from "./(about)/summary";
 
-export default function HomePage() {
+export default function Plain() {
   return (
     <Stack spacing={3}>
       <Box component="section" id="intro" sx={{ p: 3 }}>

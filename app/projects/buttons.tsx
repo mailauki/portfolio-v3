@@ -1,8 +1,7 @@
 "use client";
 
 import { GitHub, Info, OpenInNew } from "@mui/icons-material";
-import { IconButton, Tooltip } from "@mui/material";
-import Link from "next/link";
+import { IconButton, Link, Tooltip } from "@mui/material";
 
 import { Project } from "@/app/_utils/types/projects";
 

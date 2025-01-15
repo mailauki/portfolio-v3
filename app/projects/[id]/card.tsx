@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Link from "next/link";
@@ -40,7 +41,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
 
       <CardContent component="div">
         <Grid container spacing={2} sx={{ minHeight: 350 }}>
-          <Grid size={{ md: project.image[0] ? 5 : 12 }}>
+          <Grid size={{ md: project.image ? 5 : 12 }}>
             <Stack spacing={2}>
               <Stack component="ul" spacing={1}>
                 {project.bullets &&

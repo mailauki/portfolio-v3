@@ -9,9 +9,19 @@ export default function Footer() {
       sx={{ my: 10 }}
     >
       <Typography>
-        Built with <Link href="https://nextjs.org/">Next.js</Link> and{" "}
-        <Link href="https://tailwindcss.com/">Tailwind CSS</Link>, deployed with{" "}
-        <Link href="https://vercel.com/">Vercel</Link>.
+        Built with{" "}
+        <Link color="text.primary" href="https://nextjs.org/">
+          Next.js
+        </Link>{" "}
+        and{" "}
+        <Link color="text.primary" href="https://tailwindcss.com/">
+          Tailwind CSS
+        </Link>
+        , deployed with{" "}
+        <Link color="text.primary" href="https://vercel.com/">
+          Vercel
+        </Link>
+        .
       </Typography>
     </Stack>
   );

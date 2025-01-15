@@ -1,6 +1,5 @@
 import { Project } from "@/app/_utils/types/projects";
-
-import projects from "../projects.json";
+import projects from "@/app/_utils/data/projects.json";
 
 import ProjectIdCard from "./card";
 

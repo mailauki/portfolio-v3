@@ -9,10 +9,11 @@ import {
   List,
   ListItem,
   ListItemText,
-  Button,
   Typography,
+  Stack,
+  Link,
 } from "@mui/material";
-import { Link } from "@mui/icons-material";
+// import { Link } from "@mui/icons-material";
 
 import { Experience } from "@/app/_utils/types/experience";
 
@@ -77,19 +78,31 @@ export default function ItemCard({ item }: { item: Experience }) {
       {/* </CardActionArea> */}
       {item.links && (
         <CardActions>
-          {item.links.map((link) => (
-            <Button
-              key={link.href}
-              component="a"
-              href={link.href}
-              rel="noopener"
-              startIcon={<Link />}
-              sx={{ px: 2 }}
-              target="_blank"
-            >
-              {link.text}
-            </Button>
-          ))}
+          <Stack useFlexGap direction="row" flexWrap="wrap" spacing={2}>
+            {item.links.map((link) => (
+              // <Button
+              //   key={link.href}
+              //   component="a"
+              //   href={link.href}
+              //   rel="noopener"
+              //   startIcon={<Link />}
+              //   sx={{ px: 2 }}
+              //   target="_blank"
+              // >
+              //   {link.text}
+              // </Button>
+              <Link
+                key={link.href}
+                color="text.primary"
+                href={link.href}
+                rel="noopener"
+                target="_blank"
+                variant="body1"
+              >
+                {link.text}
+              </Link>
+            ))}
+          </Stack>
         </CardActions>
       )}
     </Card>

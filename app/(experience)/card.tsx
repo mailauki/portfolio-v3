@@ -2,14 +2,14 @@
 
 import { Card, CardContent, CardHeader, Stack, Divider } from "@mui/material";
 
-import ItemCard from "../(components)/card";
+import experience from "@/app/_utils/data/experience.json";
+import education from "@/app/_utils/data/education.json";
 
-import experience from "./experience.json";
-import education from "./education.json";
+import ItemCard from "../(components)/card";
 
 export function ExperienceCard() {
   return (
-    <Card>
+    <Card component="section">
       <CardHeader
         title="Education"
         titleTypographyProps={{
@@ -33,7 +33,7 @@ export function ExperienceCard() {
 }
 export function EducationCard() {
   return (
-    <Card>
+    <Card component="section">
       <CardHeader
         title="Education"
         titleTypographyProps={{

@@ -61,9 +61,16 @@ export default function ThemeRegistry(props: {
         },
       },
       MuiPaper: {
+        defaultProps: {
+          variant: "outlined",
+        },
         styleOverrides: {
           root: {
             borderRadius: 8,
+            borderColor: "transparent",
+            backgroundColor: darkMode
+              ? "rgba(0,0,0,0.32)"
+              : "rgba(255,255,255,0.16)",
           },
         },
       },

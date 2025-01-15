@@ -10,22 +10,15 @@ import {
   Stack,
 } from "@mui/material";
 
+import skills from "@/app/_utils/data/skills.json";
+
 import { getTagsLink } from "../_utils/helpers/tags/links";
 import { Tag } from "../_utils/types/projects";
 import { getTagsIcon } from "../_utils/helpers/tags/icons";
 
-import skills from "./skills.json";
-
 export default function Skills() {
   return (
-    <Card>
-      {/* <CardHeader
-        subheader="Still learning and mastering"
-        subheaderTypographyProps={{ variant: "overline", component: "h3" }}
-        sx={{ pb: 0 }}
-        title="Skills"
-        titleTypographyProps={{ fontFamily: "serif", component: "h2" }}
-      /> */}
+    <Card component="section">
       <CardHeader
         subheader="Still learning and mastering"
         subheaderTypographyProps={{

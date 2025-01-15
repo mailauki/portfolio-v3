@@ -13,9 +13,9 @@ import {
 } from "@mui/material";
 import { SwapVert } from "@mui/icons-material";
 
-import { Project } from "../_utils/types/projects";
+import { Project } from "@/app/_utils/types/projects";
+import projects from "@/app/_utils/data/projects.json";
 
-import projects from "./projects.json";
 import Projects from "./projects";
 import ProjectsNav from "./nav";
 
