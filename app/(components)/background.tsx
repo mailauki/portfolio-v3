@@ -12,8 +12,6 @@ export default function Background() {
       elevation={0}
       sx={{
         background: `linear-gradient(to bottom, ${theme.palette.background.default} 50%, ${brown[500]})`,
-        // teal[500]
-        // backgroundImage: 'url("./ombre.png")',
         position: "fixed",
         top: 0,
         left: 0,

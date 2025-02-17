@@ -1,4 +1,4 @@
-export type Experience = {
+export interface ExperienceType {
   title: string;
   description?: string;
   dates: string;
@@ -6,5 +6,5 @@ export type Experience = {
   source?: string;
   avatarSource?: string;
   avatar?: string;
-  links?: { text: string; href: string }[];
-};
+  links?: { text: string; link: string }[];
+}

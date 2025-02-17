@@ -13,15 +13,15 @@ import {
 } from "@mui/material";
 import { SwapVert } from "@mui/icons-material";
 
-import { Project } from "@/app/_utils/types/projects";
-import projects from "@/app/_utils/data/projects.json";
+import { projects } from "../_utils/data/projects";
+import { ProjectType } from "../_utils/types/projects";
 
-import Projects from "./projects";
 import ProjectsNav from "./nav";
+import Projects from "./projects";
 
 export default function Filter() {
-  const desc = [...projects].reverse() as Project[];
-  const asc = [...projects] as Project[];
+  const desc = [...projects].reverse() as ProjectType[];
+  const asc = [...projects] as ProjectType[];
   const [filter, setFilter] = useState<boolean>(false);
   const sort = filter ? desc : asc;
   const scrollTrigger = useScrollTrigger();

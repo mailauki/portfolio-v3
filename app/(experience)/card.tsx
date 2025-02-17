@@ -1,57 +1,96 @@
 "use client";
 
-import { Card, CardContent, CardHeader, Stack, Divider } from "@mui/material";
+import {
+  Avatar,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+  Stack,
+  Link,
+} from "@mui/material";
 
-import experience from "@/app/_utils/data/experience.json";
-import education from "@/app/_utils/data/education.json";
+import { ExperienceType } from "@/app/_utils/types/experience";
 
-import ItemCard from "../(components)/card";
-
-export function ExperienceCard() {
+export default function ItemCard({ item }: { item: ExperienceType }) {
   return (
-    <Card component="section">
+    <Card sx={{ bgcolor: "transparent" }}>
       <CardHeader
-        title="Education"
-        titleTypographyProps={{
-          fontFamily: "serif",
-          component: "h2",
-          variant: "h5",
+        avatar={
+          <Avatar
+            alt={item.title}
+            src={item.avatar}
+            sx={{ bgcolor: "transparent" }}
+          >
+            {" "}
+          </Avatar>
+        }
+        subheader={item.dates}
+        subheaderTypographyProps={{
+          variant: "body1",
+          color: "text.secondary",
+          component: "p",
         }}
+        title={
+          <>
+            {item.title}
+            {item.description && (
+              <Typography
+                color="text.secondary"
+                component="span"
+                fontStyle="italic"
+              >
+                {" — "}
+                {item.description}
+              </Typography>
+            )}
+          </>
+        }
+        titleTypographyProps={{ component: "h3", variant: "h5" }}
       />
-      <CardContent>
-        {/* <Typography component="h2" fontFamily="serif" variant="h5">
-				Education
-			</Typography> */}
-        <Stack divider={<Divider />} spacing={3}>
-          {experience.map((item) => (
-            <ItemCard key={item.title} item={item} />
-          ))}
-        </Stack>
+      <CardContent sx={{ pt: 0 }}>
+        {item.bullets && (
+          <List
+            disablePadding
+            sx={{
+              listStyleType: "disc",
+              pl: 2,
+              "& .MuiListItem-root": {
+                display: "list-item",
+                pl: 0,
+              },
+            }}
+          >
+            {item.bullets.map((bullet) => (
+              <ListItem key={bullet} disablePadding>
+                <ListItemText primary={bullet} />
+              </ListItem>
+            ))}
+          </List>
+        )}
       </CardContent>
-    </Card>
-  );
-}
-export function EducationCard() {
-  return (
-    <Card component="section">
-      <CardHeader
-        title="Education"
-        titleTypographyProps={{
-          fontFamily: "serif",
-          component: "h2",
-          variant: "h5",
-        }}
-      />
-      <CardContent>
-        {/* <Typography component="h2" fontFamily="serif" variant="h5">
-				Education
-			</Typography> */}
-        <Stack divider={<Divider />} spacing={3}>
-          {education.map((item) => (
-            <ItemCard key={item.title} item={item} />
-          ))}
-        </Stack>
-      </CardContent>
+      {item.links && (
+        <CardActions>
+          <Stack useFlexGap direction="row" flexWrap="wrap" spacing={2}>
+            {item.links.map((link) => (
+              <Link
+                key={link.link}
+                color="text.primary"
+                href={link.link}
+                rel="noopener"
+                target="_blank"
+                variant="body1"
+              >
+                {link.text}
+              </Link>
+            ))}
+          </Stack>
+        </CardActions>
+      )}
     </Card>
   );
 }

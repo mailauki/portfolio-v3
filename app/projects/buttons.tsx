@@ -3,27 +3,27 @@
 import { GitHub, Info, OpenInNew } from "@mui/icons-material";
 import { IconButton, Link, Tooltip } from "@mui/material";
 
-import { Project } from "@/app/_utils/types/projects";
+import { ProjectType } from "@/app/_utils/types/projects";
 
-export default function ProjectButtons({ project }: { project: Project }) {
+export default function ProjectButtons({ project }: { project: ProjectType }) {
   return (
     <>
       <Tooltip arrow placement="top" title="Github">
         <IconButton
           aria-label="github repository link"
           component={Link}
-          href={project.links.githubLink}
+          href={project.links.github}
           target="_blank"
         >
           <GitHub />
         </IconButton>
       </Tooltip>
-      {project.links.demoLink && (
+      {project.links.demo && (
         <Tooltip arrow placement="top" title="Demo">
           <IconButton
             aria-label="demo link"
             component={Link}
-            href={project.links.demoLink}
+            href={project.links.demo}
             target="_blank"
           >
             <OpenInNew />

@@ -23,7 +23,7 @@ import {
   VercelOriginal,
 } from "devicons-react";
 
-import { Tag } from "../../types/projects";
+import { Tag } from "../../types/tags";
 import { RenderLogo } from "../../icons/dev/render";
 import { ChakraLogo } from "../../icons/dev/chakra";
 import { CssLogo } from "../../icons/dev/css";
@@ -81,7 +81,7 @@ export function getTagsIcon(tag: Tag) {
       return <SwiperOriginal />;
     case "Tailwind CSS":
       return <TailwindcssOriginal />;
-    case "jQuery":
+    case "JQuery":
       return <JqueryPlain />;
     case "TypeScript":
       return <TypescriptPlain />;

@@ -7,13 +7,9 @@ export default function Section({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const scrollTrigger = useScrollTrigger();
-
   return (
-    // <Fade in={scrollTrigger}>
     <Box component="section" sx={{ minHeight: "100vh" }}>
       {children}
     </Box>
-    // </Fade>
   );
 }

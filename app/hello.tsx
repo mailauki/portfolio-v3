@@ -4,15 +4,6 @@ import { Link, Stack, Typography } from "@mui/material";
 
 export default function Hello() {
   return (
-    // <Typography
-    //     component="p"
-    //     fontFamily="serif"
-    //     fontSize={{ sm: "3rem", xs: "2rem" }}
-    //     variant="subtitle1"
-    //     whiteSpace="balance"
-    //   >
-    //     Hi, I&apos;m Julie. A web developer, linguist, and problem solver.
-    //   </Typography
     <Stack sx={{ pt: 6 }}>
       <Typography fontStyle="italic" sx={{ pb: 3 }} variant="subtitle2">
         Get in touch with me however you like. No reason needed.

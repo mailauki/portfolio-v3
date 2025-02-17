@@ -1,6 +1,6 @@
 "use client";
 
-import type { Project } from "../_utils/types/projects";
+import type { ProjectType } from "../_utils/types/projects";
 
 import {
   Stack,
@@ -13,12 +13,13 @@ import {
   List,
   ListItem,
   ListItemText,
+  Chip,
 } from "@mui/material";
 
 import ProjectButtons from "./buttons";
 import WIP from "./wip";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: ProjectType }) {
   return (
     <Card sx={{ bgcolor: "transparent" }}>
       <CardHeader
@@ -73,6 +74,12 @@ export default function ProjectCard({ project }: { project: Project }) {
       </CardContent>
       <CardActions>
         <ProjectButtons project={project} />
+        <span style={{ flex: "1 1 auto" }} />
+        <Stack useFlexGap direction="row" flexWrap="wrap" spacing={1}>
+          {project.tags.map((tag) => (
+            <Chip key={tag} label={tag} size="small" />
+          ))}
+        </Stack>
       </CardActions>
     </Card>
   );

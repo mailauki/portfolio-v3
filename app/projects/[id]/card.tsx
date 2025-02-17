@@ -17,15 +17,14 @@ import {
 } from "@mui/material";
 import { GitHub, OpenInNew } from "@mui/icons-material";
 import { useDateFormatter } from "@react-aria/i18n";
-import { parseDate, getLocalTimeZone } from "@internationalized/date";
 
 import { getTagsIcon } from "@/app/_utils/helpers/tags/icons";
 import { getTagsLink } from "@/app/_utils/helpers/tags/links";
-import { Project } from "@/app/_utils/types/projects";
+import { ProjectType } from "@/app/_utils/types/projects";
 
 import WIP from "../wip";
 
-export default function ProjectIdCard({ project }: { project: Project }) {
+export default function ProjectIdCard({ project }: { project: ProjectType }) {
   const formatter = useDateFormatter({ dateStyle: "medium" });
 
   return (
@@ -120,7 +119,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
         <Button
           aria-label="github repository link"
           component={Link}
-          href={project.links.githubLink}
+          href={project.links.github}
           startIcon={<GitHub />}
           sx={{ minWidth: "fit-content" }}
           target="_blank"
@@ -129,11 +128,11 @@ export default function ProjectIdCard({ project }: { project: Project }) {
           GitHub
         </Button>
 
-        {project.links.demoLink && (
+        {project.links.demo && (
           <Button
             aria-label="demo link"
             component={Link}
-            href={project.links.demoLink}
+            href={project.links.demo}
             startIcon={<OpenInNew />}
             sx={{ minWidth: "fit-content" }}
             target="_blank"
@@ -154,11 +153,7 @@ export default function ProjectIdCard({ project }: { project: Project }) {
             <Typography color="text.secondary" variant="caption">
               Last Updated
             </Typography>
-            <Typography>
-              {formatter.format(
-                parseDate(project.date).toDate(getLocalTimeZone()),
-              )}
-            </Typography>
+            <Typography>{formatter.format(project.date)}</Typography>
           </Stack>
         )}
       </CardActions>

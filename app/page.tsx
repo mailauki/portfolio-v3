@@ -1,13 +1,13 @@
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 
-import ItemCard from "@/app/(components)/card";
-import skills from "@/app/_utils/data/skills.json";
-import experience from "@/app/_utils/data/experience.json";
-import education from "@/app/_utils/data/education.json";
+import ItemCard from "@/app/(experience)/card";
 
 import FeaturedProjects from "./projects/featured";
 import Hello from "./hello";
 import Summary from "./(about)/summary";
+import Skills from "./(about)/skills";
+import { experience } from "./_utils/data/experience";
+import { education } from "./_utils/data/education";
 
 export default function HomePage() {
   return (
@@ -49,51 +49,7 @@ export default function HomePage() {
         >
           Still learning and mastering
         </Typography>
-        {/* <Stack
-          useFlexGap
-          direction="row"
-          divider={<Divider flexItem orientation="vertical" variant="middle" />}
-          flexWrap="wrap"
-          spacing={1}
-        >
-          {skills.sort().map((skill) => (
-            <Chip
-              key={skill.id}
-              clickable
-              // avatar={
-              //   getTagsIcon(skill.title as Tag) && (
-              //     <Avatar
-              //       aria-hidden="true"
-              //       sx={{ bgcolor: "transparent" }}
-              //     >
-              //       {getTagsIcon(skill.title as Tag)}
-              //     </Avatar>
-              //   )
-              // }
-              component="a"
-              href={getTagsLink(skill.title as Tag)}
-              label={skill.title as Tag}
-              target="_blank"
-            />
-          ))}
-        </Stack> */}
-        <Stack
-          useFlexGap
-          component={Typography}
-          direction="row"
-          divider={
-            <Typography component="span" sx={{ mr: 0.5 }}>
-              {", "}
-            </Typography>
-          }
-          flexWrap="wrap"
-        >
-          {skills.sort().map((skill) => (
-            <Typography key={skill.id} component="span">
-              {skill.title}
-            </Typography>
-          ))}
-        </Stack>
+        <Skills />
       </Paper>
       <Paper component="section" id="featured-projects" sx={{ p: 3 }}>
         <Typography

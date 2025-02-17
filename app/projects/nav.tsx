@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useParams, useRouter } from "next/navigation";
 
-import projects from "@/app/_utils/data/projects.json";
+import { projects } from "../_utils/data/projects";
 
 export default function ProjectsNav() {
   const router = useRouter();

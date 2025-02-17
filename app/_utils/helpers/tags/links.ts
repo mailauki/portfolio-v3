@@ -1,4 +1,4 @@
-import { Tag } from "../../types/projects";
+import { Tag } from "../../types/tags";
 
 export function getTagsLink(tag: Tag) {
   switch (tag) {
@@ -18,7 +18,7 @@ export function getTagsLink(tag: Tag) {
       return "https://developer.mozilla.org/en-US/docs/Web/HTML";
     case "JavaScript":
       return "https://developer.mozilla.org/en-US/docs/Web/JavaScript";
-    case "jQuery":
+    case "JQuery":
       return "https://jquery.com";
     case "Material UI":
       return "https://mui.com/material-ui";
