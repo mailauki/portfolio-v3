@@ -2,8 +2,8 @@ import { Button, Grid2 as Grid } from "@mui/material";
 import { ChevronLeft } from "@mui/icons-material";
 import Link from "next/link";
 
-import Section from "../(components)/section";
-import Title from "../(components)/title";
+import Section from "../_components/section";
+import Title from "../_components/title";
 
 import ProjectsNav from "./nav";
 

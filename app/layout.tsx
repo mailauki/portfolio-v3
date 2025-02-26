@@ -2,10 +2,10 @@ import "./globals.css";
 import { Box, Container, Paper } from "@mui/material";
 
 import styles from "./page.module.css";
-import ThemeRegistry from "./(components)/theme";
-import Background from "./(components)/background";
-import NavBar from "./(components)/nav";
-import Footer from "./(components)/footer";
+import ThemeRegistry from "./_components/theme";
+import Background from "./_components/background";
+import NavBar from "./_components/nav";
+import Footer from "./_components/footer";
 
 export const metadata = {
   title: {

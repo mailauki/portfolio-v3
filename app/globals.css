@@ -41,6 +41,14 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+
+	/* --thumbnail-size: 2; */
+	/* --thumbnail-width: calc((var(--thumbnail-size) * 100%)); */
+	/* --thumbnail-scale: calc((100 / var(--thumbnail-size)) / 100); */
+	--thumbnail-width: 1600px;
+	--thumbnail-height: 900px;
+	--thumbnail-scale: 0.25;
 }
 
 @media (prefers-color-scheme: dark) {

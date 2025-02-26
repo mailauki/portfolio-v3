@@ -4,8 +4,6 @@ import type { ProjectType } from "../_utils/types/projects";
 
 import {
   Stack,
-  Avatar,
-  Typography,
   Card,
   CardActions,
   CardContent,
@@ -14,33 +12,29 @@ import {
   ListItem,
   ListItemText,
   Chip,
+  Box,
+  Paper,
 } from "@mui/material";
 
+import styles from "@/app/thumbnail.module.css";
+
 import ProjectButtons from "./buttons";
-import WIP from "./wip";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
   return (
-    <Card sx={{ bgcolor: "transparent" }}>
+    <Card>
+      <Paper sx={{ display: "flex", justifyContent: "center" }}>
+        <Box className={styles.box}>
+          <Box className={styles.thumbnail}>
+            <iframe
+              id={project.id}
+              src={project.links.demo}
+              title={project.title}
+            />
+          </Box>
+        </Box>
+      </Paper>
       <CardHeader
-        action={project.wip && <WIP />}
-        avatar={
-          <Avatar
-            alt={project.title}
-            src={project.image}
-            sx={{ width: 160, height: 90 }}
-            variant="rounded"
-          >
-            <Stack
-              alignItems="center"
-              direction="column"
-              justifyContent="center"
-              sx={{ height: "100%", width: "100%" }}
-            >
-              <Typography>No Image Yet</Typography>
-            </Stack>
-          </Avatar>
-        }
         subheader={project.description}
         subheaderTypographyProps={{
           variant: "body1",
@@ -51,7 +45,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         title={project.title}
         titleTypographyProps={{ component: "h3", variant: "h5" }}
       />
-      <CardContent sx={{ pt: 0 }}>
+      <CardContent component={Stack} spacing={2} sx={{ pt: 0 }}>
         {project.bullets && (
           <List
             disablePadding
@@ -71,15 +65,14 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
             ))}
           </List>
         )}
-      </CardContent>
-      <CardActions>
-        <ProjectButtons project={project} />
-        <span style={{ flex: "1 1 auto" }} />
         <Stack useFlexGap direction="row" flexWrap="wrap" spacing={1}>
           {project.tags.map((tag) => (
             <Chip key={tag} label={tag} size="small" />
           ))}
         </Stack>
+      </CardContent>
+      <CardActions>
+        <ProjectButtons project={project} />
       </CardActions>
     </Card>
   );

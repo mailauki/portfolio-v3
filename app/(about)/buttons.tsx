@@ -2,7 +2,7 @@
 
 import { Avatar, Button, Link, Stack, Tooltip } from "@mui/material";
 
-import SocialLinks from "../(components)/social";
+import SocialLinks from "../_components/social";
 
 export default function QuickButtons() {
   return (

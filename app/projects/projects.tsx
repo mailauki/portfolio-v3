@@ -13,5 +13,12 @@ export default function Projects({ sort }: { sort: ProjectType[] }) {
         <ProjectCard key={project.id} project={project} />
       ))}
     </Stack>
+    // <Grid container spacing={3}>
+    //   {sort.map((project) => (
+    //     <Grid key={project.id} size={{ sm: 12, md: 6 }}>
+    //       <ProjectCard project={project} />
+    //     </Grid>
+    //   ))}
+    // </Grid>
   );
 }
